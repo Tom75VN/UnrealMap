@@ -8,6 +8,8 @@ region is created on first show only, so a dismissed popup costs one timer
 frame for a few seconds and no texture.
 ]]
 
+-- Disabled until the launcher support link is ready; set true to re-enable.
+local ENABLED = false
 local SHOW_DELAY = 6
 local DISMISSED_KEY = "supportPopupDismissed"
 
@@ -326,6 +328,8 @@ local function Build()
   frame.parts = { check, close }
   return frame
 end
+
+if not ENABLED then return end
 
 local timer = CreateFrame("Frame", "unrealMapSupportPopupTimer", UIParent)
 local started, fired
