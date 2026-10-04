@@ -1,5 +1,0 @@
-Pillow
-numpy
-etcpak
-opencv-python-headless
-lupa

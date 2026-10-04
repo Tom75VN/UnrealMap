@@ -13,17 +13,18 @@
   <a href="https://github.com/Tom75VN/UnrealMap/releases/latest"><b>⬇ Download the latest release</b></a>
 </p>
 
-- 🗺️ **2x resolution maps** for every zone, capital, battleground and continent
-- ✨ **Exclusive artwork**, made only for Unreal Map
-- 🏰 **19 dungeons and 7 raids** in HD, every floor included
-- 🎯 **Nothing moves**: labels, icons, coordinates and clicks stay in place
-- 🪶 **Low memory**: nothing loads at login, only the map you open
-- 🌫️ **Optional fog-of-war removal** in one click
-- 🔌 **Install and play**: no setup needed
+- **Exclusive HD world maps, available only in Unreal Map**: created for this
+  addon and found nowhere else
+- **2x resolution** for every zone, capital, battleground and continent
+- **19 dungeons and 7 raids** in HD, every floor included
+- **Nothing moves**: labels, icons, coordinates and clicks stay in place
+- **Low memory**: nothing loads at login, only the map you open
+- **Optional fog-of-war removal** in one click
+- **Install and play**: no setup needed
 
-![Dustwallow Marsh and Eastern Plaguelands, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/01-dustwallow-eastern-plaguelands-hd-vs-native.jpg)
+![Dustwallow Marsh, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/01-dustwallow-marsh-hd-vs-native.jpg)
 
-![Orgrimmar and Stormwind, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/04-orgrimmar-stormwind-hd-vs-native.jpg)
+![Stormwind, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/08-stormwind-hd-vs-native.jpg)
 
 ## Why Unreal Map
 
@@ -86,21 +87,37 @@ Better visuals without weighing down your game.
 
 ## Screenshots
 
-**Stranglethorn Vale and Warsong Gulch**
+**Eastern Plaguelands**
 
-![Stranglethorn Vale and Warsong Gulch, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/02-stranglethorn-warsong-gulch-hd-vs-native.jpg)
+![Eastern Plaguelands, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/02-eastern-plaguelands-hd-vs-native.jpg)
 
-**Stonetalon Mountains and Elwynn Forest**
+**Stranglethorn Vale**
 
-![Stonetalon Mountains and Elwynn Forest, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/03-stonetalon-elwynn-hd-vs-native.jpg)
+![Stranglethorn Vale, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/03-stranglethorn-hd-vs-native.jpg)
 
-**Dungeon: The Deadmines**
+**Warsong Gulch**
 
-![The Deadmines HD map](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/05-dungeon-the-deadmines-hd.jpg)
+![Warsong Gulch, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/04-warsong-gulch-hd-vs-native.jpg)
+
+**Stonetalon Mountains**
+
+![Stonetalon Mountains, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/05-stonetalon-mountains-hd-vs-native.jpg)
+
+**Elwynn Forest**
+
+![Elwynn Forest, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/06-elwynn-hd-vs-native.jpg)
+
+**Orgrimmar**
+
+![Orgrimmar, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/07-orgrimmar-hd-vs-native.jpg)
+
+**Dungeon: Ragefire Chasm**
+
+![Ragefire Chasm, HD map](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/09-dungeon-ragefire-chasm-hd.jpg)
 
 **Raid: Molten Core**
 
-![Molten Core HD map](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/06-raid-molten-core-hd.jpg)
+![Molten Core, HD map](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/10-raid-molten-core-hd.jpg)
 
 ## Installation
 
