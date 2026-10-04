@@ -4,25 +4,46 @@
 
 <h1 align="center">Unreal Map</h1>
 
-High-definition world, dungeon and raid maps for World of Warcraft 1.12
-(vanilla) clients.
+<p align="center">
+  <b>See Azeroth in high definition.</b><br>
+  Sharper world, dungeon and raid maps for World of Warcraft 1.12 (vanilla).
+</p>
 
-Unreal Map replaces the map textures with sharper, twice-resolution artwork
-while keeping everything else exactly where it was: labels, icons, player
-arrow, coordinates, click areas, zoom and controls are untouched.
+<p align="center">
+  <a href="https://github.com/Tom75VN/UnrealMap/releases/latest"><b>⬇ Download the latest release</b></a>
+</p>
+
+- 🗺️ **2x resolution maps** for every zone, capital, battleground and continent
+- ✨ **Exclusive artwork**, made only for Unreal Map
+- 🏰 **19 dungeons and 7 raids** in HD, every floor included
+- 🎯 **Nothing moves**: labels, icons, coordinates and clicks stay in place
+- 🪶 **Low memory**: nothing loads at login, only the map you open
+- 🌫️ **Optional fog-of-war removal** in one click
+- 🔌 **Install and play**: no setup needed
 
 ![Dustwallow Marsh and Eastern Plaguelands, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/01-dustwallow-eastern-plaguelands-hd-vs-native.jpg)
+
+![Orgrimmar and Stormwind, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/04-orgrimmar-stormwind-hd-vs-native.jpg)
+
+## Why Unreal Map
+
+The original maps were drawn for screens from 2004. On a modern display they
+look blurry and washed out. Unreal Map swaps them for sharp, richly colored
+artwork at twice the resolution, while everything you rely on stays exactly
+where it was: labels, quest and town icons, your player arrow, coordinates,
+click areas, zoom and controls.
 
 ## Features
 
 ### Exclusive HD world maps
 
-Generated specifically for this addon from full-zone masters at twice the
-native resolution, then registered on the game's own map so nothing shifts.
+Every world map was generated specifically for Unreal Map at twice the native
+resolution, then carefully lined up with the game's own map, so labels and
+map icons sit exactly where you expect them.
 
-- **40 zones**: every Eastern Kingdoms and Kalimdor zone, from Elwynn Forest
-  and Durotar to Silithus and Winterspring, with HD base tiles and HD
-  exploration overlays.
+- **40 zones**: all of Eastern Kingdoms and Kalimdor, from Elwynn Forest and
+  Durotar to Silithus and Winterspring, including the explored areas you
+  uncover as you travel.
 - **6 capitals**: Stormwind, Ironforge, Darnassus, Orgrimmar, Thunder Bluff
   and Undercity.
 - **3 battlegrounds**: Alterac Valley, Arathi Basin and Warsong Gulch.
@@ -30,9 +51,9 @@ native resolution, then registered on the game's own map so nothing shifts.
 
 ### HD dungeon and raid maps
 
-HD maps for the original vanilla instances, from Turtle WoW's map artwork.
-The correct map is picked automatically from the instance name (English,
-Russian or Chinese clients) and can also be chosen by hand.
+Find your way through every classic instance. The right map opens
+automatically when you are inside, on English, Russian and Chinese clients,
+and you can also pick one by hand.
 
 - **19 dungeons, 55 maps** including every floor and entrance: Ragefire
   Chasm, The Deadmines, Wailing Caverns, Shadowfang Keep, The Stockade,
@@ -42,22 +63,26 @@ Russian or Chinese clients) and can also be chosen by hand.
 - **7 raids, 13 maps**: Molten Core, Onyxia's Lair, Blackwing Lair,
   Zul'Gurub, Ruins of Ahn'Qiraj, Temple of Ahn'Qiraj and Naxxramas.
 
-### Options
+### Low memory use
 
-- Optional fog-of-war removal: show the unexplored areas of every zone.
-- Minimap button to open the settings (can be hidden).
-- English, Russian and Chinese translations, with a language picker.
-- Integrates into unrealUI's settings window when unrealUI is installed;
-  works fully on its own otherwise. Neither addon requires the other.
+Better visuals without weighing down your game.
 
-### Lightweight
-
-- Nothing is loaded at login. HD textures are loaded only while the map is
-  open, and only for the map you are looking at.
-- A single fixed set of texture slots is reused for every map, so memory does
-  not grow as you browse.
+- Nothing is loaded at login: no impact on loading time or memory until you
+  open the map.
+- HD textures are loaded only while the map is open, and only for the map you
+  are looking at.
+- A single fixed set of texture slots is reused for every map, so the addon
+  does not grow as you browse from map to map.
 - Compressed textures with mipmaps; only the files the game actually uses are
   shipped.
+
+### Simple options
+
+- Remove the fog of war to see the unexplored areas of every zone.
+- Minimap button for quick access to the settings (can be hidden).
+- Available in English, Russian and Chinese, with a language picker.
+- Fits into unrealUI's settings window when unrealUI is installed, and works
+  fully on its own otherwise.
 
 ## Screenshots
 
@@ -69,10 +94,6 @@ Russian or Chinese clients) and can also be chosen by hand.
 
 ![Stonetalon Mountains and Elwynn Forest, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/03-stonetalon-elwynn-hd-vs-native.jpg)
 
-**Orgrimmar and Stormwind**
-
-![Orgrimmar and Stormwind, HD vs native](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/04-orgrimmar-stormwind-hd-vs-native.jpg)
-
 **Dungeon: The Deadmines**
 
 ![The Deadmines HD map](https://raw.githubusercontent.com/Tom75VN/UnrealMap/readme-assets/05-dungeon-the-deadmines-hd.jpg)
@@ -83,11 +104,11 @@ Russian or Chinese clients) and can also be chosen by hand.
 
 ## Installation
 
-1. Download the latest release.
+1. [Download the latest release](https://github.com/Tom75VN/UnrealMap/releases/latest).
 2. Extract it into `Interface/AddOns/` so the folder is
    `Interface/AddOns/unrealMap/` (the folder must be named exactly
    `unrealMap`).
-3. Restart the game client.
+3. Restart the game client and open your map.
 
 ## Commands
 
