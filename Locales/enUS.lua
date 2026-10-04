@@ -1,0 +1,47 @@
+-- unrealMap / Locales/enUS.lua -- English, the fallback for every key.
+unrealMapLocale.Register("enUS", {
+  ["COMMON_CLOSE"] = "Close",
+
+  ["SETTINGS_PAGE_GENERAL"] = "General",
+  ["SETTINGS_HEADING_WORLD_MAP"] = "World map",
+  ["SETTINGS_REVEAL_FOG"] = "Remove fog of war",
+  ["SETTINGS_REVEAL_FOG_NOTE"] = "Shows the unexplored areas of every zone on the world map. "
+    .. "Exploration progress itself is unchanged. "
+    .. "When fog of war is kept, unexplored areas stay in low definition.",
+  ["SETTINGS_MINIMAP_BUTTON"] = "Show minimap button",
+  ["SETTINGS_LANGUAGE_CHANGED"] = "language set to %s.",
+  ["SETTINGS_LANGUAGE_RELOAD"] = "type /reload to redraw the interface in it.",
+  ["SETTINGS_WINDOW_FAILED"] = "could not create the settings window.",
+  ["SETTINGS_WINDOW_NOT_MOVABLE"] = "the settings window could not be moved.",
+  ["SETTINGS_HOST_REFUSED"] = "unrealUI refused the settings page; using unrealMap's own window.",
+  ["SETTINGS_IN_UNREALUI"] = "the settings are in unrealUI's settings window.",
+  ["MINIMAP_TOOLTIP"] = "Click to open the map settings.",
+
+  ["CHAT_LOADED"] = "v%s loaded. /umap for settings.",
+  ["CHAT_FOG_REMOVED"] = "fog of war removed.",
+  ["CHAT_FOG_RESTORED"] = "fog of war restored.",
+  ["CHAT_MINIMAP_SHOWN"] = "minimap button shown.",
+  ["CHAT_MINIMAP_HIDDEN"] = "minimap button hidden.",
+  ["CHAT_RAGEFIRE_UPDATED"] = "Ragefire dungeon map updated.",
+  ["CHAT_RAGEFIRE_FAILED"] = "Ragefire dungeon map could not be updated.",
+  ["CHAT_RAGEFIRE_UNAVAILABLE"] = "Ragefire dungeon support is unavailable.",
+  ["CHAT_HELP"] = "/umap opens settings. /umap fog [on|off], /umap minimap, /umap dungeon <map|off>, /umap raid <map|off>.",
+
+  ["RAGEFIRE_NEEDS_DUNGEON"] = "Ragefire confirmation only works inside a party dungeon.",
+  ["RAGEFIRE_ENABLED"] = "Ragefire dungeon map enabled.",
+  ["RAGEFIRE_CLEARED"] = "Ragefire dungeon map confirmation cleared.",
+  ["DUNGEON_NEEDS_INSTANCE"] = "Dungeon map selection only works inside a party dungeon.",
+  ["DUNGEON_UNKNOWN"] = "Unknown dungeon map: %s.",
+  ["DUNGEON_ENABLED"] = "Dungeon map enabled: %s.",
+  ["DUNGEON_CLEARED"] = "Dungeon map selection cleared.",
+  ["RAID_NEEDS_INSTANCE"] = "Raid map selection only works inside a raid instance.",
+  ["RAID_UNKNOWN"] = "Unknown raid map: %s.",
+  ["RAID_ENABLED"] = "Raid map enabled: %s.",
+  ["RAID_CLEARED"] = "Raid map selection cleared.",
+  ["RAID_UNAVAILABLE"] = "Raid map support is unavailable.",
+
+  ["POPUP_QUESTION"] = "You like it ?",
+  ["POPUP_MESSAGE"] = "Give a like to this addon from the launcher",
+  ["POPUP_THANKS"] = "THANKS FOR YOUR SUPPORT !",
+  ["POPUP_DONT_SHOW"] = "Don't show again",
+})

@@ -1,0 +1,2945 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-04",
+  "zones": [
+    {
+      "order": 1,
+      "mapName": "Alterac",
+      "displayName": "Alterac",
+      "sourceFile": "Alterac.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766513,
+          0.00112,
+          9.432047
+        ],
+        [
+          -9.9e-05,
+          0.768194,
+          6.278542
+        ]
+      ],
+      "eccScore": 0,
+      "registration": {
+        "samples": 20,
+        "medianHDPixels": [
+          11,
+          8
+        ],
+        "p90HDPixels": 13,
+        "worstHDPixels": 13
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": null,
+      "files": [
+        "AlteracHighlight",
+        "ChillwindPoint1",
+        "ChillwindPoint2",
+        "ChillwindPoint3",
+        "ChillwindPoint4",
+        "CorrahnsDagger1",
+        "CorrahnsDagger2",
+        "CrushridgeHold1",
+        "CrushridgeHold2",
+        "Dalaran1",
+        "Dalaran2",
+        "Dalaran3",
+        "Dalaran4",
+        "DandredsFold1",
+        "DandredsFold2",
+        "GallowsCorner1",
+        "GavinsNaze1",
+        "GrowlessCave1",
+        "LordamereInternmentCamp1",
+        "LordamereInternmentCamp2",
+        "LordamereInternmentCamp3",
+        "LordamereInternmentCamp4",
+        "MistyShore1",
+        "MistyShore2",
+        "RuinsOfAlterac1",
+        "SoferasNaze1",
+        "SoferasNaze2",
+        "Strahnbrad1",
+        "Strahnbrad2",
+        "Strahnbrad3",
+        "Strahnbrad4",
+        "TheHeadland1",
+        "TheUplands1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 45,
+      "estimatedPeakDecodedBytes": 32800768,
+      "estimatedPeakCompressedMipBytes": 10935504,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 2,
+      "mapName": "Arathi",
+      "displayName": "Arathi",
+      "sourceFile": "arathi.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.999875,
+          0.000578,
+          0.728735
+        ],
+        [
+          -1.7e-05,
+          0.999305,
+          0.395894
+        ]
+      ],
+      "eccScore": 0.734966,
+      "registration": {
+        "samples": 19,
+        "medianHDPixels": [
+          -1,
+          0
+        ],
+        "p90HDPixels": 3,
+        "worstHDPixels": 4
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "ArathiHighlight",
+        "BoulderfistHall1",
+        "Bouldergor1",
+        "CircleOfEastBinding1",
+        "CircleOfInnerBinding1",
+        "CircleOfOuterBinding1",
+        "CircleOfWestBinding1",
+        "DabyriesFarmstead1",
+        "FaldirsCove1",
+        "GoShekFarm1",
+        "Hammerfall1",
+        "NorthfoldManor1",
+        "RefugePoint1",
+        "StromgardeKeep1",
+        "ThandolSpan1",
+        "ThoradinsWall1",
+        "WitherbarkVillage1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 29,
+      "estimatedPeakDecodedBytes": 29622272,
+      "estimatedPeakCompressedMipBytes": 9874864,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 3,
+      "mapName": "Ashenvale",
+      "displayName": "Ashenvale",
+      "sourceFile": "Ashenvale.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000674,
+          0.000245,
+          0.281628
+        ],
+        [
+          -8.9e-05,
+          0.999563,
+          0.376181
+        ]
+      ],
+      "eccScore": 0.769573,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AshenvaleHighlight",
+        "Astranaar1",
+        "BoughShadow1",
+        "FallenSkyLake1",
+        "FelfireHill1",
+        "FireScarShrine1",
+        "IrisLake1",
+        "LakeFalathim1",
+        "MaestrasPost1",
+        "MaestrasPost2",
+        "MystralLake1",
+        "MystralLake2",
+        "NightRun1",
+        "RaynewoodRetreat1",
+        "Satyrnaar1",
+        "Satyrnaar2",
+        "TheHowlingVale1",
+        "TheRuinsOfStardust1",
+        "TheShrineOfAessina1",
+        "TheZoramStrand1",
+        "ThistlefurVillage1",
+        "WarsongLumberCamp1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 34,
+      "estimatedPeakDecodedBytes": 31719424,
+      "estimatedPeakCompressedMipBytes": 10574240,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 4,
+      "mapName": "Aszhara",
+      "displayName": "Aszhara",
+      "sourceFile": "azshara.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000213,
+          0.000578,
+          0.490364
+        ],
+        [
+          0.000402,
+          1.003519,
+          -0.0878
+        ]
+      ],
+      "eccScore": 0.778411,
+      "registration": {
+        "samples": 22,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AszharaHighlight",
+        "BayOfStorms1",
+        "BayOfStorms2",
+        "BayOfStorms3",
+        "BayOfStorms4",
+        "BitterReaches1",
+        "ForlornRidge1",
+        "HaldarrEncampment1",
+        "JaggedReef1",
+        "JaggedReef2",
+        "JaggedReef3",
+        "LakeMennar1",
+        "LakeMennar2",
+        "LegashEncampment1",
+        "RavencrestMonument1",
+        "RuinsOfEldarath1",
+        "RuinsOfEldarath2",
+        "RuinsOfEldarath3",
+        "RuinsOfEldarath4",
+        "ShadowsongShrine1",
+        "SouthridgeBeach1",
+        "SouthridgeBeach2",
+        "TempleOfArkkoran1",
+        "ThalassianBaseCamp1",
+        "TheRuinedReaches1",
+        "TheRuinedReaches2",
+        "TheShatteredStrand1",
+        "TimbermawHold1",
+        "TimbermawHold2",
+        "TowerOfEldara1",
+        "Ursolan1",
+        "Valormok1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 44,
+      "estimatedPeakDecodedBytes": 34430976,
+      "estimatedPeakCompressedMipBytes": 11478912,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 5,
+      "mapName": "Badlands",
+      "displayName": "Badlands",
+      "sourceFile": "Badlands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000816,
+          0.000119,
+          0.769275
+        ],
+        [
+          0.000384,
+          1.001366,
+          -0.378124
+        ]
+      ],
+      "eccScore": 0.772984,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 3
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AgmondsEnd1",
+        "AgmondsEnd2",
+        "AgmondsEnd3",
+        "AgmondsEnd4",
+        "AngorFortress1",
+        "ApocryphansRest1",
+        "BadlandsHighlight",
+        "CampBoff1",
+        "CampBoff2",
+        "CampCagg1",
+        "CampKosh1",
+        "DustwindGulch1",
+        "HammertoesDigsite1",
+        "Kargath1",
+        "LethlorRavine1",
+        "LethlorRavine2",
+        "LethlorRavine3",
+        "LethlorRavine4",
+        "MirageFlats1",
+        "MirageFlats2",
+        "TheDustbowl1",
+        "TheDustbowl2",
+        "TheDustbowl3",
+        "TheDustbowl4",
+        "TheMakersTerrace1",
+        "ValleyOfFangs1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 38,
+      "estimatedPeakDecodedBytes": 30224384,
+      "estimatedPeakCompressedMipBytes": 10076544,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 6,
+      "mapName": "Barrens",
+      "displayName": "Barrens",
+      "sourceFile": "Barren.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766415,
+          -5.8e-05,
+          2.872044
+        ],
+        [
+          0.000172,
+          0.767017,
+          0.300265
+        ]
+      ],
+      "eccScore": 0,
+      "registration": {
+        "samples": 20,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 3,
+        "worstHDPixels": 4
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "Agamagor1",
+        "BaelModan1",
+        "BarrensHighlight",
+        "BlackthornRidge1",
+        "BoulderLodeMine1",
+        "Bramblescar1",
+        "CampTaurajo1",
+        "DreadmistPeak1",
+        "FarWatchPost1",
+        "FieldOfGiants1",
+        "GroldomFarm1",
+        "HonorsStand1",
+        "LushwaterOasis1",
+        "NorthwatchFold1",
+        "RaptorGrounds1",
+        "Ratchet1",
+        "RazorfenDowns1",
+        "RazorfenKraul1",
+        "TheCrossroads1",
+        "TheDryHills1",
+        "TheForgottenPools1",
+        "TheMerchantCoast1",
+        "TheMorshanRampart1",
+        "TheSludgeFen1",
+        "TheStagnantOasis1",
+        "ThornHill1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 38,
+      "estimatedPeakDecodedBytes": 25690112,
+      "estimatedPeakCompressedMipBytes": 8564480,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 7,
+      "mapName": "BlastedLands",
+      "displayName": "BlastedLands",
+      "sourceFile": "BlastedLands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.001049,
+          0.000569,
+          -0.256822
+        ],
+        [
+          -3.7e-05,
+          0.999982,
+          -0.08611
+        ]
+      ],
+      "eccScore": 0.798338,
+      "registration": {
+        "samples": 22,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": "native reveal composition did not fully uncover the zone in game",
+      "files": [
+        "AltarOfStorms1",
+        "BlastedLandsHighlight",
+        "DarkPortal1",
+        "DarkPortal2",
+        "DreadmaulHold1",
+        "DreadmaulPost1",
+        "GarrisonArmory1",
+        "NethergardeKeep1",
+        "RiseOfTheDefiler1",
+        "SerpentsCoil1",
+        "TheTaintedScar1",
+        "TheTaintedScar2",
+        "TheTaintedScar3",
+        "TheTaintedScar4"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 26,
+      "estimatedPeakDecodedBytes": 24444928,
+      "estimatedPeakCompressedMipBytes": 8149184,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 8,
+      "mapName": "BurningSteppes",
+      "displayName": "BurningSteppes",
+      "sourceFile": "BurningSteppes.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000671,
+          -6e-05,
+          0.445513
+        ],
+        [
+          -2e-05,
+          1.00023,
+          0.406948
+        ]
+      ],
+      "eccScore": 0.716148,
+      "registration": {
+        "samples": 15,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AltarOfStorms1",
+        "BlackrockMountain1",
+        "BlackrockMountain2",
+        "BlackrockPass1",
+        "BlackrockPass2",
+        "BlackrockPass3",
+        "BlackrockPass4",
+        "BlackrockStronghold1",
+        "BlackrockStronghold2",
+        "BurningSteppesHighlight",
+        "Dracodar1",
+        "Dracodar2",
+        "Dracodar3",
+        "Dracodar4",
+        "DreadmaulRock1",
+        "MorgansVigil1",
+        "MorgansVigil2",
+        "MorgansVigil3",
+        "MorgansVigil4",
+        "PillarOfAsh1",
+        "PillarOfAsh2",
+        "PillarOfAsh3",
+        "PillarOfAsh4",
+        "RuinsOfThaurissan1",
+        "RuinsOfThaurissan2",
+        "RuinsOfThaurissan3",
+        "RuinsOfThaurissan4",
+        "TerrorWingPath1",
+        "TerrorWingPath2",
+        "TerrorWingPath3",
+        "TerrorWingPath4"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 43,
+      "estimatedPeakDecodedBytes": 27058176,
+      "estimatedPeakCompressedMipBytes": 9021872,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 9,
+      "mapName": "Darkshore",
+      "displayName": "Darkshore",
+      "sourceFile": "darkshore.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000314,
+          0.000267,
+          0.778557
+        ],
+        [
+          -4e-05,
+          0.999982,
+          0.356512
+        ]
+      ],
+      "eccScore": 0.905702,
+      "registration": {
+        "samples": 24,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AmethAran1",
+        "Auberdine1",
+        "BashalAran1",
+        "CliffspringRiver1",
+        "DarkshoreHighlight",
+        "GroveOfTheAncients1",
+        "RemtravelsExcavation1",
+        "RuinsOfMathystra1",
+        "TheMastersGlaive1",
+        "TowerOfAlthalaxx1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 22,
+      "estimatedPeakDecodedBytes": 22282240,
+      "estimatedPeakCompressedMipBytes": 7428000,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 10,
+      "mapName": "DeadwindPass",
+      "displayName": "DeadwindPass",
+      "sourceFile": "deadwindpass.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.998849,
+          -0.00046,
+          2.048352
+        ],
+        [
+          0.000266,
+          0.998906,
+          -0.259378
+        ]
+      ],
+      "eccScore": 0.767286,
+      "registration": {
+        "samples": 16,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "DeadmansCrossing1",
+        "DeadmansCrossing2",
+        "DeadmansCrossing3",
+        "DeadmansCrossing4",
+        "DeadwindPassHighlight"
+      ],
+      "missingNativeRevealPieces": [
+        "KARAZHAN1",
+        "KARAZHAN2",
+        "THEVICE1",
+        "THEVICE2",
+        "THEVICE3",
+        "THEVICE4"
+      ],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 17,
+      "estimatedPeakDecodedBytes": 15204352,
+      "estimatedPeakCompressedMipBytes": 5068592,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 11,
+      "mapName": "Desolace",
+      "displayName": "Desolace",
+      "sourceFile": "Desolace.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.001354,
+          0.00124,
+          -0.304905
+        ],
+        [
+          -0.00015,
+          0.999556,
+          0.429665
+        ]
+      ],
+      "eccScore": 0.656211,
+      "registration": {
+        "samples": 15,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "DesolaceHighlight",
+        "EthelRethor1",
+        "GelkisVillage1",
+        "KodoGraveyard1",
+        "KodoGraveyard2",
+        "KolkarVillage1",
+        "KormeksHut1",
+        "MagramVillage1",
+        "MagramVillage2",
+        "MannorocCoven1",
+        "MannorocCoven2",
+        "MannorocCoven3",
+        "MannorocCoven4",
+        "NijelsPoint1",
+        "RanazjarIsle1",
+        "Sargeron1",
+        "Sargeron2",
+        "ShadowbreakRavine1",
+        "ShadowpreyVillage1",
+        "TethrisAran1",
+        "ThunderAxeFortress1",
+        "ValleyOfSpears1",
+        "ValleyOfSpears2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 35,
+      "estimatedPeakDecodedBytes": 28590080,
+      "estimatedPeakCompressedMipBytes": 9531408,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 12,
+      "mapName": "DunMorogh",
+      "displayName": "DunMorogh",
+      "sourceFile": "DunMorogh.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000596,
+          -0.00025,
+          1.574136
+        ],
+        [
+          -7e-05,
+          0.999009,
+          0.924802
+        ]
+      ],
+      "eccScore": 0.763261,
+      "registration": {
+        "samples": 19,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AmberstillRanch1",
+        "Anvilmar1",
+        "BrewnallVillage1",
+        "ChillBreezeValley1",
+        "ColdridgePass1",
+        "DunMoroghHighlight",
+        "FrostmaneHold1",
+        "Gnomeragon1",
+        "GolBolarQuarry1",
+        "HelmsBedLake1",
+        "IceFlowLake1",
+        "Ironforge1",
+        "Ironforge2",
+        "Kharanos1",
+        "MistyPineRefuge1",
+        "NorthernGateOutpost1",
+        "ShimmerRidge1",
+        "SouthernGateOutpost1",
+        "TheGrizzledDen1",
+        "TheTundridHills1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 32,
+      "estimatedPeakDecodedBytes": 25165824,
+      "estimatedPeakCompressedMipBytes": 8389568,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 13,
+      "mapName": "Durotar",
+      "displayName": "Durotar",
+      "sourceFile": "durotar.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766128,
+          0.000206,
+          0.442597
+        ],
+        [
+          3e-05,
+          0.766694,
+          -0.008191
+        ]
+      ],
+      "eccScore": 0.839738,
+      "registration": {
+        "samples": 22,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "DrygulchRavine1",
+        "DurotarHighlight",
+        "EchoIsles1",
+        "KolkarCrag1",
+        "Orgrimmar1",
+        "Orgrimmar2",
+        "RazorHill1",
+        "RazormaneGrounds1",
+        "SenjinVillage1",
+        "SkullRock1",
+        "ThunderRidge1",
+        "TiragardeKeep1",
+        "ValleyOfTrials1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 25,
+      "estimatedPeakDecodedBytes": 24117248,
+      "estimatedPeakCompressedMipBytes": 8039760,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 14,
+      "mapName": "Duskwood",
+      "displayName": "Duskwood",
+      "sourceFile": "duskwood.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.999998,
+          0.000973,
+          -0.318451
+        ],
+        [
+          -0.000159,
+          0.998931,
+          1.179782
+        ]
+      ],
+      "eccScore": 0.661286,
+      "registration": {
+        "samples": 16,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AddlesStead1",
+        "AddlesStead2",
+        "BrightwoodGrove1",
+        "BrightwoodGrove2",
+        "Darkshire1",
+        "Darkshire2",
+        "Darkshire3",
+        "Darkshire4",
+        "DuskwoodHighlight",
+        "ManorMistmantle1",
+        "RavenHill1",
+        "RavenHillCemetary1",
+        "RavenHillCemetary2",
+        "RavenHillCemetary3",
+        "RavenHillCemetary4",
+        "TheDarkenedBank1",
+        "TheDarkenedBank2",
+        "TheDarkenedBank3",
+        "TheDarkenedBank4",
+        "TheHushedBank1",
+        "TheHushedBank2",
+        "TheRottingOrchard1",
+        "TheYorgenFarmstead1",
+        "TranquilGardensCemetary1",
+        "TwilightGrove1",
+        "TwilightGrove2",
+        "TwilightGrove3",
+        "TwilightGrove4",
+        "VulGolOgreMound1",
+        "VulGolOgreMound2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 42,
+      "estimatedPeakDecodedBytes": 34373632,
+      "estimatedPeakCompressedMipBytes": 11459360,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 15,
+      "mapName": "Dustwallow",
+      "displayName": "Dustwallow",
+      "sourceFile": "dustwallowmarsh.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000676,
+          6.2e-05,
+          -0.040395
+        ],
+        [
+          8.5e-05,
+          0.999941,
+          0.121669
+        ]
+      ],
+      "eccScore": 0.760512,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AlcazIsland1",
+        "BackbayWetlands1",
+        "BackbayWetlands2",
+        "BrackenwallVillage1",
+        "BrackenwallVillage2",
+        "BrackenwallVillage3",
+        "BrackenwallVillage4",
+        "DustwallowHighlight",
+        "TheDenOfFlame1",
+        "TheramoreIsle1",
+        "TheWyrmbog1",
+        "TheWyrmbog2",
+        "WitchHill1",
+        "WitchHill2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 26,
+      "estimatedPeakDecodedBytes": 21831680,
+      "estimatedPeakCompressedMipBytes": 7278272,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 16,
+      "mapName": "EasternPlaguelands",
+      "displayName": "EasternPlaguelands",
+      "sourceFile": "Eastern_Plaguelands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000292,
+          0.001382,
+          0.515931
+        ],
+        [
+          0.000221,
+          0.999988,
+          0.630468
+        ]
+      ],
+      "eccScore": 0.753166,
+      "registration": {
+        "samples": 17,
+        "medianHDPixels": [
+          -1,
+          -1
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BlackwoodLake1",
+        "CorinsCrossing1",
+        "CrownGuardTower1",
+        "Darrowshire1",
+        "EasternPlaguelandsHighlight",
+        "EastwallTower1",
+        "LakeMereldar1",
+        "LightsHopeChapel1",
+        "Northdale1",
+        "NorthpassTower1",
+        "PestilentScar1",
+        "Plaguewood1",
+        "Plaguewood2",
+        "Plaguewood3",
+        "Plaguewood4",
+        "QuelLithienLodge1",
+        "Stratholme1",
+        "Terrordale1",
+        "TheFungalVale1",
+        "TheInfectisScar1",
+        "TheInfectisScar2",
+        "TheMarrisStead1",
+        "TheNoxiousGlade1",
+        "TheUndercroft1",
+        "ThondrorilRiver1",
+        "ThondrorilRiver2",
+        "TyrsHand1",
+        "ZulMashar1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 40,
+      "estimatedPeakDecodedBytes": 37191680,
+      "estimatedPeakCompressedMipBytes": 12398624,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 17,
+      "mapName": "Elwynn",
+      "displayName": "Elwynn",
+      "sourceFile": "elwynn.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766324,
+          -0.00017,
+          0.678902
+        ],
+        [
+          0.000354,
+          0.764264,
+          -0.356286
+        ]
+      ],
+      "eccScore": 0,
+      "registration": {
+        "samples": 12,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "themed-unexplored-master-with-native-reveal",
+      "fogOverrideReason": null,
+      "files": [
+        "BrackwellPumpkinPatch1",
+        "CrystalLake1",
+        "EastvaleLoggingCamp1",
+        "ElwynnHighlight",
+        "FargodeepMine1",
+        "ForestsEdge1",
+        "ForestsEdge2",
+        "Goldshire1",
+        "JerodsLanding1",
+        "NorthshireValley1",
+        "RidgepointTower1",
+        "RidgepointTower2",
+        "StoneCairnLake1",
+        "StoneCairnLake2",
+        "Stormwind1",
+        "Stormwind2",
+        "Stormwind3",
+        "Stormwind4",
+        "TowerOfAzora1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 31,
+      "estimatedPeakDecodedBytes": 29622272,
+      "estimatedPeakCompressedMipBytes": 9874992,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      },
+      "unexploredSource": {
+        "root": "Media/Textures/Maps/World/_Unexplored/Elwynn",
+        "file": "Elwynn.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": [
+          [
+            0.766324,
+            -0.00017,
+            0.678902
+          ],
+          [
+            0.000354,
+            0.764264,
+            -0.356286
+          ]
+        ]
+      }
+    },
+    {
+      "order": 18,
+      "mapName": "Felwood",
+      "displayName": "Felwood",
+      "sourceFile": "felwood.png",
+      "sourceWidth": 1535,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": -2,
+      "detailScaleVsNative": 1.532,
+      "warpOutputToMaster": [
+        [
+          0.765833,
+          2e-06,
+          0.762267
+        ],
+        [
+          3.4e-05,
+          0.765462,
+          0.349437
+        ]
+      ],
+      "eccScore": 0.804975,
+      "registration": {
+        "samples": 24,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 5
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BloodvenomFalls1",
+        "DeadwoodVillage1",
+        "EmeraldSanctuary1",
+        "FelpawVillage1",
+        "FelwoodHighlight",
+        "IrontreeWoods1",
+        "JadefireGlen1",
+        "JadefireRun1",
+        "Jaedenar1",
+        "MorlosAran1",
+        "RuinsOfConstellas1",
+        "ShatterScarVale1",
+        "TalonbranchGlade1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 25,
+      "estimatedPeakDecodedBytes": 24903680,
+      "estimatedPeakCompressedMipBytes": 8301904,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 19,
+      "mapName": "Feralas",
+      "displayName": "Feralas",
+      "sourceFile": "Feralas.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.00032,
+          0.000818,
+          0.85205
+        ],
+        [
+          0.000573,
+          1.001379,
+          -0.19746
+        ]
+      ],
+      "eccScore": 0.805761,
+      "registration": {
+        "samples": 21,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "CampMojache1",
+        "DireMaul1",
+        "DreamBough1",
+        "FeralasHighlight",
+        "FeralScarVale1",
+        "FrayfeatherHighlands1",
+        "GordunniOutpost1",
+        "GrimtotemCompound1",
+        "IsleOfDread1",
+        "IsleOfDread2",
+        "LowerWilds1",
+        "Oneiros1",
+        "RuinsOfIsildien1",
+        "RuinsOfRavenwind1",
+        "SardorIsle1",
+        "TheForgottenCoast1",
+        "TheForgottenCoast2",
+        "TheTwinColossals1",
+        "TheTwinColossals2",
+        "TheWrithingDeep1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 32,
+      "estimatedPeakDecodedBytes": 27131904,
+      "estimatedPeakCompressedMipBytes": 9044992,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 20,
+      "mapName": "Hilsbrad",
+      "displayName": "Hilsbrad",
+      "sourceFile": "Hillsbrad.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.001322,
+          -0.000595,
+          1.041518
+        ],
+        [
+          -0.000286,
+          0.999171,
+          0.992226
+        ]
+      ],
+      "eccScore": 0.745176,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 3,
+        "worstHDPixels": 4
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AzureloadMine1",
+        "DarrowHill1",
+        "DunGarok1",
+        "DunGarok2",
+        "DurnholdeKeep1",
+        "DurnholdeKeep2",
+        "DurnholdeKeep3",
+        "DurnholdeKeep4",
+        "EasternStrand1",
+        "EasternStrand2",
+        "HillsbradFields1",
+        "HillsbradFields2",
+        "HillsbradFields3",
+        "HillsbradFields4",
+        "HilsbradHighlight",
+        "NethanderStead1",
+        "PurgationIsle1",
+        "SouthpointTower1",
+        "SouthpointTower2",
+        "Southshore1",
+        "Southshore2",
+        "TarrenMill1",
+        "TarrenMill2",
+        "WesternStrand1",
+        "WesternStrand2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 37,
+      "estimatedPeakDecodedBytes": 27361280,
+      "estimatedPeakCompressedMipBytes": 9122000,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 21,
+      "mapName": "Hinterlands",
+      "displayName": "Hinterlands",
+      "sourceFile": "Hinterlands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000672,
+          -0.000106,
+          0.426375
+        ],
+        [
+          -5.4e-05,
+          1.000052,
+          0.225561
+        ]
+      ],
+      "eccScore": 0.835885,
+      "registration": {
+        "samples": 23,
+        "medianHDPixels": [
+          -1,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": "native reveal composition did not fully uncover the zone in game",
+      "files": [
+        "AeriePeak1",
+        "AgolWatha1",
+        "HinterlandsHighlight",
+        "Hiriwatha1",
+        "JinthaAlor1",
+        "JinthaAlor2",
+        "PlaguemistRavine1",
+        "QuelDanilLodge1",
+        "Seradane1",
+        "Seradane2",
+        "Seradane3",
+        "Seradane4",
+        "ShadraAlor1",
+        "ShaolWatha1",
+        "ShaolWatha2",
+        "SkulkRock1",
+        "TheAltarOfZul1",
+        "TheCreepingRuin1",
+        "TheOverlookCliffs1",
+        "TheOverlookCliffs2",
+        "ValorwindLake1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 33,
+      "estimatedPeakDecodedBytes": 28327936,
+      "estimatedPeakCompressedMipBytes": 9443856,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 22,
+      "mapName": "LochModan",
+      "displayName": "LochModan",
+      "sourceFile": "LochModan.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.001675,
+          0.000691,
+          0.024942
+        ],
+        [
+          -0.000122,
+          0.999987,
+          0.702973
+        ]
+      ],
+      "eccScore": 0.710128,
+      "registration": {
+        "samples": 17,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 3,
+        "worstHDPixels": 4
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "GrizzlepawRidge1",
+        "GrizzlepawRidge2",
+        "GrizzlepawRidge3",
+        "GrizzlepawRidge4",
+        "IronbandsExcavationSite1",
+        "IronbandsExcavationSite2",
+        "LochModanHighlight",
+        "MogroshStronghold1",
+        "MogroshStronghold2",
+        "NorthGatePass1",
+        "NorthGatePass2",
+        "SilverStreamMine1",
+        "SilverStreamMine2",
+        "StonesplinterValley1",
+        "StonesplinterValley2",
+        "StonewroughtDam1",
+        "StonewroughtDam2",
+        "TheFarstriderLodge1",
+        "TheFarstriderLodge2",
+        "TheFarstriderLodge3",
+        "TheFarstriderLodge4",
+        "TheLoch1",
+        "TheLoch2",
+        "TheLoch3",
+        "TheLoch4",
+        "Thelsamar1",
+        "ValleyOfKings1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 39,
+      "estimatedPeakDecodedBytes": 29294592,
+      "estimatedPeakCompressedMipBytes": 9766416,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 23,
+      "mapName": "Moonglade",
+      "displayName": "Moonglade",
+      "sourceFile": "Moonglade.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.001947,
+          -0.000596,
+          0.426191
+        ],
+        [
+          -0.000511,
+          1.000188,
+          0.676011
+        ]
+      ],
+      "eccScore": 0.796237,
+      "registration": {
+        "samples": 19,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 3
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "LakeEluneara1",
+        "LakeEluneara2",
+        "LakeEluneara3",
+        "LakeEluneara4",
+        "LakeEluneara5",
+        "LakeEluneara6",
+        "MoongladeHighlight"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 19,
+      "estimatedPeakDecodedBytes": 17563648,
+      "estimatedPeakCompressedMipBytes": 5855120,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 24,
+      "mapName": "Mulgore",
+      "displayName": "Mulgore",
+      "sourceFile": "mulgore.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.767015,
+          0.00011,
+          0.149923
+        ],
+        [
+          5.8e-05,
+          0.766434,
+          -0.0451
+        ]
+      ],
+      "eccScore": 0.77756,
+      "registration": {
+        "samples": 20,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BaeldunDigsite1",
+        "BloodhoofVillage1",
+        "MulgoreHighlight",
+        "PalemaneRock1",
+        "RavagedCaravan1",
+        "RedCloudMesa1",
+        "RedCloudMesa2",
+        "RedRocks1",
+        "TheGoldenPlains1",
+        "TheRollingPlains1",
+        "TheVentureCoMine1",
+        "Thunderbluff1",
+        "Thunderbluff2",
+        "ThunderhornWaterWell1",
+        "WildmaneWaterWell1",
+        "WindfuryRidge1",
+        "WinterhoofWaterWell1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 29,
+      "estimatedPeakDecodedBytes": 25296896,
+      "estimatedPeakCompressedMipBytes": 8433200,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 25,
+      "mapName": "Redridge",
+      "displayName": "Redridge",
+      "sourceFile": "redbridge.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.767087,
+          -2.6e-05,
+          2.066549
+        ],
+        [
+          0.000521,
+          0.76817,
+          -0.439177
+        ]
+      ],
+      "eccScore": 0,
+      "registration": {
+        "samples": 17,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AlthersMill1",
+        "AlthersMill2",
+        "GalardellValley1",
+        "LakeEverstill1",
+        "LakeEverstill2",
+        "LakeEverstill3",
+        "LakeEverstill4",
+        "LakeEverstill5",
+        "LakeEverstill6",
+        "LakeridgeHighway1",
+        "LakeridgeHighway2",
+        "LakeridgeHighway3",
+        "LakeridgeHighway4",
+        "Lakeshire1",
+        "Lakeshire2",
+        "RedridgeCanyons1",
+        "RedridgeCanyons2",
+        "RedridgeHighlight",
+        "RendersCamp1",
+        "RendersCamp2",
+        "RendersValley1",
+        "RendersValley2",
+        "Stonewatch1",
+        "Stonewatch2",
+        "StonewatchFalls1",
+        "StonewatchFalls2",
+        "ThreeCorners1",
+        "ThreeCorners2",
+        "ThreeCorners3",
+        "ThreeCorners4"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 42,
+      "estimatedPeakDecodedBytes": 31539200,
+      "estimatedPeakCompressedMipBytes": 10514816,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 26,
+      "mapName": "SearingGorge",
+      "displayName": "SearingGorge",
+      "sourceFile": "SearingGorge.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.99772,
+          -0.000564,
+          4.109161
+        ],
+        [
+          -0.001098,
+          0.999099,
+          1.665414
+        ]
+      ],
+      "eccScore": 0.432089,
+      "registration": {
+        "samples": 7,
+        "medianHDPixels": [
+          2,
+          0
+        ],
+        "p90HDPixels": 4,
+        "worstHDPixels": 4
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": null,
+      "files": [
+        "BlackcharCave1",
+        "BlackcharCave2",
+        "DustfireValley1",
+        "DustfireValley2",
+        "DustfireValley3",
+        "DustfireValley4",
+        "FirewatchRidge1",
+        "FirewatchRidge2",
+        "FirewatchRidge3",
+        "FirewatchRidge4",
+        "GrimsiltDigSite1",
+        "GrimsiltDigSite2",
+        "SearingGorgeHighlight",
+        "TannerCamp1",
+        "TannerCamp2",
+        "TheCauldron1",
+        "TheCauldron2",
+        "TheCauldron3",
+        "TheCauldron4",
+        "TheSeaOfCinders1",
+        "TheSeaOfCinders2",
+        "TheSeaOfCinders3",
+        "TheSeaOfCinders4"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 35,
+      "estimatedPeakDecodedBytes": 28901376,
+      "estimatedPeakCompressedMipBytes": 9635024,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 27,
+      "mapName": "Silithus",
+      "displayName": "Silithus",
+      "sourceFile": "Silithus.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.765035,
+          0.000957,
+          0.371593
+        ],
+        [
+          -0.000468,
+          0.766172,
+          -1.125713
+        ]
+      ],
+      "eccScore": 0.17462,
+      "registration": {
+        "samples": 1,
+        "medianHDPixels": [
+          -14,
+          19
+        ],
+        "p90HDPixels": 19,
+        "worstHDPixels": 19
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": null,
+      "files": [
+        "HiveAshi1",
+        "HiveAshi2",
+        "HiveAshi3",
+        "HiveAshi4",
+        "HiveRegal1",
+        "HiveRegal2",
+        "HiveRegal3",
+        "HiveRegal4",
+        "HiveZora1",
+        "HiveZora2",
+        "HiveZora3",
+        "HiveZora4",
+        "SilithusHighlight",
+        "SouthwindVillage1",
+        "SouthwindVillage2",
+        "SouthwindVillage3",
+        "SouthwindVillage4",
+        "TheCrystalVale1",
+        "TheCrystalVale2",
+        "TheCrystalVale3",
+        "TheCrystalVale4",
+        "TheScarabWall1",
+        "TheScarabWall2",
+        "TwilightBaseCamp1",
+        "TwilightBaseCamp2"
+      ],
+      "missingNativeRevealPieces": [
+        "HiveAshi2",
+        "HiveAshi3",
+        "HiveAshi4",
+        "HiveRegal3",
+        "HiveRegal4",
+        "HiveZora2",
+        "HiveZora3",
+        "HiveZora4",
+        "SouthwindVillage2",
+        "SouthwindVillage3",
+        "SouthwindVillage4",
+        "TheCrystalVale2",
+        "TheCrystalVale3",
+        "TheCrystalVale4",
+        "TheScarabWall2",
+        "TwilightBaseCamp2"
+      ],
+      "transparentRevealSuppressions": [
+        "HiveAshi2",
+        "HiveAshi3",
+        "HiveAshi4",
+        "HiveRegal3",
+        "HiveRegal4",
+        "HiveZora2",
+        "HiveZora3",
+        "HiveZora4",
+        "SouthwindVillage2",
+        "SouthwindVillage3",
+        "SouthwindVillage4",
+        "TheCrystalVale2",
+        "TheCrystalVale3",
+        "TheCrystalVale4",
+        "TheScarabWall2",
+        "TwilightBaseCamp2"
+      ],
+      "runtimeFileCount": 37,
+      "estimatedPeakDecodedBytes": 28246016,
+      "estimatedPeakCompressedMipBytes": 9416624,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 28,
+      "mapName": "Silverpine",
+      "displayName": "Silverpine",
+      "sourceFile": "silverpine.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766963,
+          -4.9e-05,
+          0.656441
+        ],
+        [
+          0.000109,
+          0.767118,
+          -0.203945
+        ]
+      ],
+      "eccScore": 0.800117,
+      "registration": {
+        "samples": 21,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "Ambermill1",
+        "BerensPeril1",
+        "DeepElemMine1",
+        "FenrisIsle1",
+        "MaldensOrchard1",
+        "NorthTidesHollow1",
+        "OlsensFarthing1",
+        "PyrewoodVillage1",
+        "ShadowfangKeep1",
+        "SilverpineHighlight",
+        "TheDeadField1",
+        "TheDecrepitFerry1",
+        "TheGreymaneWall1",
+        "TheSepulcher1",
+        "TheShiningStrand1",
+        "TheSkitteringDark1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 28,
+      "estimatedPeakDecodedBytes": 27525120,
+      "estimatedPeakCompressedMipBytes": 9175808,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 29,
+      "mapName": "StonetalonMountains",
+      "displayName": "StonetalonMountains",
+      "sourceFile": "Stonetalon_Mountains.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000429,
+          -0.000244,
+          1.691676
+        ],
+        [
+          -4.1e-05,
+          0.999205,
+          0.325617
+        ]
+      ],
+      "eccScore": 0.902272,
+      "registration": {
+        "samples": 24,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BoulderslideRavine1",
+        "CampAparaje1",
+        "GrimtotemPost1",
+        "Malakajin1",
+        "MirkfallonLake1",
+        "SishirCanyon1",
+        "StonetalonMountainsHighlight",
+        "StonetalonPeak1",
+        "StonetalonPeak2",
+        "SunRockRetreat1",
+        "TheCharredVale1",
+        "TheCharredVale2",
+        "WebwinderPath1",
+        "WebwinderPath2",
+        "WebwinderPath3",
+        "WebwinderPath4",
+        "WindshearCrag1",
+        "WindshearCrag2",
+        "WindshearCrag3",
+        "WindshearCrag4"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 32,
+      "estimatedPeakDecodedBytes": 22970368,
+      "estimatedPeakCompressedMipBytes": 7658080,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 30,
+      "mapName": "Stranglethorn",
+      "displayName": "Stranglethorn",
+      "sourceFile": "Stranglethorn.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000708,
+          0.000747,
+          0.012361
+        ],
+        [
+          0.000353,
+          1.000628,
+          -0.014844
+        ]
+      ],
+      "eccScore": 0.796158,
+      "registration": {
+        "samples": 21,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BalalRuins1",
+        "BaliamahRuins1",
+        "BloodsailCompound1",
+        "BootyBay1",
+        "CrystalveinMine1",
+        "GromgolBaseCamp1",
+        "JagueroIsle1",
+        "KalaiRuins1",
+        "KurzensCompound1",
+        "LakeNazferiti1",
+        "MistvaleValley1",
+        "MizjahRuins1",
+        "MoshoggOgreMound1",
+        "NekmaniWellspring1",
+        "NesingwarysExpedition1",
+        "RebelCamp1",
+        "RuinsOfAboraz1",
+        "RuinsOfJubuwal1",
+        "RuinsOfZulkunda1",
+        "RuinsOfZulmamwe1",
+        "StranglethornHighlight",
+        "TheArena1",
+        "TheVileReef1",
+        "VentureCoBaseCamp1",
+        "WildShore1",
+        "ZiatajaiRuins1",
+        "ZulGurub1",
+        "ZuuldaiaRuins1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 40,
+      "estimatedPeakDecodedBytes": 26476544,
+      "estimatedPeakCompressedMipBytes": 8826656,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 31,
+      "mapName": "SwampOfSorrows",
+      "displayName": "SwampOfSorrows",
+      "sourceFile": "swamp_of_sorrows.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000162,
+          0.000314,
+          0.444167
+        ],
+        [
+          0.000351,
+          0.999044,
+          0.602793
+        ]
+      ],
+      "eccScore": 0.640737,
+      "registration": {
+        "samples": 15,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "FallowSanctuary1",
+        "FallowSanctuary2",
+        "FallowSanctuary3",
+        "FallowSanctuary4",
+        "IthariussCave1",
+        "MistyreedStrand1",
+        "MistyreedStrand2",
+        "MistyreedStrand3",
+        "MistyValley1",
+        "MistyValley2",
+        "PoolOfTears1",
+        "PoolOfTears2",
+        "PoolOfTears3",
+        "PoolOfTears4",
+        "Sorrowmurk1",
+        "Sorrowmurk2",
+        "SplinterspearJunction1",
+        "SplinterspearJunction2",
+        "Stagalbog1",
+        "Stagalbog2",
+        "Stonard1",
+        "Stonard2",
+        "Stonard3",
+        "Stonard4",
+        "SwampOfSorrowsHighlight",
+        "TheHarborage1",
+        "TheShiftingMire1",
+        "TheShiftingMire2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 40,
+      "estimatedPeakDecodedBytes": 30441472,
+      "estimatedPeakCompressedMipBytes": 10148608,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 32,
+      "mapName": "Tanaris",
+      "displayName": "Tanaris",
+      "sourceFile": "Tanaris.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.998766,
+          3.2e-05,
+          3.140501
+        ],
+        [
+          -0.000444,
+          0.999137,
+          0.976845
+        ]
+      ],
+      "eccScore": 0.771684,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 3
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AbyssalSands1",
+        "BrokenPillar1",
+        "CavernsOfTime1",
+        "DunemaulCompound1",
+        "EastmoonRuins1",
+        "Gadgetzan1",
+        "LandsEndBeach1",
+        "LostRiggerCove1",
+        "NoonshadeRuins1",
+        "SandsorrowWatch1",
+        "SouthbreakShore1",
+        "SouthmoonRuins1",
+        "SteamwheedlePort1",
+        "TanarisHighlight",
+        "TheGapingChasm1",
+        "TheNoxiousLair1",
+        "ThistleshrubValley1",
+        "ValleyOfTheWatchers1",
+        "WaterspringField1",
+        "ZalashjisDen1",
+        "ZulFarrak1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 33,
+      "estimatedPeakDecodedBytes": 32243712,
+      "estimatedPeakCompressedMipBytes": 10748816,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 33,
+      "mapName": "Teldrassil",
+      "displayName": "Teldrassil",
+      "sourceFile": "Teldrassil.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000063,
+          1e-05,
+          0.842464
+        ],
+        [
+          0.000222,
+          1.000307,
+          -0.384279
+        ]
+      ],
+      "eccScore": 0.687762,
+      "registration": {
+        "samples": 19,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "BanethilHollow1",
+        "Darnassus1",
+        "Darnassus2",
+        "Dolanaar1",
+        "GnarlpineHold1",
+        "LakeAlameth1",
+        "PoolsOfArlithrien1",
+        "RuttheranVillage1",
+        "Shadowglen1",
+        "StarbreezeVillage1",
+        "TeldrassilHighlight",
+        "TheOracleGlade1",
+        "WellspringLake1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 25,
+      "estimatedPeakDecodedBytes": 22282240,
+      "estimatedPeakCompressedMipBytes": 7428144,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 34,
+      "mapName": "ThousandNeedles",
+      "displayName": "ThousandNeedles",
+      "sourceFile": "Thousandneedles.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000445,
+          0.000336,
+          0.398446
+        ],
+        [
+          0.0005,
+          0.998475,
+          0.262819
+        ]
+      ],
+      "eccScore": 0.769982,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 3
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "CampEthok1",
+        "CampEthok2",
+        "CampEthok3",
+        "CampEthok4",
+        "DarkcloudPinnacle1",
+        "FreewindPost1",
+        "Highperch1",
+        "SplithoofCrag1",
+        "TheGreatLift1",
+        "TheScreechingCanyon1",
+        "TheShimmeringFlats1",
+        "TheShimmeringFlats2",
+        "TheShimmeringFlats3",
+        "TheShimmeringFlats4",
+        "ThousandNeedlesHighlight",
+        "WindbreakCanyon1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 28,
+      "estimatedPeakDecodedBytes": 23789568,
+      "estimatedPeakCompressedMipBytes": 7930720,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 35,
+      "mapName": "Tirisfal",
+      "displayName": "Tirisfal",
+      "sourceFile": "Tirisfal.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          0.999015,
+          0.000819,
+          2.256735
+        ],
+        [
+          0.000188,
+          1.001663,
+          -0.019138
+        ]
+      ],
+      "eccScore": 0.770204,
+      "registration": {
+        "samples": 19,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AgamandMills1",
+        "BalnirFarmstead1",
+        "BrightwaterLake1",
+        "BrightwaterLake2",
+        "Brill1",
+        "Bulwark1",
+        "ColdHearthManor1",
+        "CrusaderOutpost1",
+        "Deathknell1",
+        "GarrensHaunt1",
+        "Monastary1",
+        "NightmareVale1",
+        "RuinsOfLordaeron1",
+        "RuinsOfLordaeron2",
+        "ScarletWatchPost1",
+        "SollidenFarmstead1",
+        "StillwaterPond1",
+        "TirisfalHighlight",
+        "VenomwebVale1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 31,
+      "estimatedPeakDecodedBytes": 27918336,
+      "estimatedPeakCompressedMipBytes": 9307088,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 36,
+      "mapName": "UngoroCrater",
+      "displayName": "UngoroCrater",
+      "sourceFile": "UngoroCrater.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000885,
+          0.000186,
+          0.08452
+        ],
+        [
+          -7.8e-05,
+          0.9997,
+          0.429458
+        ]
+      ],
+      "eccScore": 0.800392,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 3
+      },
+      "preserveNativeFog": false,
+      "fogMode": "png-only-explored",
+      "fogOverrideReason": "native reveal composition did not fully uncover the zone in game",
+      "files": [
+        "FirePlumeRidge1",
+        "FirePlumeRidge2",
+        "FirePlumeRidge3",
+        "FirePlumeRidge4",
+        "GolakkaHotSprings1",
+        "GolakkaHotSprings2",
+        "GolakkaHotSprings3",
+        "GolakkaHotSprings4",
+        "IronstonePlateau1",
+        "IronstonePlateau2",
+        "IronstonePlateau3",
+        "IronstonePlateau4",
+        "LakkariTarPits1",
+        "LakkariTarPits2",
+        "LakkariTarPits3",
+        "LakkariTarPits4",
+        "LakkariTarPits5",
+        "LakkariTarPits6",
+        "TerrorRun1",
+        "TerrorRun2",
+        "TerrorRun3",
+        "TerrorRun4",
+        "TheMarshlands1",
+        "TheMarshlands2",
+        "TheMarshlands3",
+        "TheMarshlands4",
+        "TheSlitheringScar1",
+        "TheSlitheringScar2",
+        "TheSlitheringScar3",
+        "TheSlitheringScar4",
+        "UngoroCraterHighlight"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 43,
+      "estimatedPeakDecodedBytes": 25542656,
+      "estimatedPeakCompressedMipBytes": 8516464,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": "Versions through 0.5.1 remained partially unexplored; 0.5.2 adds the client UnGoroCrater alias and awaits full-restart validation."
+      }
+    },
+    {
+      "order": 37,
+      "mapName": "WesternPlaguelands",
+      "displayName": "WesternPlaguelands",
+      "sourceFile": "WesternPlaguelands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000983,
+          0.000679,
+          -0.272702
+        ],
+        [
+          -3.8e-05,
+          0.999826,
+          0.272432
+        ]
+      ],
+      "eccScore": 0.831291,
+      "registration": {
+        "samples": 22,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 1,
+        "worstHDPixels": 1
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "CaerDarrow1",
+        "DalsonsTears1",
+        "DarrowmereLake1",
+        "DarrowmereLake2",
+        "DarrowmereLake3",
+        "DarrowmereLake4",
+        "FelstoneField1",
+        "GahrronsWithering1",
+        "Hearthglen1",
+        "Hearthglen2",
+        "Hearthglen3",
+        "Hearthglen4",
+        "NorthridgeLumberCamp1",
+        "RuinsOfAndorhol1",
+        "RuinsOfAndorhol2",
+        "SorrowHill1",
+        "SorrowHill2",
+        "TheBulwark1",
+        "TheWeepingCave1",
+        "TheWrithingHaunt1",
+        "ThondrorilRiver1",
+        "ThondrorilRiver2",
+        "WesternPlaguelandsHighlight"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 35,
+      "estimatedPeakDecodedBytes": 28213248,
+      "estimatedPeakCompressedMipBytes": 9405840,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 38,
+      "mapName": "Westfall",
+      "displayName": "Westfall",
+      "sourceFile": "Westfall.png",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 1.533,
+      "warpOutputToMaster": [
+        [
+          0.766095,
+          -0.000519,
+          1.238846
+        ],
+        [
+          0.000285,
+          0.76574,
+          0.162928
+        ]
+      ],
+      "eccScore": 0.702631,
+      "registration": {
+        "samples": 18,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 3,
+        "worstHDPixels": 8
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AlexstonFarmstead1",
+        "AlexstonFarmstead2",
+        "DemontsPlace1",
+        "FurlbrowsPumpkinFarm1",
+        "GoldCoastQuarry1",
+        "JangolodeMine1",
+        "Moonbrook1",
+        "SaldeansFarm1",
+        "SentinelHill1",
+        "TheDaggerHills1",
+        "TheDeadAcre1",
+        "TheDustPlains1",
+        "TheDustPlains2",
+        "TheJansenStead1",
+        "TheMolsenFarm1",
+        "WestfallHighlight",
+        "WestfallLighthouse1",
+        "WestfallLighthouse2"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 30,
+      "estimatedPeakDecodedBytes": 28049408,
+      "estimatedPeakCompressedMipBytes": 9350784,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 39,
+      "mapName": "Wetlands",
+      "displayName": "Wetlands",
+      "sourceFile": "Wetlands.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.00064,
+          5.4e-05,
+          0.21103
+        ],
+        [
+          9.3e-05,
+          0.99984,
+          0.332002
+        ]
+      ],
+      "eccScore": 0.750656,
+      "registration": {
+        "samples": 21,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 2
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "AngerfangEncampment1",
+        "BlackChannelMarsh1",
+        "BluegillMarsh1",
+        "DireforgeHill1",
+        "DunModr1",
+        "GrimBatol1",
+        "GrimBatol2",
+        "GrimBatol3",
+        "GrimBatol4",
+        "IronbeardsTomb1",
+        "MenethilHarbor1",
+        "MosshideFen1",
+        "RaptorRidge1",
+        "SaltsprayGlen1",
+        "SundownMarsh1",
+        "SundownMarsh2",
+        "TheGreenBelt1",
+        "ThelganRock1",
+        "WetlandsHighlight",
+        "WhelgarsExcavationSite1"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 32,
+      "estimatedPeakDecodedBytes": 29622272,
+      "estimatedPeakCompressedMipBytes": 9875008,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    },
+    {
+      "order": 40,
+      "mapName": "Winterspring",
+      "displayName": "Winterspring",
+      "sourceFile": "Winterspring.png",
+      "sourceWidth": 2004,
+      "sourceHeight": 1336,
+      "sourceMode": "RGB",
+      "sourceAspectErrorTwicePixels": 0,
+      "detailScaleVsNative": 2.0,
+      "warpOutputToMaster": [
+        [
+          1.000216,
+          0.000212,
+          1.082898
+        ],
+        [
+          -0.000181,
+          0.999195,
+          1.177165
+        ]
+      ],
+      "eccScore": 0.799652,
+      "registration": {
+        "samples": 21,
+        "medianHDPixels": [
+          0,
+          0
+        ],
+        "p90HDPixels": 2,
+        "worstHDPixels": 24
+      },
+      "preserveNativeFog": true,
+      "fogMode": "native-active-zone-fallback",
+      "fogOverrideReason": null,
+      "files": [
+        "DarkwhisperGorge1",
+        "Everlook1",
+        "FrostfireHotSprings1",
+        "FrostsaberRock1",
+        "FrostwhisperGorge1",
+        "IceThistleHills1",
+        "LakeKelTheril1",
+        "Mazthoril1",
+        "OwlWingThicket1",
+        "StarfallVillage1",
+        "TheHiddenGrove1",
+        "TimbermawPost1",
+        "WinterfallVillage1",
+        "WinterspringHighlight"
+      ],
+      "missingNativeRevealPieces": [],
+      "transparentRevealSuppressions": [],
+      "runtimeFileCount": 26,
+      "estimatedPeakDecodedBytes": 24903680,
+      "estimatedPeakCompressedMipBytes": 8301952,
+      "runtimeIntegrated": true,
+      "offlineValidation": "PASS",
+      "inGameValidation": {
+        "status": "NOT_TESTED",
+        "validatedBy": "user",
+        "date": null,
+        "notes": ""
+      }
+    }
+  ]
+}

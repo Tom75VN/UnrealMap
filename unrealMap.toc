@@ -1,0 +1,17 @@
+## Interface: 11200
+## Title: |cffffffffUnreal |cfff5ae0aMap
+## Notes: High-definition map texture replacement, with an optional fog-of-war reveal.
+## Author: Thomas
+## Version: 0.5.13
+## SavedVariables: unrealMapDB
+
+Locale.lua
+Locales\enUS.lua
+Locales\ruRU.lua
+Locales\zhCN.lua
+MapOverlayData.lua
+DungeonMapData.lua
+RaidMapData.lua
+unrealMap.lua
+Settings.lua
+SupportPopup.lua

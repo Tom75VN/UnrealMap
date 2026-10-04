@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "root": "D:/Development/unrealUI_data/WorldMap/#Dungeons",
+    "role": "user-supplied compressed runtime output",
+    "provenance": "supplied by the user from the local WorldMap export; custom Turtle WoW folders prefixed turtle_ are excluded",
+    "licenseOrPermission": "supplied by the user for this local integration; redistribution rights are not documented"
+  },
+  "runtime": {
+    "activeFormat": "BLP2 DXT5",
+    "encoding": "BLP2 encoding 2, alpha depth 8, alpha encoding 7",
+    "tileCountPerMap": 12,
+    "dimensionsPerTile": "512x512",
+    "grid": "4 columns x 3 rows, row-major",
+    "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Dungeons/{mapName}/Dungeon{mapName}{1..12}",
+    "rename": "the Dungeon basename prefix prevents collisions with shipped world-overlay textures; source pixels and BLP payloads are copied unchanged",
+    "exploration": "none",
+    "maximumSimultaneouslyBoundTiles": 12,
+    "estimatedPeakDecodedBytes": 12582912,
+    "startupBindings": 0,
+    "addonOwnedTextureRegions": 0,
+    "nativeTextureRegionsReused": "WorldMapDetailTile1 through WorldMapDetailTile12"
+  },
+  "selection": {
+    "preferred": "the exact dungeon or floor key returned by GetMapInfo",
+    "fallback": "the default map for a party-instance name returned by GetInstanceInfo or the available location-text APIs",
+    "persistence": "the last confirmed dungeon map is retained only while IsInInstance reports a party instance",
+    "manualFallback": "/umap dungeon <mapName> while the world map is closed; /umap dungeon off clears it",
+    "unsafeOperations": "no inferred internal map ID is passed to SetMapZoom"
+  },
+  "dungeons": [
+    {
+      "id": "blackfathom-deeps",
+      "name": "Blackfathom Deeps",
+      "defaultMap": "BlackFathomDeeps",
+      "maps": ["BlackFathomDeeps"],
+      "aliases": ["Blackfathom Deeps", "BlackFathomDeeps", "Непроглядная Пучина", "黑暗深渊"]
+    },
+    {
+      "id": "blackrock-depths",
+      "name": "Blackrock Depths",
+      "defaultMap": "BlackrockDepths",
+      "maps": ["BlackrockDepths", "BlackrockDepths2f"],
+      "aliases": ["Blackrock Depths", "Глубины Черной горы", "黑石深渊"]
+    },
+    {
+      "id": "blackrock-spire",
+      "name": "Blackrock Spire",
+      "defaultMap": "BlackrockSpire",
+      "maps": ["BlackrockSpire", "BlackrockSpire2f", "BlackrockSpire3f", "BlackrockSpire4f", "BlackrockSpire5f", "BlackrockSpire6f", "BlackrockSpire7f"],
+      "aliases": ["Blackrock Spire", "Lower Blackrock Spire", "Upper Blackrock Spire", "Пик Черной горы", "黑石塔"]
+    },
+    {
+      "id": "deadmines",
+      "name": "The Deadmines",
+      "defaultMap": "TheDeadmines",
+      "maps": ["DeadminesEntrance", "TheDeadmines"],
+      "aliases": ["The Deadmines", "Deadmines", "Мертвые копи", "死亡矿井"]
+    },
+    {
+      "id": "dire-maul",
+      "name": "Dire Maul",
+      "defaultMap": "DireMaul",
+      "maps": ["DireMaul", "DireMaul2f", "DireMaul3f", "DireMaul4f", "DireMaul5f", "DireMaul6f", "DireMaulEntrance"],
+      "aliases": ["Dire Maul", "Забытый Город", "厄运之槌"]
+    },
+    {
+      "id": "gnomeregan",
+      "name": "Gnomeregan",
+      "defaultMap": "Gnomeregan",
+      "maps": ["Gnomeregan", "Gnomeregan2f", "Gnomeregan3f", "Gnomeregan4f", "GnomereganEntrance"],
+      "aliases": ["Gnomeregan", "Гномреган", "诺莫瑞根"]
+    },
+    {
+      "id": "maraudon",
+      "name": "Maraudon",
+      "defaultMap": "Maraudon",
+      "maps": ["Maraudon", "MaraudonEntrance"],
+      "aliases": ["Maraudon", "Мародон", "玛拉顿"]
+    },
+    {
+      "id": "ragefire-chasm",
+      "name": "Ragefire Chasm",
+      "defaultMap": "Ragefire",
+      "maps": ["Ragefire"],
+      "aliases": ["Ragefire Chasm", "Ragefire", "Огненная Пропасть", "怒焰裂谷"]
+    },
+    {
+      "id": "razorfen-downs",
+      "name": "Razorfen Downs",
+      "defaultMap": "RazorfenDowns",
+      "maps": ["RazorfenDowns"],
+      "aliases": ["Razorfen Downs", "Курганы Иглошкурых", "剃刀高地"]
+    },
+    {
+      "id": "razorfen-kraul",
+      "name": "Razorfen Kraul",
+      "defaultMap": "RazorfenKraul",
+      "maps": ["RazorfenKraul"],
+      "aliases": ["Razorfen Kraul", "Лабиринты Иглошкурых", "剃刀沼泽"]
+    },
+    {
+      "id": "scarlet-monastery",
+      "name": "Scarlet Monastery",
+      "defaultMap": "ScarletMonastery",
+      "maps": ["ScarletMonastery", "ScarletMonastery2f", "ScarletMonastery3f", "ScarletMonastery4f", "ScarletMonasteryEntrance"],
+      "aliases": ["Scarlet Monastery", "Монастырь Алого ордена", "血色修道院"]
+    },
+    {
+      "id": "scholomance",
+      "name": "Scholomance",
+      "defaultMap": "Scholomance",
+      "maps": ["Scholomance", "Scholomance2f", "Scholomance3f", "Scholomance4f"],
+      "aliases": ["Scholomance", "Некроситет", "通灵学院"]
+    },
+    {
+      "id": "shadowfang-keep",
+      "name": "Shadowfang Keep",
+      "defaultMap": "ShadowfangKeep",
+      "maps": ["ShadowfangKeep", "ShadowfangKeep2f", "ShadowfangKeep3f", "ShadowfangKeep4f", "ShadowfangKeep5f", "ShadowfangKeep6f", "ShadowfangKeep7f"],
+      "aliases": ["Shadowfang Keep", "Крепость Темного Клыка", "影牙城堡"]
+    },
+    {
+      "id": "stratholme",
+      "name": "Stratholme",
+      "defaultMap": "Stratholme",
+      "maps": ["Stratholme"],
+      "aliases": ["Stratholme", "Стратхольм", "斯坦索姆"]
+    },
+    {
+      "id": "stockade",
+      "name": "The Stockade",
+      "defaultMap": "TheStockade",
+      "maps": ["TheStockade"],
+      "aliases": ["The Stockade", "Stormwind Stockade", "Stormwind Stockades", "Тюрьма", "暴风城监狱"]
+    },
+    {
+      "id": "sunken-temple",
+      "name": "The Temple of Atal'Hakkar",
+      "defaultMap": "TheTempleOfAtalHakkar",
+      "maps": ["TheTempleOfAtalHakkar", "TheTempleOfAtalHakkar2f", "TheTempleOfAtalHakkar3f"],
+      "aliases": ["The Temple of Atal'Hakkar", "Temple of Atal'Hakkar", "Sunken Temple", "Затонувший храм", "Храм Атал'Хаккара", "沉没的神庙", "阿塔哈卡神庙"]
+    },
+    {
+      "id": "uldaman",
+      "name": "Uldaman",
+      "defaultMap": "Uldaman",
+      "maps": ["Uldaman", "UldamanEntrance"],
+      "aliases": ["Uldaman", "Ульдаман", "奥达曼"]
+    },
+    {
+      "id": "wailing-caverns",
+      "name": "Wailing Caverns",
+      "defaultMap": "WailingCaverns",
+      "maps": ["WailingCaverns", "WailingCavernsEntrance"],
+      "aliases": ["Wailing Caverns", "Пещеры Стенаний", "哀嚎洞穴"]
+    },
+    {
+      "id": "zul-farrak",
+      "name": "Zul'Farrak",
+      "defaultMap": "ZulFarrak",
+      "maps": ["ZulFarrak"],
+      "aliases": ["Zul'Farrak", "ZulFarrak", "Зул'Фаррак", "祖尔法拉克"]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "root": "D:/Development/unrealUI_data/WorldMap/#Raid",
+    "included": "the thirteen declared non-turtle_ folders and their .blp files",
+    "excluded": "all .tga files and every turtle_ custom-content folder",
+    "provenance": "supplied by the user from the local WorldMap export",
+    "licenseOrPermission": "supplied by the user for this local integration; redistribution rights are not documented"
+  },
+  "runtime": {
+    "format": "BLP2 DXT5",
+    "encoding": "BLP2 encoding 2, alpha depth 8, alpha encoding 7",
+    "tileCountPerMap": 12,
+    "dimensionsPerTile": "512x512",
+    "grid": "4 columns x 3 rows, row-major",
+    "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Raids/{mapName}/Raid{mapName}{1..12}",
+    "rename": "the Raid basename prefix prevents collisions with all other shipped map textures; source pixels and BLP payloads are copied unchanged",
+    "exploration": "none",
+    "maximumSimultaneouslyBoundTiles": 12,
+    "estimatedPeakDecodedBytes": 12582912,
+    "startupBindings": 0,
+    "addonOwnedTextureRegions": 0,
+    "nativeTextureRegionsReused": "WorldMapDetailTile1 through WorldMapDetailTile12"
+  },
+  "selection": {
+    "preferred": "the exact raid or floor key returned by GetMapInfo",
+    "fallback": "the default map for a raid-instance name returned by GetInstanceInfo or the available location-text APIs",
+    "persistence": "the last confirmed raid map is retained only while IsInInstance reports a raid instance",
+    "manualFallback": "/umap raid <mapName> while the world map is closed; /umap raid off clears it",
+    "unsafeOperations": "no inferred internal map ID is passed to SetMapZoom"
+  },
+  "raids": [
+    {
+      "id": "ahn-qiraj",
+      "name": "Temple of Ahn'Qiraj",
+      "defaultMap": "AhnQiraj",
+      "maps": ["AhnQiraj", "AhnQiraj2f", "AhnQirajEntrance"],
+      "aliases": ["Temple of Ahn'Qiraj", "Ahn'Qiraj", "AhnQiraj", "Ан'Кираж", "Храм Ан'Киража", "安其拉神殿", "安其拉"]
+    },
+    {
+      "id": "blackwing-lair",
+      "name": "Blackwing Lair",
+      "defaultMap": "BlackwingLair",
+      "maps": ["BlackwingLair", "BlackwingLair2f", "BlackwingLair3f", "BlackwingLair4f"],
+      "aliases": ["Blackwing Lair", "Логово Крыла Тьмы", "黑翼之巢"]
+    },
+    {
+      "id": "molten-core",
+      "name": "Molten Core",
+      "defaultMap": "MoltenCore",
+      "maps": ["MoltenCore"],
+      "aliases": ["Molten Core", "Огненные Недра", "熔火之心"]
+    },
+    {
+      "id": "naxxramas",
+      "name": "Naxxramas",
+      "defaultMap": "Naxxramas",
+      "maps": ["Naxxramas", "Naxxramas2f"],
+      "aliases": ["Naxxramas", "Наксрамас", "纳克萨玛斯"]
+    },
+    {
+      "id": "onyxias-lair",
+      "name": "Onyxia's Lair",
+      "defaultMap": "OnyxiasLair",
+      "maps": ["OnyxiasLair"],
+      "aliases": ["Onyxia's Lair", "Onyxias Lair", "Логово Ониксии", "奥妮克希亚的巢穴"]
+    },
+    {
+      "id": "ruins-of-ahn-qiraj",
+      "name": "Ruins of Ahn'Qiraj",
+      "defaultMap": "RuinsofAhnQiraj",
+      "maps": ["RuinsofAhnQiraj"],
+      "aliases": ["Ruins of Ahn'Qiraj", "Ruins of AhnQiraj", "Руины Ан'Киража", "安其拉废墟"]
+    },
+    {
+      "id": "zul-gurub",
+      "name": "Zul'Gurub",
+      "defaultMap": "ZulGurub",
+      "maps": ["ZulGurub"],
+      "aliases": ["Zul'Gurub", "ZulGurub", "Зул'Гуруб", "祖尔格拉布"]
+    }
+  ]
+}
