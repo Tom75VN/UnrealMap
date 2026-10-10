@@ -1,7 +1,27 @@
 local TILE_COUNT = 12
 local MAX_OVERLAY_TILES = 64
 local DRIVER_INTERVAL = 0.1
-local MAP_ROOT = "Interface\\AddOns\\unrealMap\\Media\\Textures\\Maps\\"
+local ADDON_ROOT = "Interface\\AddOns\\"
+
+-- HD textures ship as separate launcher data packs, one addon folder each.
+-- Every pack folder starts with this prefix, which marks an HD binding.
+local PACK_PREFIX = ADDON_ROOT .. "unrealMap_"
+local UNEXPLORED_CATEGORY = "World_Unexplored"
+local CATEGORY_PACKS = {
+  Battlegrounds = "unrealMap_World",
+  Capitals = "unrealMap_World",
+  Continents = "unrealMap_World",
+  World = "unrealMap_World",
+  World_Unexplored = "unrealMap_Unexplored",
+  Dungeons = "unrealMap_Instances",
+  Raids = "unrealMap_Instances",
+}
+-- Every data pack, in the order the settings page lists them.
+local PACKS = { "unrealMap_World", "unrealMap_Unexplored", "unrealMap_Instances" }
+
+local function CategoryRoot(category)
+  return ADDON_ROOT .. CATEGORY_PACKS[category] .. "\\" .. category .. "\\"
+end
 
 local MAP_CATEGORIES = {
   AlteracValley = "Battlegrounds",
@@ -19,6 +39,10 @@ local MAP_CATEGORIES = {
 }
 
 local UNEXPLORED_BASE_MAPS = {
+  Alterac = true,
+  Arathi = true,
+  Ashenvale = true,
+  Durotar = true,
   Elwynn = true,
 }
 
@@ -152,20 +176,64 @@ local function AssetRoot(mapName)
   local assetMapName = AssetMapName(mapName)
   local category = MAP_CATEGORIES[assetMapName]
   if not category then return nil end
-  return MAP_ROOT .. category .. "\\" .. assetMapName
+  return CategoryRoot(category) .. assetMapName
+end
+
+-- SetTexture cannot detect a missing file (textures.gettexture_echoes_missing_path),
+-- so a map binds only when the pack it reads from is installed. The client
+-- lists addons once per session; the cache holds one entry per pack.
+local packInstalled = {}
+local packReported = {}
+
+local function IsPackInstalled(pack)
+  if packInstalled[pack] == nil then
+    local ok, name = false, nil
+    if type(GetAddOnInfo) == "function" then ok, name = pcall(GetAddOnInfo, pack) end
+    packInstalled[pack] = ok and type(name) == "string" and name ~= ""
+  end
+  return packInstalled[pack]
+end
+
+local function RequirePack(pack)
+  if IsPackInstalled(pack) then return true end
+  if not packReported[pack] then
+    packReported[pack] = true
+    local frame = _G["DEFAULT_CHAT_FRAME"]
+    if frame and type(frame.AddMessage) == "function" then
+      -- Settings.lua's chat style; the pack name stands out in the accent.
+      pcall(frame.AddMessage, frame, "|cffffffffUnreal |cfff5ae0aMap|r |cffb3b3b3: "
+        .. unrealMapLocale.L("PACK_MISSING", "|cfff5ae0a" .. pack .. "|cffb3b3b3") .. "|r")
+    end
+  end
+  return false
+end
+
+local function MapPacksInstalled(mapName)
+  local category = MAP_CATEGORIES[AssetMapName(mapName)]
+  return category ~= nil and RequirePack(CATEGORY_PACKS[category])
+end
+
+-- A zone with a themed unexplored master keeps its standard base in
+-- unrealMap_World. The optional unrealMap_Unexplored pack adds a second base,
+-- <Map>_Unexplored1..12, used instead when installed; overlays are shared.
+local function UsesUnexploredBase(assetMapName)
+  return UNEXPLORED_BASE_MAPS[assetMapName] == true
+    and IsPackInstalled(CATEGORY_PACKS[UNEXPLORED_CATEGORY])
 end
 
 local function AssetTileRoot(mapName)
   local assetMapName = AssetMapName(mapName)
-  if UNEXPLORED_BASE_MAPS[assetMapName] then
-    return MAP_ROOT .. "World\\_Unexplored\\" .. assetMapName
+  if UsesUnexploredBase(assetMapName) then
+    return CategoryRoot(UNEXPLORED_CATEGORY) .. assetMapName
   end
   return AssetRoot(assetMapName)
 end
 
 local function AssetTileStem(mapName)
   local assetMapName = AssetMapName(mapName)
-  if MAP_CATEGORIES[assetMapName] == "Dungeons" then
+  if UsesUnexploredBase(assetMapName) then
+    return assetMapName .. "_Unexplored"
+  elseif MAP_CATEGORIES[assetMapName] == "Dungeons" then
     return "Dungeon" .. assetMapName
   elseif MAP_CATEGORIES[assetMapName] == "Raids" then
     return "Raid" .. assetMapName
@@ -606,10 +674,10 @@ local function HasActiveOverlayTexture()
 end
 
 local function HasHDBaseTile()
-  return HasPrefix(SafeTexture(_G["WorldMapDetailTile1"]), MAP_ROOT)
+  return HasPrefix(SafeTexture(_G["WorldMapDetailTile1"]), PACK_PREFIX)
 end
 
-local function BindingMap()
+local function SelectedMap()
   local dungeonMap = RefreshDungeonContext()
   if dungeonMap then return dungeonMap end
   local raidMap = RefreshRaidContext()
@@ -622,12 +690,27 @@ local function BindingMap()
   return nil
 end
 
+-- A map whose pack is missing stays native.
+local function BindingMap()
+  local mapName = SelectedMap()
+  if mapName and MapPacksInstalled(mapName) then return mapName end
+  return nil
+end
+
+local function IsWorldMapVisible()
+  if not worldMap or type(worldMap.IsVisible) ~= "function" then return false end
+  local ok, visible = pcall(worldMap.IsVisible, worldMap)
+  return ok and visible and true or false
+end
+
 -- Overlay textures are the verified open-map signal; maps without overlays
--- (cities) fall back to a bound base tile.
+-- (cities) fall back to a bound base tile. A zone with nothing explored and
+-- fog kept draws no overlay, so it uses the base tile while the map is visible.
 local function IsPresented(mapName)
   if HasActiveOverlayTexture() then return true end
   local assetMapName = mapName and AssetMapName(mapName) or nil
-  if not assetMapName or table.getn(MAP_OVERLAYS[assetMapName]) > 0 then
+  if not assetMapName then return false end
+  if table.getn(MAP_OVERLAYS[assetMapName]) > 0 and not IsWorldMapVisible() then
     return false
   end
   local texture = SafeTexture(_G["WorldMapDetailTile1"])
@@ -682,7 +765,7 @@ local function ClearBindings(keepConcealed)
   local i
   if tiles then
     for i = 1, TILE_COUNT do
-      if HasPrefix(SafeTexture(tiles[i]), MAP_ROOT) then
+      if HasPrefix(SafeTexture(tiles[i]), PACK_PREFIX) then
         pcall(tiles[i].SetTexture, tiles[i], "")
       end
     end
@@ -691,7 +774,7 @@ local function ClearBindings(keepConcealed)
   for i = 1, MAX_OVERLAY_TILES do
     local overlay = _G["WorldMapOverlay" .. i]
     if overlay and type(overlay.SetTexture) == "function"
-        and HasPrefix(SafeTexture(overlay), MAP_ROOT) then
+        and HasPrefix(SafeTexture(overlay), PACK_PREFIX) then
       pcall(overlay.SetTexture, overlay, "")
     end
   end
@@ -927,7 +1010,10 @@ end
 
 if type(nativeGetMapOverlayInfo) == "function" then
   _G["GetMapOverlayInfo"] = function(index)
-    if IsSupportedMap(CurrentMapName()) then StartDriver(true) end
+    local currentMap = CurrentMapName()
+    if IsSupportedMap(currentMap) and MapPacksInstalled(currentMap) then
+      StartDriver(true)
+    end
     if IsFogRevealEnabled() and type(index) == "number" then
       local nativeCount = NativeOverlayCount()
       EnsureReveal(nativeCount)
@@ -946,9 +1032,7 @@ end
 -- Redraws an open map after the setting changed. A closed map is left alone:
 -- running the updater while closed populates stale native paths.
 local function RefreshOpenMap()
-  if not worldMap or type(worldMap.IsVisible) ~= "function" then return end
-  local ok, visible = pcall(worldMap.IsVisible, worldMap)
-  if not ok or not visible then return end
+  if not IsWorldMapVisible() then return end
   -- Overlay slots the redraw stops using would keep their HD binding.
   ClearBindings()
   local update = _G["WorldMapFrame_Update"]
@@ -1074,10 +1158,14 @@ RefreshDungeonContext()
 RefreshRaidContext()
 
 unrealMap = {
-  version = "0.5.13",
+  version = "0.6.0",
   ApplyReplacement = ApplyReplacement,
   ClearBindings = ClearBindings,
   GetFogRevealEnabled = IsFogRevealEnabled,
+  GetPacks = function()
+    return PACKS
+  end,
+  IsPackInstalled = IsPackInstalled,
   GetOverlayReplacementEnabled = function()
     return overlayReplacementEnabled
   end,

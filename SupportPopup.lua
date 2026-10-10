@@ -6,18 +6,24 @@ player ticks "Don't show again". Its art is UnrealUI's Modern WoW popup set,
 imported under Media/Textures/UI (provenance in assets/manifest.json). Every
 region is created on first show only, so a dismissed popup costs one timer
 frame for a few seconds and no texture.
+
+While the required unrealMap_World pack is missing, the same popup explains
+how to install the data packs instead. That notice has no "Don't show again"
+and ignores the support dismissal: it returns every login until the pack is
+installed, because no map is shown in HD without it.
 ]]
 
--- Disabled until the launcher support link is ready; set true to re-enable.
-local ENABLED = false
 local SHOW_DELAY = 6
 local DISMISSED_KEY = "supportPopupDismissed"
+local REQUIRED_PACK = "unrealMap_World"
+local OPTIONAL_PACKS = { "unrealMap_Unexplored", "unrealMap_Instances" }
 
 local MEDIA = "Interface\\AddOns\\unrealMap\\Media\\Textures\\UI\\"
 local PLAIN_TEXTURE = "Interface\\Buttons\\WHITE8X8"
 
 local WIDTH = 368
 local HEIGHT = 168
+local PACK_HEIGHT = 196
 local TEXT_WIDTH = 312
 local BUTTON_WIDTH = 132
 local BUTTON_HEIGHT = 30
@@ -28,6 +34,7 @@ local CHECK_WIDTH = 16
 local CHECK_HEIGHT = 15
 
 local TITLE = "|cffffffffUnreal |cfff5ae0aMap|r"
+local ACCENT = "|cfff5ae0a"
 -- Translated when the popup is built, never at file scope (Locale.lua).
 local L = unrealMapLocale.L
 
@@ -88,6 +95,18 @@ end
 local function SetDismissed(value)
   if type(unrealMapDB) ~= "table" then unrealMapDB = {} end
   unrealMapDB[DISMISSED_KEY] = value and true or nil
+end
+
+-- Without unrealMap.lua's pack check the support popup is shown as before.
+local function RequiredPackMissing()
+  local addon = _G["unrealMap"]
+  if type(addon) ~= "table" or type(addon.IsPackInstalled) ~= "function" then return false end
+  local ok, installed = pcall(addon.IsPackInstalled, REQUIRED_PACK)
+  return ok and not installed
+end
+
+local function Accent(text)
+  return ACCENT .. text .. "|r"
 end
 
 local function Texture(parent, layer, path, u1, u2, v1, v2)
@@ -273,63 +292,78 @@ local function Checkbox(parent, text, onChange)
   return row
 end
 
-local function Build()
+-- lines: centred paragraphs stacked under the title, each { text, gap }.
+local function Build(height, lines, withCheck)
   local ok, frame = pcall(CreateFrame, "Frame", "unrealMapSupportPopup", UIParent)
   if not ok or not frame then return nil end
   pcall(frame.SetFrameStrata, frame, "DIALOG")
   pcall(frame.SetWidth, frame, WIDTH)
-  pcall(frame.SetHeight, frame, HEIGHT)
+  pcall(frame.SetHeight, frame, height)
   pcall(frame.SetPoint, frame, "CENTER", UIParent, "CENTER", 0, 0)
   pcall(frame.EnableMouse, frame, true)
-  MetalFrame(frame, WIDTH, HEIGHT)
+  MetalFrame(frame, WIDTH, height)
 
   local title = Label(frame, "GameFontNormalLarge", TITLE)
   if title then pcall(title.SetPoint, title, "TOP", frame, "TOP", 0, -20) end
 
-  local question = Label(frame, "GameFontHighlight", L("POPUP_QUESTION"))
-  if question then
-    pcall(question.SetWidth, question, TEXT_WIDTH)
-    pcall(question.SetJustifyH, question, "CENTER")
-    pcall(question.SetPoint, question, "TOP", frame, "TOP", 0, -46)
+  local previous
+  local i
+  for i = 1, table.getn(lines) do
+    local line = Label(frame, "GameFontHighlight", lines[i][1])
+    if line then
+      pcall(line.SetWidth, line, TEXT_WIDTH)
+      pcall(line.SetJustifyH, line, "CENTER")
+      if previous then
+        pcall(line.SetPoint, line, "TOP", previous, "BOTTOM", 0, -lines[i][2])
+      else
+        pcall(line.SetPoint, line, "TOP", frame, "TOP", 0, -46)
+      end
+      previous = line
+    end
   end
 
-  local message = Label(frame, "GameFontHighlight", L("POPUP_MESSAGE"))
-  if message and question then
-    pcall(message.SetWidth, message, TEXT_WIDTH)
-    pcall(message.SetJustifyH, message, "CENTER")
-    pcall(message.SetPoint, message, "TOP", question, "BOTTOM", 0, 0)
-  end
-
-  local thanks = Label(frame, "GameFontHighlight", L("POPUP_THANKS"))
-  if thanks and message then
-    pcall(thanks.SetWidth, thanks, TEXT_WIDTH)
-    pcall(thanks.SetJustifyH, thanks, "CENTER")
-    pcall(thanks.SetPoint, thanks, "TOP", message, "BOTTOM", 0, -THANKS_GAP)
-  end
-
-  local check = Checkbox(frame, L("POPUP_DONT_SHOW"), SetDismissed)
-  if check then
+  local parts = {}
+  local check
+  if withCheck then
+    check = Checkbox(frame, L("POPUP_DONT_SHOW"), SetDismissed)
+    if not check then return nil end
     local width = 0
     local measured, value = pcall(check.GetWidth, check)
     if measured and tonumber(value) then width = tonumber(value) end
     pcall(check.SetPoint, check, "BOTTOMLEFT", frame, "BOTTOM", -width / 2, CHECK_BOTTOM)
+    table.insert(parts, check)
   end
 
   -- Child frames are shown and hidden explicitly; this client does not
   -- reliably carry parent visibility to them (rendering.parent_alpha_not_propagated).
   local close
   close = RedButton(frame, L("COMMON_CLOSE"), function()
-    pcall(check.Hide, check)
+    if check then pcall(check.Hide, check) end
     pcall(close.Hide, close)
     pcall(frame.Hide, frame)
   end)
-  if not check or not close then return nil end
+  if not close then return nil end
   pcall(close.SetPoint, close, "BOTTOM", frame, "BOTTOM", 0, BUTTON_BOTTOM)
-  frame.parts = { check, close }
+  table.insert(parts, close)
+  frame.parts = parts
   return frame
 end
 
-if not ENABLED then return end
+local function BuildSupport()
+  return Build(HEIGHT, {
+    { L("POPUP_QUESTION"), 0 },
+    { L("POPUP_MESSAGE"), 0 },
+    { L("POPUP_THANKS"), THANKS_GAP },
+  }, true)
+end
+
+local function BuildPackNotice()
+  return Build(PACK_HEIGHT, {
+    { L("POPUP_PACK_REQUIRED"), 0 },
+    { L("POPUP_PACK_MESSAGE", Accent(REQUIRED_PACK)), THANKS_GAP },
+    { L("POPUP_PACK_OPTIONAL", Accent(OPTIONAL_PACKS[1]), Accent(OPTIONAL_PACKS[2])), THANKS_GAP },
+  }, false)
+end
 
 local timer = CreateFrame("Frame", "unrealMapSupportPopupTimer", UIParent)
 local started, fired
@@ -341,8 +375,12 @@ timer:SetScript("OnUpdate", function()
   fired = true
   timer:SetScript("OnUpdate", nil)
   timer:Hide()
-  if Dismissed() then return end
-  popup = popup or Build()
+  if RequiredPackMissing() then
+    popup = popup or BuildPackNotice()
+  else
+    if Dismissed() then return end
+    popup = popup or BuildSupport()
+  end
   if not popup then return end
   pcall(popup.Show, popup)
   local i

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-04",
+  "updated": "2026-10-10",
   "zones": [
     {
       "order": 1,
@@ -80,10 +80,39 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Alterac.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": [
+          [
+            0.766513,
+            0.00112,
+            10.968798
+          ],
+          [
+            -9.9e-05,
+            0.768194,
+            6.108636
+          ]
+        ],
+        "registrationVsExplored": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 4
+        }
       }
     },
     {
@@ -148,10 +177,39 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Arathi.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": [
+          [
+            0.766371,
+            0.000443,
+            0.495227
+          ],
+          [
+            -1.3e-05,
+            0.765934,
+            0.312577
+          ]
+        ],
+        "registrationVsExplored": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 21
+        }
       }
     },
     {
@@ -221,10 +279,39 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Ashenvale.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": [
+          [
+            0.766984,
+            0.000188,
+            0.215242
+          ],
+          [
+            -6.8e-05,
+            0.766132,
+            -0.101769
+          ]
+        ],
+        "registrationVsExplored": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 4
+        }
       }
     },
     {
@@ -304,10 +391,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -381,10 +468,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -458,10 +545,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -523,10 +610,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -605,10 +692,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -666,10 +753,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -729,10 +816,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -803,10 +890,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -874,10 +961,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -938,10 +1025,39 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Durotar.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": [
+          [
+            0.766128,
+            0.000206,
+            0.644696
+          ],
+          [
+            3e-05,
+            0.766694,
+            -0.150479
+          ]
+        ],
+        "registrationVsExplored": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -1019,10 +1135,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1084,10 +1200,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1163,10 +1279,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1202,7 +1318,7 @@
         "worstHDPixels": 2
       },
       "preserveNativeFog": true,
-      "fogMode": "themed-unexplored-master-with-native-reveal",
+      "fogMode": "native-active-zone-fallback",
       "fogOverrideReason": null,
       "files": [
         "BrackwellPumpkinPatch1",
@@ -1235,11 +1351,11 @@
       "inGameValidation": {
         "status": "NOT_TESTED",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "Standard base tiles regenerated in unrealMap_World; unexplored tiles renamed Elwynn_Unexplored1..12 in unrealMap_Unexplored. Previous PASS covered the unexplored base only."
       },
       "unexploredSource": {
-        "root": "Media/Textures/Maps/World/_Unexplored/Elwynn",
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
         "file": "Elwynn.png",
         "width": 1536,
         "height": 1024,
@@ -1317,10 +1433,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1388,10 +1504,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1464,10 +1580,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1536,10 +1652,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1614,10 +1730,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1672,10 +1788,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1740,10 +1856,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1821,10 +1937,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -1895,10 +2011,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2005,10 +2121,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2072,10 +2188,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2143,10 +2259,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2222,10 +2338,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2301,10 +2417,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2373,10 +2489,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2437,10 +2553,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2504,10 +2620,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2574,10 +2690,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2656,10 +2772,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": "Versions through 0.5.1 remained partially unexplored; 0.5.2 adds the client UnGoroCrater alias and awaits full-restart validation."
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2730,10 +2846,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2799,10 +2915,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2870,10 +2986,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     },
     {
@@ -2935,10 +3051,10 @@
       "runtimeIntegrated": true,
       "offlineValidation": "PASS",
       "inGameValidation": {
-        "status": "NOT_TESTED",
+        "status": "PASS",
         "validatedBy": "user",
-        "date": null,
-        "notes": ""
+        "date": "2026-10-10",
+        "notes": "User confirmed the explored HD map OK in game"
       }
     }
   ]

@@ -3,6 +3,7 @@ unrealMapLocale.Register("zhCN", {
   ["COMMON_CLOSE"] = "关闭",
 
   ["SETTINGS_PAGE_GENERAL"] = "常规",
+  ["SETTINGS_PAGE_PACKS"] = "数据包",
   ["SETTINGS_HEADING_WORLD_MAP"] = "世界地图",
   ["SETTINGS_REVEAL_FOG"] = "移除战争迷雾",
   ["SETTINGS_REVEAL_FOG_NOTE"] = "在世界地图上显示每个区域的未探索区域。"
@@ -39,9 +40,24 @@ unrealMapLocale.Register("zhCN", {
   ["RAID_ENABLED"] = "团队副本地图已启用：%s。",
   ["RAID_CLEARED"] = "团队副本地图选择已清除。",
   ["RAID_UNAVAILABLE"] = "团队副本地图支持不可用。",
+  ["PACK_MISSING"] = "此地图保持标准清晰度。请在启动器中安装 %s 数据包以查看高清地图。",
+  ["SETTINGS_HEADING_PACKS"] = "数据包",
+  ["SETTINGS_PACKS_COUNT"] = "已安装 %s / %s 个数据包",
+  ["SETTINGS_PACKS_NOTE"] = "请在启动器中安装缺少的数据包，然后重启游戏。",
+  ["PACK_INSTALLED"] = "已安装",
+  ["PACK_NOT_INSTALLED"] = "未安装",
+  ["PACK_WORLD_NAME"] = "世界地图",
+  ["PACK_WORLD_NOTE"] = "区域、大陆、主城和战场。",
+  ["PACK_UNEXPLORED_NAME"] = "未探索地图",
+  ["PACK_UNEXPLORED_NOTE"] = "保留战争迷雾时，以高清显示未探索区域。",
+  ["PACK_INSTANCES_NAME"] = "副本地图",
+  ["PACK_INSTANCES_NOTE"] = "地下城和团队副本。",
 
   ["POPUP_QUESTION"] = "喜欢吗？",
   ["POPUP_MESSAGE"] = "请在启动器中为此插件点赞",
   ["POPUP_THANKS"] = "感谢您的支持！",
   ["POPUP_DONT_SHOW"] = "不再显示",
+  ["POPUP_PACK_REQUIRED"] = "需要数据包",
+  ["POPUP_PACK_MESSAGE"] = "Unreal Map 至少需要 %s 数据包。请从启动器安装，然后重新启动游戏。",
+  ["POPUP_PACK_OPTIONAL"] = "%s 和 %s 数据包为可选。",
 })

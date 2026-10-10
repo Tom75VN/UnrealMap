@@ -13,7 +13,7 @@
     "tileCountPerMap": 12,
     "dimensionsPerTile": "512x512",
     "grid": "4 columns x 3 rows, row-major",
-    "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Raids/{mapName}/Raid{mapName}{1..12}",
+    "pathPattern": "Interface/AddOns/unrealMap_Instances/Raids/{mapName}/Raid{mapName}{1..12}",
     "rename": "the Raid basename prefix prevents collisions with all other shipped map textures; source pixels and BLP payloads are copied unchanged",
     "exploration": "none",
     "maximumSimultaneouslyBoundTiles": 12,

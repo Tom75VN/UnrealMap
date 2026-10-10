@@ -3,6 +3,7 @@ unrealMapLocale.Register("ruRU", {
   ["COMMON_CLOSE"] = "Закрыть",
 
   ["SETTINGS_PAGE_GENERAL"] = "Общие",
+  ["SETTINGS_PAGE_PACKS"] = "Пакеты",
   ["SETTINGS_HEADING_WORLD_MAP"] = "Карта мира",
   ["SETTINGS_REVEAL_FOG"] = "Убрать туман войны",
   ["SETTINGS_REVEAL_FOG_NOTE"] = "Показывает неисследованные области всех зон на карте мира. "
@@ -39,9 +40,24 @@ unrealMapLocale.Register("ruRU", {
   ["RAID_ENABLED"] = "Карта рейда включена: %s.",
   ["RAID_CLEARED"] = "Выбор карты рейда сброшен.",
   ["RAID_UNAVAILABLE"] = "Поддержка карт рейдов недоступна.",
+  ["PACK_MISSING"] = "эта карта остаётся в стандартном качестве. Установите пакет данных %s в лаунчере, чтобы видеть её в HD.",
+  ["SETTINGS_HEADING_PACKS"] = "Пакеты данных",
+  ["SETTINGS_PACKS_COUNT"] = "Установлено пакетов: %s из %s",
+  ["SETTINGS_PACKS_NOTE"] = "Установите недостающие пакеты в лаунчере, затем перезапустите игру.",
+  ["PACK_INSTALLED"] = "Установлен",
+  ["PACK_NOT_INSTALLED"] = "Не установлен",
+  ["PACK_WORLD_NAME"] = "Карты мира",
+  ["PACK_WORLD_NOTE"] = "Зоны, континенты, столицы и поля боя.",
+  ["PACK_UNEXPLORED_NAME"] = "Неисследованные карты",
+  ["PACK_UNEXPLORED_NOTE"] = "Неисследованные зоны в HD, пока туман войны сохранён.",
+  ["PACK_INSTANCES_NAME"] = "Карты подземелий",
+  ["PACK_INSTANCES_NOTE"] = "Подземелья и рейды.",
 
   ["POPUP_QUESTION"] = "Вам нравится?",
   ["POPUP_MESSAGE"] = "Поставьте лайк этому аддону в лаунчере",
   ["POPUP_THANKS"] = "СПАСИБО ЗА ПОДДЕРЖКУ!",
   ["POPUP_DONT_SHOW"] = "Больше не показывать",
+  ["POPUP_PACK_REQUIRED"] = "Требуется пакет данных",
+  ["POPUP_PACK_MESSAGE"] = "Для Unreal Map нужен как минимум пакет данных %s. Установите его из лаунчера и перезапустите игру.",
+  ["POPUP_PACK_OPTIONAL"] = "Пакеты %s и %s необязательны.",
 })

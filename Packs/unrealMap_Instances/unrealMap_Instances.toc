@@ -1,0 +1,10 @@
+## Interface: 11200
+## Title: |cffffffffUnreal |cfff5ae0aMap|r - Instance textures
+## Notes: HD dungeon and raid map textures for unrealMap.
+## Author: Thomas
+## Version: 1.0.0
+## LoadOnDemand: 1
+
+# The client registers an addon only when its .toc lists a file. LoadOnDemand
+# packs are never loaded, so this texture is listed, not read.
+Dungeons\BlackFathomDeeps\DungeonBlackFathomDeeps1.blp

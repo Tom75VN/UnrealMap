@@ -3,6 +3,7 @@ unrealMapLocale.Register("enUS", {
   ["COMMON_CLOSE"] = "Close",
 
   ["SETTINGS_PAGE_GENERAL"] = "General",
+  ["SETTINGS_PAGE_PACKS"] = "Packs",
   ["SETTINGS_HEADING_WORLD_MAP"] = "World map",
   ["SETTINGS_REVEAL_FOG"] = "Remove fog of war",
   ["SETTINGS_REVEAL_FOG_NOTE"] = "Shows the unexplored areas of every zone on the world map. "
@@ -39,9 +40,24 @@ unrealMapLocale.Register("enUS", {
   ["RAID_ENABLED"] = "Raid map enabled: %s.",
   ["RAID_CLEARED"] = "Raid map selection cleared.",
   ["RAID_UNAVAILABLE"] = "Raid map support is unavailable.",
+  ["PACK_MISSING"] = "this map stays in standard definition. Install the %s data pack from the launcher to see it in HD.",
+  ["SETTINGS_HEADING_PACKS"] = "Data packs",
+  ["SETTINGS_PACKS_COUNT"] = "%s of %s packs installed",
+  ["SETTINGS_PACKS_NOTE"] = "Install missing packs from the launcher, then restart the game.",
+  ["PACK_INSTALLED"] = "Installed",
+  ["PACK_NOT_INSTALLED"] = "Not installed",
+  ["PACK_WORLD_NAME"] = "World Maps",
+  ["PACK_WORLD_NOTE"] = "Zones, continents, capitals and battlegrounds.",
+  ["PACK_UNEXPLORED_NAME"] = "Unexplored Maps",
+  ["PACK_UNEXPLORED_NOTE"] = "Unexplored zones in HD while fog of war is kept.",
+  ["PACK_INSTANCES_NAME"] = "Instances Maps",
+  ["PACK_INSTANCES_NOTE"] = "Dungeons and raids.",
 
   ["POPUP_QUESTION"] = "You like it ?",
   ["POPUP_MESSAGE"] = "Give a like to this addon from the launcher",
   ["POPUP_THANKS"] = "THANKS FOR YOUR SUPPORT !",
   ["POPUP_DONT_SHOW"] = "Don't show again",
+  ["POPUP_PACK_REQUIRED"] = "Data pack required",
+  ["POPUP_PACK_MESSAGE"] = "Unreal Map needs at least the %s data pack. Install it from the launcher, then restart the game.",
+  ["POPUP_PACK_OPTIONAL"] = "The %s and %s packs are optional.",
 })

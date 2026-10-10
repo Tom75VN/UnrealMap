@@ -1,0 +1,10 @@
+## Interface: 11200
+## Title: |cffffffffUnreal |cfff5ae0aMap|r - World textures
+## Notes: HD textures for unrealMap: zones, continents, capitals and battlegrounds.
+## Author: Thomas
+## Version: 1.0.0
+## LoadOnDemand: 1
+
+# The client registers an addon only when its .toc lists a file. LoadOnDemand
+# packs are never loaded, so this texture is listed, not read.
+World\Elwynn\Elwynn1.blp

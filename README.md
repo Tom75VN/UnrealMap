@@ -121,11 +121,22 @@ Better visuals without weighing down your game.
 
 ## Installation
 
-1. [Download the latest release](https://github.com/Tom75VN/UnrealMap/releases/latest).
-2. Extract it into `Interface/AddOns/` so the folder is
-   `Interface/AddOns/unrealMap/` (the folder must be named exactly
-   `unrealMap`).
-3. Restart the game client and open your map.
+Install from the Emberveil launcher: add **unrealMap**, then its data packs.
+Each data pack is its own launcher entry.
+
+| Data pack | Maps | |
+| --- | --- | --- |
+| `unrealMap_World` | Zones, continents, capitals and battlegrounds | Required |
+| `unrealMap_Unexplored` | Themed unexplored zones, shown while fog of war is kept (more zones coming) | Optional |
+| `unrealMap_Instances` | Dungeons and raids | Optional |
+
+A map whose data pack is missing stays in standard definition, and the chat
+names the pack to install.
+
+Manual install: [download the latest release](https://github.com/Tom75VN/UnrealMap/releases/latest)
+and extract each archive into `Interface/AddOns/`, so the folders are
+`Interface/AddOns/unrealMap/`, `Interface/AddOns/unrealMap_World/`, and so on.
+Keep the folder names exactly as they are, then restart the game client.
 
 ## Commands
 

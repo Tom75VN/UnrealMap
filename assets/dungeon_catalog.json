@@ -12,7 +12,7 @@
     "tileCountPerMap": 12,
     "dimensionsPerTile": "512x512",
     "grid": "4 columns x 3 rows, row-major",
-    "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Dungeons/{mapName}/Dungeon{mapName}{1..12}",
+    "pathPattern": "Interface/AddOns/unrealMap_Instances/Dungeons/{mapName}/Dungeon{mapName}{1..12}",
     "rename": "the Dungeon basename prefix prevents collisions with shipped world-overlay textures; source pixels and BLP payloads are copied unchanged",
     "exploration": "none",
     "maximumSimultaneouslyBoundTiles": 12,

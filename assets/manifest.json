@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "project": "unrealMap",
   "provenance": {
-    "source": "User-supplied explored full-map PNG masters under D:/Development/unrealUI_data/#Maps and unexplored masters under Media/Textures/Maps/World/_Unexplored/<Map>; native sprites used only for geometry, reveal alpha, and declared active-zone fog fallback",
+    "source": "User-supplied explored full-map PNG masters under D:/Development/unrealMap_data/#Maps and unexplored masters under D:/Development/unrealMap_data/#Maps/zones_unexplored; native sprites used only for geometry, reveal alpha, and declared active-zone fog fallback",
     "authorOrOwner": "Not supplied",
     "licenseOrPermission": "Not supplied; local validation only until redistribution rights are documented",
     "sourceLocation": "Per-asset roots recorded below"
@@ -25,7 +25,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/Battlegrounds",
+        "root": "D:/Development/unrealMap_data/#Maps/Battlegrounds",
         "file": "alteracvalley.png",
         "width": 2004,
         "height": 1336,
@@ -35,7 +35,7 @@
         "role": "source master; stored outside the packaged addon",
         "detailScale": "2x native runtime resolution",
         "style": "user-supplied repainted battleground artwork",
-        "provenance": "user-supplied from D:/Development/unrealUI_data/#Maps/Battlegrounds; author and license not supplied",
+        "provenance": "user-supplied from D:/Development/unrealMap_data/#Maps/Battlegrounds; author and license not supplied",
         "licenseOrPermission": "supplied by the user for this local integration; redistribution rights not documented",
         "warpOutputToMaster": [
           [
@@ -56,7 +56,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Battlegrounds/AlteracValley/AlteracValley{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Battlegrounds/AlteracValley/AlteracValley{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map AlteracValley",
@@ -83,7 +83,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 base tiles and eight transparent native-overlay suppressions are BLP2 DXT5 with valid mip bounds and exact inventory; the 2004x1336 stitched preview has no blank, duplicate, or discontinuous tile",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "native battleground overlays or a non-empty base tile texture"
       }
     },
@@ -108,7 +108,7 @@
       ],
       "runtime": {
         "activeFormat": "BLP2 DXT5",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Battlegrounds/AlteracValley/{file}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Battlegrounds/AlteracValley/{file}",
         "generator": "python -B tools/slice_full_map.py --map AlteracValley",
         "alphaMode": "fully transparent straight alpha",
         "maximumSimultaneouslyBoundOverlays": 8,
@@ -119,7 +119,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: all eight suppressions decode fully transparent at the exact dimensions and mip counts of the native overlay paths",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game"
       }
     },
     {
@@ -132,7 +132,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/Battlegrounds",
+        "root": "D:/Development/unrealMap_data/#Maps/Battlegrounds",
         "file": "ArathiBasin.png",
         "width": 2004,
         "height": 1336,
@@ -142,7 +142,7 @@
         "role": "source master; stored outside the packaged addon",
         "detailScale": "2x native runtime resolution",
         "style": "user-supplied repainted battleground artwork",
-        "provenance": "user-supplied from D:/Development/unrealUI_data/#Maps/Battlegrounds; author and license not supplied",
+        "provenance": "user-supplied from D:/Development/unrealMap_data/#Maps/Battlegrounds; author and license not supplied",
         "licenseOrPermission": "supplied by the user for this local integration; redistribution rights not documented",
         "warpOutputToMaster": [
           [
@@ -163,7 +163,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Battlegrounds/ArathiBasin/ArathiBasin{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Battlegrounds/ArathiBasin/ArathiBasin{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map ArathiBasin",
@@ -178,7 +178,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-free map: presentation detected from a non-empty base tile texture"
       }
     },
@@ -192,7 +192,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/Battlegrounds",
+        "root": "D:/Development/unrealMap_data/#Maps/Battlegrounds",
         "file": "WarsongGulch.png",
         "width": 2004,
         "height": 1336,
@@ -202,7 +202,7 @@
         "role": "source master; stored outside the packaged addon",
         "detailScale": "2x native runtime resolution",
         "style": "user-supplied repainted battleground artwork",
-        "provenance": "user-supplied from D:/Development/unrealUI_data/#Maps/Battlegrounds; author and license not supplied",
+        "provenance": "user-supplied from D:/Development/unrealMap_data/#Maps/Battlegrounds; author and license not supplied",
         "licenseOrPermission": "supplied by the user for this local integration; redistribution rights not documented",
         "warpOutputToMaster": [
           [
@@ -223,7 +223,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Battlegrounds/WarsongGulch/WarsongGulch{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Battlegrounds/WarsongGulch/WarsongGulch{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map WarsongGulch",
@@ -238,7 +238,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-free map: presentation detected from a non-empty base tile texture"
       }
     },
@@ -279,7 +279,7 @@
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/Stormwind/Stormwind{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/Stormwind/Stormwind{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Stormwind",
@@ -290,7 +290,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-01: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, stitched preview, and lifecycle binding simulation validated",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -335,7 +335,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/Undercity/Undercity{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/Undercity/Undercity{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Undercity",
@@ -349,7 +349,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-02: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, stitched preview, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found in the composite",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -394,7 +394,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/Ogrimmar/Ogrimmar{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/Ogrimmar/Ogrimmar{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Ogrimmar",
@@ -408,7 +408,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-01: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, stitched preview, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found in the composite",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -424,7 +424,7 @@
       "master": {
         "file": "Darnassis/Darnassus.png",
         "root": "C:/Games/Azeroth Launcher/unrealMap-sources",
-        "originalPath": "D:/Development/unrealUI_data/#Maps/Capitals/Darnassus.png",
+        "originalPath": "D:/Development/unrealMap_data/#Maps/Capitals/Darnassus.png",
         "width": 2004,
         "height": 1336,
         "colorMode": "RGB",
@@ -454,7 +454,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/Darnassis/Darnassis{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/Darnassis/Darnassis{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Darnassis",
@@ -468,7 +468,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, unique basenames, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       },
       "bindingAliases": [
@@ -488,7 +488,7 @@
       "master": {
         "file": "Ironforge/ironforge.png",
         "root": "C:/Games/Azeroth Launcher/unrealMap-sources",
-        "originalPath": "D:/Development/unrealUI_data/#Maps/Capitals/ironforge.png",
+        "originalPath": "D:/Development/unrealMap_data/#Maps/Capitals/ironforge.png",
         "width": 2004,
         "height": 1336,
         "colorMode": "RGB",
@@ -518,7 +518,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/Ironforge/Ironforge{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/Ironforge/Ironforge{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Ironforge",
@@ -532,7 +532,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, unique basenames, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -548,7 +548,7 @@
       "master": {
         "file": "ThunderBluff/Thunder_Bluff.png",
         "root": "C:/Games/Azeroth Launcher/unrealMap-sources",
-        "originalPath": "D:/Development/unrealUI_data/#Maps/Capitals/Thunder_Bluff.png",
+        "originalPath": "D:/Development/unrealMap_data/#Maps/Capitals/Thunder_Bluff.png",
         "width": 2004,
         "height": 1336,
         "colorMode": "RGB",
@@ -578,7 +578,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Capitals/ThunderBluff/ThunderBluff{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Capitals/ThunderBluff/ThunderBluff{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map ThunderBluff",
@@ -592,7 +592,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, unique basenames, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -616,7 +616,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Dungeons/{mapName}/Dungeon{mapName}{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_Instances/Dungeons/{mapName}/Dungeon{mapName}{1..12}",
         "transform": "source BLP bytes copied unchanged under a Dungeon-prefixed runtime basename to prevent the client's basename-only texture cache from colliding with world overlays",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete supplied mip chain with every payload validated in bounds",
@@ -630,7 +630,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: exact 55-folder/660-file BLP-only inventory, BLP2 DXT5 headers, 512x512 dimensions, mip bounds, zero duplicate basenames, catalog/Lua agreement, all-map lifecycle binding simulation, and 55 stitched previews validated; representative previews were visually inspected with no blank, duplicate, discontinuous, or visibly seamed tiles",
-        "inGame": "Ragefire PASS 2026-10-02 with UnrealRuntimeProbe 1.58.23 (map-only); every other dungeon and floor NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed all 19 dungeons OK in game (Ragefire first passed 2026-10-02 with UnrealRuntimeProbe 1.58.23, map-only)",
         "playerPosition": "not provided by this feature; Ragefire returned 0,0 through the tested native map context",
         "presentationSignal": "party-instance context plus an exact dungeon map key, a recognized instance/location name, the entry latch, or /umap dungeon <mapName>"
       }
@@ -655,7 +655,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Raids/{mapName}/Raid{mapName}{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_Instances/Raids/{mapName}/Raid{mapName}{1..12}",
         "transform": "source BLP bytes copied unchanged under a Raid-prefixed runtime basename to prevent the client's basename-only texture cache from colliding with other map textures",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete supplied mip chain with every payload validated in bounds",
@@ -669,7 +669,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: exact 13-folder/156-file BLP-only inventory, BLP2 DXT5 headers, 512x512 dimensions, mip bounds, zero duplicate basenames, catalog/Lua agreement, all-map lifecycle binding simulation, and 13 stitched previews validated; representative Ahn'Qiraj, Blackwing Lair, Naxxramas, and Molten Core previews were visually inspected with no blank, duplicate, discontinuous, or visibly seamed tiles",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "playerPosition": "not provided by this feature",
         "presentationSignal": "raid-instance context plus an exact raid map key, a recognized instance/location name, the entry latch, or /umap raid <mapName>"
       }
@@ -684,7 +684,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps",
+        "root": "D:/Development/unrealMap_data/#Maps",
         "file": "world.png",
         "width": 1536,
         "height": 1024,
@@ -715,7 +715,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Continents/World/World{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Continents/World/World{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map World",
@@ -729,7 +729,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "GetMapInfo may be nil on the cosmic view; identify the verified native Interface/WorldMap/World/World1 path before rebinding"
       }
     },
@@ -743,7 +743,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps",
+        "root": "D:/Development/unrealMap_data/#Maps",
         "file": "Kalimdor.png",
         "width": 1536,
         "height": 1024,
@@ -774,7 +774,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Continents/Kalimdor/Kalimdor{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Continents/Kalimdor/Kalimdor{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Kalimdor",
@@ -788,7 +788,7 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
       }
     },
@@ -802,7 +802,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps",
+        "root": "D:/Development/unrealMap_data/#Maps",
         "file": "Eastern Kingdoms.png",
         "width": 1536,
         "height": 1024,
@@ -833,7 +833,7 @@
         "role": "shipped runtime output",
         "colorMode": "RGBA encoded as DXT5 from the opaque RGB master",
         "alphaMode": "opaque 255",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/Continents/Azeroth/Azeroth{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/Continents/Azeroth/Azeroth{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "11-level layout of the validated base tiles",
         "generator": "python -B tools/slice_full_map.py --map Azeroth",
@@ -847,8 +847,40 @@
       },
       "validation": {
         "offline": "PASS 2026-10-04: 12/12 BLP2 DXT5 tiles, 512x512 dimensions, mip bounds, exact inventory, 2004x1336 stitched preview, registration, and lifecycle binding simulation validated; no blank, duplicate, or discontinuous visible tile was found",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS 2026-10-10: user confirmed the HD map OK in game",
         "presentationSignal": "overlay-less map: presentation detected from a non-empty base tile texture; confirm the tile is empty after closing the map"
+      }
+    },
+    {
+      "id": "ui.addonlogo",
+      "name": "unrealMap settings logo (not a map surface)",
+      "bindingKey": "Settings.lua / UnrealUI Game Settings integration",
+      "files": [
+        {
+          "runtime": "Media/Textures/UI/uM_logo.tga",
+          "originalSource": "User-supplied Media/Textures/UI/uM_logo.png (conversion input; not shipped)",
+          "originalDimensions": "1254x1254",
+          "originalColorMode": "RGBA",
+          "originalSha256": "56c6b7b3d914054bac5245b4a17a2c682ddd08c9bc36734229324d184d01ed36",
+          "dimensions": "128x128",
+          "colorMode": "RGBA",
+          "sha256": "8df950049b36694731109f0163c36a71e7efec4d7ecf78ebaa8eec7fc8216f21",
+          "use": "Logo before the unrealMap page title and Game Settings category name"
+        }
+      ],
+      "provenance": "Artwork supplied in the unrealMap workspace by the project owner for this settings integration.",
+      "licenseOrPermission": "Use authorized by the project owner's explicit request; underlying authorship and redistribution licence were not separately supplied.",
+      "runtime": {
+        "activeFormat": "32-bit uncompressed TGA (image type 2, descriptor 0x08)",
+        "conversion": "Pillow 12.3.0: RGBA converted to premultiplied RGBa, Lanczos resized once from 1254x1254 to 128x128, converted back to straight RGBA, and saved as uncompressed TGA",
+        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/UI/uM_logo",
+        "startupBindings": 0,
+        "binding": "Bound only when a settings window containing unrealMap is built",
+        "addonOwnedTextureRegions": "1 in the standalone unrealMap window; the UnrealUI host owns its category and page-title regions"
+      },
+      "validation": {
+        "offline": "PASS 2026-10-05: decoded as 128x128 RGBA; TGA header image type 2, 32 bpp, descriptor 0x08; transparency and edge quality visually checked from a decoded PNG preview",
+        "inGame": "NOT_TESTED"
       }
     },
     {
@@ -941,6 +973,50 @@
       }
     },
     {
+      "id": "ui.packicons",
+      "name": "Packs settings page status icons (not a map surface)",
+      "bindingKey": "Settings.lua (Packs page / Data packs section)",
+      "files": [
+        {
+          "runtime": "Media/Textures/UI/unrealmap-pack-installed.tga",
+          "dimensions": "64x64",
+          "colorMode": "RGBA",
+          "sha256": "b4adbf7c4f636aff064c73b5f2d649d72eb8d3df734a6ffb70e51aa046c02ff1",
+          "use": "Green check in a ring beside an installed data pack"
+        },
+        {
+          "runtime": "Media/Textures/UI/unrealmap-pack-missing.tga",
+          "dimensions": "64x64",
+          "colorMode": "RGBA",
+          "sha256": "662b5b23d7d295967ecba35a99533b506998056783c92b11d3660572702fd7ff",
+          "use": "Grey ring with an X beside a data pack that is not installed"
+        },
+        {
+          "runtime": "Media/Textures/UI/unrealmap-pack-notice.tga",
+          "dimensions": "64x64",
+          "colorMode": "RGBA",
+          "sha256": "30c13a7856c74f1f3f3e27fecb9deb8e6461bb0cb86223cf838954eeecbe929b",
+          "use": "Accent exclamation mark in a ring before the install hint"
+        }
+      ],
+      "provenance": "Original vector drawing generated for unrealMap by tools/generate_pack_icons.py from geometry and colors in that script; no input artwork.",
+      "licenseOrPermission": "Project-original artwork created at the project owner's request.",
+      "runtime": {
+        "activeFormat": "32-bit uncompressed TGA (image type 2, descriptor 0x08), the format of uM_logo.tga",
+        "conversion": "Pillow 12.3.0: drawn at 512x512 (8x) on a transparent canvas, box-filtered to 64x64 in premultiplied RGBa, converted back to straight RGBA, saved uncompressed",
+        "generator": "python tools/generate_pack_icons.py (scratch venv with tools/requirements.txt)",
+        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/UI/unrealmap-pack-{installed,missing,notice}",
+        "startupBindings": 0,
+        "binding": "Bound only when the Packs page (unrealUI) or the standalone settings window is first built; each row icon switches between installed and missing on open",
+        "addonOwnedTextureRegions": "4 per built page: one status icon per pack plus the notice icon",
+        "displaySize": "18x18 status icons, 16x16 notice icon"
+      },
+      "validation": {
+        "offline": "PASS 2026-10-10: TGA headers type 2, 32 bpp, descriptor 0x08; 64x64 RGBA; preview at 64 px and 20 px on a dark background checked for halos and stroke legibility",
+        "inGame": "NOT_TESTED"
+      }
+    },
+    {
       "id": "world.alterac.base",
       "name": "Alterac base map",
       "bindingKey": "Alterac",
@@ -950,7 +1026,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Alterac.png",
         "width": 1536,
         "height": 1024,
@@ -976,7 +1052,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Alterac/Alterac{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Alterac/Alterac{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Alterac",
@@ -988,7 +1064,56 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.alterac.unexplored",
+      "name": "Alterac unexplored base map",
+      "bindingKey": "Alterac",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Alterac.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "role": "authoritative full-map unexplored themed master",
+        "warpOutputToMaster": [
+          [
+            0.766513,
+            0.00112,
+            10.968798
+          ],
+          [
+            -9.9e-05,
+            0.768194,
+            6.108636
+          ]
+        ]
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Alterac/Alterac_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "python -B tools/import_zone_masters.py --map Alterac --unexplored-only",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 45
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
       }
     },
     {
@@ -1037,7 +1162,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Alterac.png",
         "width": 1536,
         "height": 1024,
@@ -1077,7 +1202,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Alterac",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1091,7 +1216,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "arathi.png",
         "width": 2004,
         "height": 1336,
@@ -1117,7 +1242,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Arathi/Arathi{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Arathi/Arathi{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Arathi",
@@ -1129,7 +1254,56 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.arathi.unexplored",
+      "name": "Arathi unexplored base map",
+      "bindingKey": "Arathi",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Arathi.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "role": "authoritative full-map unexplored themed master",
+        "warpOutputToMaster": [
+          [
+            0.766371,
+            0.000443,
+            0.495227
+          ],
+          [
+            -1.3e-05,
+            0.765934,
+            0.312577
+          ]
+        ]
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Arathi/Arathi_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "python -B tools/import_zone_masters.py --map Arathi --unexplored-only",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 29
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
       }
     },
     {
@@ -1162,7 +1336,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "arathi.png",
         "width": 2004,
         "height": 1336,
@@ -1202,7 +1376,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Arathi",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1216,7 +1390,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Ashenvale.png",
         "width": 2004,
         "height": 1336,
@@ -1242,7 +1416,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Ashenvale/Ashenvale{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Ashenvale/Ashenvale{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Ashenvale",
@@ -1254,7 +1428,56 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.ashenvale.unexplored",
+      "name": "Ashenvale unexplored base map",
+      "bindingKey": "Ashenvale",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Ashenvale.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "role": "authoritative full-map unexplored themed master",
+        "warpOutputToMaster": [
+          [
+            0.766984,
+            0.000188,
+            0.215242
+          ],
+          [
+            -6.8e-05,
+            0.766132,
+            -0.101769
+          ]
+        ]
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Ashenvale/Ashenvale_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "python -B tools/import_zone_masters.py --map Ashenvale --unexplored-only",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 34
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
       }
     },
     {
@@ -1292,7 +1515,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Ashenvale.png",
         "width": 2004,
         "height": 1336,
@@ -1332,7 +1555,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Ashenvale",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1346,7 +1569,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "azshara.png",
         "width": 2004,
         "height": 1336,
@@ -1372,7 +1595,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Aszhara/Aszhara{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Aszhara/Aszhara{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Aszhara",
@@ -1384,7 +1607,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -1432,7 +1655,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "azshara.png",
         "width": 2004,
         "height": 1336,
@@ -1472,7 +1695,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Aszhara",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1486,7 +1709,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Badlands.png",
         "width": 2004,
         "height": 1336,
@@ -1512,7 +1735,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Badlands/Badlands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Badlands/Badlands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Badlands",
@@ -1524,7 +1747,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -1566,7 +1789,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Badlands.png",
         "width": 2004,
         "height": 1336,
@@ -1606,7 +1829,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Badlands",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1620,7 +1843,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Barren.png",
         "width": 1536,
         "height": 1024,
@@ -1646,7 +1869,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Barrens/Barrens{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Barrens/Barrens{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Barrens",
@@ -1658,7 +1881,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -1700,7 +1923,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Barren.png",
         "width": 1536,
         "height": 1024,
@@ -1740,7 +1963,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Barrens",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -1754,7 +1977,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "BlastedLands.png",
         "width": 2004,
         "height": 1336,
@@ -1780,7 +2003,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/BlastedLands/BlastedLands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/BlastedLands/BlastedLands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map BlastedLands",
@@ -1792,7 +2015,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -1822,7 +2045,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "BlastedLands.png",
         "width": 2004,
         "height": 1336,
@@ -1862,7 +2085,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map BlastedLands",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS",
         "nativeFogUnavailableReason": "native reveal composition did not fully uncover the zone in game"
       },
       "validation": "PASS",
@@ -1881,7 +2104,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "BurningSteppes.png",
         "width": 2004,
         "height": 1336,
@@ -1907,7 +2130,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/BurningSteppes/BurningSteppes{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/BurningSteppes/BurningSteppes{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map BurningSteppes",
@@ -1919,7 +2142,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -1966,7 +2189,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "BurningSteppes.png",
         "width": 2004,
         "height": 1336,
@@ -2006,7 +2229,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map BurningSteppes",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -2024,7 +2247,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "darkshore.png",
         "width": 2004,
         "height": 1336,
@@ -2050,7 +2273,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Darkshore/Darkshore{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Darkshore/Darkshore{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Darkshore",
@@ -2062,7 +2285,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2088,7 +2311,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "darkshore.png",
         "width": 2004,
         "height": 1336,
@@ -2128,7 +2351,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Darkshore",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2142,7 +2365,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "deadwindpass.png",
         "width": 2004,
         "height": 1336,
@@ -2168,7 +2391,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/DeadwindPass/DeadwindPass{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/DeadwindPass/DeadwindPass{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map DeadwindPass",
@@ -2180,7 +2403,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2201,7 +2424,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "deadwindpass.png",
         "width": 2004,
         "height": 1336,
@@ -2248,7 +2471,7 @@
         ],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map DeadwindPass",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2262,7 +2485,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Desolace.png",
         "width": 2004,
         "height": 1336,
@@ -2288,7 +2511,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Desolace/Desolace{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Desolace/Desolace{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Desolace",
@@ -2300,7 +2523,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2339,7 +2562,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Desolace.png",
         "width": 2004,
         "height": 1336,
@@ -2379,7 +2602,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Desolace",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2393,7 +2616,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "DunMorogh.png",
         "width": 2004,
         "height": 1336,
@@ -2419,7 +2642,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/DunMorogh/DunMorogh{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/DunMorogh/DunMorogh{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map DunMorogh",
@@ -2431,7 +2654,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2467,7 +2690,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "DunMorogh.png",
         "width": 2004,
         "height": 1336,
@@ -2507,7 +2730,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map DunMorogh",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -2526,7 +2749,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "durotar.png",
         "width": 1536,
         "height": 1024,
@@ -2552,7 +2775,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Durotar/Durotar{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Durotar/Durotar{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Durotar",
@@ -2564,7 +2787,56 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.durotar.unexplored",
+      "name": "Durotar unexplored base map",
+      "bindingKey": "Durotar",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Durotar.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "role": "authoritative full-map unexplored themed master",
+        "warpOutputToMaster": [
+          [
+            0.766128,
+            0.000206,
+            0.644696
+          ],
+          [
+            3e-05,
+            0.766694,
+            -0.150479
+          ]
+        ]
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Durotar/Durotar_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "python -B tools/import_zone_masters.py --map Durotar --unexplored-only",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 25
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
       }
     },
     {
@@ -2593,7 +2865,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "durotar.png",
         "width": 1536,
         "height": 1024,
@@ -2633,7 +2905,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Durotar",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2647,7 +2919,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "duskwood.png",
         "width": 2004,
         "height": 1336,
@@ -2673,7 +2945,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Duskwood/Duskwood{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Duskwood/Duskwood{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Duskwood",
@@ -2685,7 +2957,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2731,7 +3003,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "duskwood.png",
         "width": 2004,
         "height": 1336,
@@ -2771,7 +3043,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Duskwood",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2785,7 +3057,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "dustwallowmarsh.png",
         "width": 2004,
         "height": 1336,
@@ -2811,7 +3083,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Dustwallow/Dustwallow{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Dustwallow/Dustwallow{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Dustwallow",
@@ -2823,7 +3095,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2853,7 +3125,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "dustwallowmarsh.png",
         "width": 2004,
         "height": 1336,
@@ -2893,7 +3165,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Dustwallow",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -2907,7 +3179,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Eastern_Plaguelands.png",
         "width": 2004,
         "height": 1336,
@@ -2933,7 +3205,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/EasternPlaguelands/EasternPlaguelands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/EasternPlaguelands/EasternPlaguelands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map EasternPlaguelands",
@@ -2945,7 +3217,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -2989,7 +3261,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Eastern_Plaguelands.png",
         "width": 2004,
         "height": 1336,
@@ -3029,7 +3301,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map EasternPlaguelands",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -3048,7 +3320,58 @@
         "order": "row-major"
       },
       "master": {
-        "root": "Media/Textures/Maps/World/_Unexplored/Elwynn",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
+        "file": "elwynn.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "role": "authoritative full-map themed master",
+        "warpOutputToMaster": [
+          [
+            0.766324,
+            -0.00017,
+            0.678902
+          ],
+          [
+            0.000354,
+            0.764264,
+            -0.356286
+          ]
+        ]
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "shipped runtime output",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Elwynn/Elwynn{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "python -B tools/import_zone_masters.py --map Elwynn",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "estimatedPeakDecodedBytesIncludingExploration": 29622272,
+        "estimatedPeakCompressedMipBytesIncludingExploration": 9874992,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 31
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "NOT_TESTED"
+      }
+    },
+    {
+      "id": "world.elwynn.unexplored",
+      "name": "Elwynn unexplored base map",
+      "bindingKey": "Elwynn",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
         "file": "Elwynn.png",
         "width": 1536,
         "height": 1024,
@@ -3073,15 +3396,13 @@
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
-        "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/_Unexplored/Elwynn/Elwynn{1..12}",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Elwynn/Elwynn_Unexplored{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
-        "generator": "python -B tools/import_zone_masters.py --map Elwynn",
+        "generator": "python -B tools/import_zone_masters.py --map Elwynn --unexplored-only",
         "startupBindings": 0,
         "addonOwnedTextureRegions": 0,
-        "estimatedPeakDecodedBytesIncludingExploration": 29622272,
-        "estimatedPeakCompressedMipBytesIncludingExploration": 9874992,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 31
       },
       "validation": {
@@ -3121,7 +3442,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "elwynn.png",
         "width": 1536,
         "height": 1024,
@@ -3130,7 +3451,7 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "state": "authoritative explored/unexplored master pair with native per-area reveal alpha",
+        "state": "authoritative full-map master with native active-zone fog fallback",
         "approvedForRuntime": true,
         "preserveNativeFog": true,
         "nativeAlphaReference": "D:/Development/unrealUI_data/wowclassic_illus_maps/WoW Classic Maps/Sprite assets/Elwynn",
@@ -3161,32 +3482,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Elwynn",
-        "inGame": "NOT_TESTED",
-        "unexploredMaster": {
-          "root": "Media/Textures/Maps/World/_Unexplored/Elwynn",
-          "file": "Elwynn.png",
-          "width": 1536,
-          "height": 1024,
-          "colorMode": "RGB",
-          "detailScale": "1.533x native supplied; resampled once to 2x runtime",
-          "provenance": "user-supplied",
-          "authorOrOwner": "not supplied",
-          "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-          "role": "authoritative full-map unexplored themed master",
-          "warpOutputToMaster": [
-            [
-              0.766324,
-              -0.00017,
-              0.678902
-            ],
-            [
-              0.000354,
-              0.764264,
-              -0.356286
-            ]
-          ]
-        },
-        "nativeRGBFallback": false
+        "inGame": "NOT_TESTED"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -3207,7 +3503,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "felwood.png",
         "width": 1535,
         "height": 1024,
@@ -3233,7 +3529,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Felwood/Felwood{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Felwood/Felwood{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Felwood",
@@ -3245,7 +3541,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3274,7 +3570,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "felwood.png",
         "width": 1535,
         "height": 1024,
@@ -3314,7 +3610,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Felwood",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -3328,7 +3624,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Feralas.png",
         "width": 2004,
         "height": 1336,
@@ -3354,7 +3650,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Feralas/Feralas{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Feralas/Feralas{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Feralas",
@@ -3366,7 +3662,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3402,7 +3698,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Feralas.png",
         "width": 2004,
         "height": 1336,
@@ -3442,7 +3738,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Feralas",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -3456,7 +3752,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Hillsbrad.png",
         "width": 2004,
         "height": 1336,
@@ -3482,7 +3778,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Hilsbrad/Hilsbrad{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Hilsbrad/Hilsbrad{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Hilsbrad",
@@ -3494,7 +3790,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3535,7 +3831,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Hillsbrad.png",
         "width": 2004,
         "height": 1336,
@@ -3575,7 +3871,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Hilsbrad",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -3589,7 +3885,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Hinterlands.png",
         "width": 2004,
         "height": 1336,
@@ -3615,7 +3911,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Hinterlands/Hinterlands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Hinterlands/Hinterlands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Hinterlands",
@@ -3627,7 +3923,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3664,7 +3960,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Hinterlands.png",
         "width": 2004,
         "height": 1336,
@@ -3704,7 +4000,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Hinterlands",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS",
         "nativeFogUnavailableReason": "native reveal composition did not fully uncover the zone in game"
       },
       "validation": "PASS"
@@ -3719,7 +4015,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "LochModan.png",
         "width": 2004,
         "height": 1336,
@@ -3745,7 +4041,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/LochModan/LochModan{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/LochModan/LochModan{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map LochModan",
@@ -3757,7 +4053,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3800,7 +4096,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "LochModan.png",
         "width": 2004,
         "height": 1336,
@@ -3840,7 +4136,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map LochModan",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -3854,7 +4150,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Moonglade.png",
         "width": 2004,
         "height": 1336,
@@ -3880,7 +4176,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Moonglade/Moonglade{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Moonglade/Moonglade{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Moonglade",
@@ -3892,7 +4188,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -3915,7 +4211,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Moonglade.png",
         "width": 2004,
         "height": 1336,
@@ -3955,7 +4251,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Moonglade",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -3969,7 +4265,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "mulgore.png",
         "width": 1536,
         "height": 1024,
@@ -3995,7 +4291,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Mulgore/Mulgore{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Mulgore/Mulgore{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Mulgore",
@@ -4007,7 +4303,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4040,7 +4336,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "mulgore.png",
         "width": 1536,
         "height": 1024,
@@ -4080,7 +4376,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Mulgore",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -4099,7 +4395,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "redbridge.png",
         "width": 1536,
         "height": 1024,
@@ -4125,7 +4421,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Redridge/Redridge{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Redridge/Redridge{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Redridge",
@@ -4137,7 +4433,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4183,7 +4479,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "redbridge.png",
         "width": 1536,
         "height": 1024,
@@ -4223,7 +4519,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Redridge",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4237,7 +4533,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "SearingGorge.png",
         "width": 2004,
         "height": 1336,
@@ -4263,7 +4559,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/SearingGorge/SearingGorge{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/SearingGorge/SearingGorge{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map SearingGorge",
@@ -4275,7 +4571,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4314,7 +4610,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "SearingGorge.png",
         "width": 2004,
         "height": 1336,
@@ -4354,7 +4650,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map SearingGorge",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4368,7 +4664,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Silithus.png",
         "width": 1536,
         "height": 1024,
@@ -4394,7 +4690,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Silithus/Silithus{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Silithus/Silithus{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Silithus",
@@ -4406,7 +4702,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4447,7 +4743,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Silithus.png",
         "width": 1536,
         "height": 1024,
@@ -4521,7 +4817,7 @@
           "TwilightBaseCamp2"
         ],
         "generator": "python -B tools/import_zone_masters.py --map Silithus",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4535,7 +4831,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "silverpine.png",
         "width": 1536,
         "height": 1024,
@@ -4561,7 +4857,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Silverpine/Silverpine{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Silverpine/Silverpine{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Silverpine",
@@ -4573,7 +4869,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4605,7 +4901,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "silverpine.png",
         "width": 1536,
         "height": 1024,
@@ -4645,7 +4941,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Silverpine",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4659,7 +4955,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Stonetalon_Mountains.png",
         "width": 2004,
         "height": 1336,
@@ -4685,7 +4981,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/StonetalonMountains/StonetalonMountains{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/StonetalonMountains/StonetalonMountains{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map StonetalonMountains",
@@ -4697,7 +4993,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4733,7 +5029,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Stonetalon_Mountains.png",
         "width": 2004,
         "height": 1336,
@@ -4773,7 +5069,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map StonetalonMountains",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4787,7 +5083,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Stranglethorn.png",
         "width": 2004,
         "height": 1336,
@@ -4813,7 +5109,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Stranglethorn/Stranglethorn{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Stranglethorn/Stranglethorn{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Stranglethorn",
@@ -4825,7 +5121,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -4869,7 +5165,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Stranglethorn.png",
         "width": 2004,
         "height": 1336,
@@ -4909,7 +5205,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Stranglethorn",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -4923,7 +5219,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "swamp_of_sorrows.png",
         "width": 2004,
         "height": 1336,
@@ -4949,7 +5245,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/SwampOfSorrows/SwampOfSorrows{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/SwampOfSorrows/SwampOfSorrows{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map SwampOfSorrows",
@@ -4961,7 +5257,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5005,7 +5301,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "swamp_of_sorrows.png",
         "width": 2004,
         "height": 1336,
@@ -5045,7 +5341,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map SwampOfSorrows",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5059,7 +5355,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Tanaris.png",
         "width": 2004,
         "height": 1336,
@@ -5085,7 +5381,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Tanaris/Tanaris{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Tanaris/Tanaris{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Tanaris",
@@ -5097,7 +5393,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5134,7 +5430,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Tanaris.png",
         "width": 2004,
         "height": 1336,
@@ -5174,7 +5470,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Tanaris",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5188,7 +5484,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Teldrassil.png",
         "width": 2004,
         "height": 1336,
@@ -5214,7 +5510,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Teldrassil/Teldrassil{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Teldrassil/Teldrassil{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Teldrassil",
@@ -5226,7 +5522,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5255,7 +5551,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Teldrassil.png",
         "width": 2004,
         "height": 1336,
@@ -5295,7 +5591,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Teldrassil",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5309,7 +5605,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Thousandneedles.png",
         "width": 2004,
         "height": 1336,
@@ -5335,7 +5631,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/ThousandNeedles/ThousandNeedles{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/ThousandNeedles/ThousandNeedles{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map ThousandNeedles",
@@ -5347,7 +5643,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5379,7 +5675,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Thousandneedles.png",
         "width": 2004,
         "height": 1336,
@@ -5419,7 +5715,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map ThousandNeedles",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5433,7 +5729,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Tirisfal.png",
         "width": 2004,
         "height": 1336,
@@ -5459,7 +5755,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Tirisfal/Tirisfal{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Tirisfal/Tirisfal{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Tirisfal",
@@ -5471,7 +5767,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5506,7 +5802,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Tirisfal.png",
         "width": 2004,
         "height": 1336,
@@ -5546,7 +5842,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Tirisfal",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5560,7 +5856,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "UngoroCrater.png",
         "width": 2004,
         "height": 1336,
@@ -5586,7 +5882,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/UngoroCrater/UngoroCrater{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/UngoroCrater/UngoroCrater{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map UngoroCrater",
@@ -5598,7 +5894,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5645,7 +5941,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "UngoroCrater.png",
         "width": 2004,
         "height": 1336,
@@ -5685,7 +5981,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map UngoroCrater",
-        "inGame": "NOT_TESTED",
+        "inGame": "PASS",
         "nativeFogUnavailableReason": "native reveal composition did not fully uncover the zone in game"
       },
       "validation": "PASS"
@@ -5700,7 +5996,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "WesternPlaguelands.png",
         "width": 2004,
         "height": 1336,
@@ -5726,7 +6022,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/WesternPlaguelands/WesternPlaguelands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/WesternPlaguelands/WesternPlaguelands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map WesternPlaguelands",
@@ -5738,7 +6034,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5777,7 +6073,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "WesternPlaguelands.png",
         "width": 2004,
         "height": 1336,
@@ -5817,7 +6113,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map WesternPlaguelands",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS",
       "runtimeFileNames": {
@@ -5836,7 +6132,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Westfall.png",
         "width": 1536,
         "height": 1024,
@@ -5862,7 +6158,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Westfall/Westfall{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Westfall/Westfall{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Westfall",
@@ -5874,7 +6170,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -5908,7 +6204,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Westfall.png",
         "width": 1536,
         "height": 1024,
@@ -5948,7 +6244,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Westfall",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -5962,7 +6258,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Wetlands.png",
         "width": 2004,
         "height": 1336,
@@ -5988,7 +6284,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Wetlands/Wetlands{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Wetlands/Wetlands{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Wetlands",
@@ -6000,7 +6296,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -6036,7 +6332,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Wetlands.png",
         "width": 2004,
         "height": 1336,
@@ -6076,7 +6372,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Wetlands",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     },
@@ -6090,7 +6386,7 @@
         "order": "row-major"
       },
       "master": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Winterspring.png",
         "width": 2004,
         "height": 1336,
@@ -6116,7 +6412,7 @@
       "runtime": {
         "activeFormat": "BLP2 DXT5",
         "role": "shipped runtime output",
-        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/Maps/World/Winterspring/Winterspring{1..12}",
+        "pathPattern": "Interface/AddOns/unrealMap_World/World/Winterspring/Winterspring{1..12}",
         "dimensionsPerTile": "512x512",
         "mipPolicy": "complete chain",
         "generator": "python -B tools/import_zone_masters.py --map Winterspring",
@@ -6128,7 +6424,7 @@
       },
       "validation": {
         "offline": "PASS",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       }
     },
     {
@@ -6158,7 +6454,7 @@
       "alphaMode": "straight alpha from native reveal sprites; premultiplied box-filtered mips",
       "role": "shipped runtime exploration overlays rebound onto the native fixed overlay pool",
       "activeMasterImport": {
-        "root": "D:/Development/unrealUI_data/#Maps/zones",
+        "root": "D:/Development/unrealMap_data/#Maps/zones",
         "file": "Winterspring.png",
         "width": 2004,
         "height": 1336,
@@ -6198,7 +6494,7 @@
         "missingNativeRevealPieces": [],
         "transparentRevealSuppressions": [],
         "generator": "python -B tools/import_zone_masters.py --map Winterspring",
-        "inGame": "NOT_TESTED"
+        "inGame": "PASS"
       },
       "validation": "PASS"
     }

@@ -1,14 +1,16 @@
 --[[
 unrealMap / Settings.lua
 
-The options page, and which window draws it. Same contract as UnrealQuest's
-Core/Settings.lua, scaled down to one page:
+The options pages, and which window draws them. Same contract as
+UnrealQuest's Core/Settings.lua, scaled down to two pages: General, and Packs
+(the launcher data packs and whether each one is installed).
 
-  * If unrealUI is installed, the page is registered with its settings window
-    (U.RegisterSettingsTab) and uses its shared checkbox component, so it looks
-    and opens like every other unrealUI page.
+  * If unrealUI is installed, the pages are registered with its settings window
+    (U.RegisterSettingsTab) and use its shared checkbox component, so they look
+    and open like every other unrealUI page.
   * Otherwise unrealMap builds its own small window and hands the same builder
-    its content frame, with a button beside the minimap to open it.
+    its content frame, both sections stacked on one page, with a button beside
+    the minimap to open it.
 
 Neither addon depends on the other. unrealUI is detected by POLLING for the
 UnrealUI global and type-checking RegisterSettingsTab, not by load order,
@@ -28,29 +30,54 @@ Every label is translated when it is built; a language change asks for a
 local L = unrealMapLocale.L
 
 -- Under unrealUI the addon is a settings group (its own "Unreal Map" category
--- in unrealUI's Game Settings window) holding one page.
+-- in unrealUI's Game Settings window) holding the General and Packs pages.
 local TAB_ID = "unrealmap"
 local TAB_LABEL = "UnrealMap"
 local GENERAL_PAGE_ID = TAB_ID .. ".general"
+local PACKS_PAGE_ID = TAB_ID .. ".packs"
+
+-- The display name and description of each launcher pack. A pack missing
+-- here is listed by its folder name alone.
+local PACK_INFO = {
+  unrealMap_World = { name = "PACK_WORLD_NAME", note = "PACK_WORLD_NOTE" },
+  unrealMap_Unexplored = { name = "PACK_UNEXPLORED_NAME", note = "PACK_UNEXPLORED_NOTE" },
+  unrealMap_Instances = { name = "PACK_INSTANCES_NAME", note = "PACK_INSTANCES_NOTE" },
+}
+
+-- Packs page icons (manifest ui.packicons), bound only when the page is built.
+local UI_TEXTURES = "Interface\\AddOns\\unrealMap\\Media\\Textures\\UI\\"
+local PACK_ICON_INSTALLED = UI_TEXTURES .. "unrealmap-pack-installed"
+local PACK_ICON_MISSING = UI_TEXTURES .. "unrealmap-pack-missing"
+local PACK_ICON_NOTICE = UI_TEXTURES .. "unrealmap-pack-notice"
 
 -- Never the name of the global API table below: CreateFrame assigns the
 -- frame to a global of its name, which would replace that table.
 local WINDOW_NAME = "unrealMapSettingsWindow"
 local MINIMAP_BUTTON_NAME = "unrealMapMinimapButton"
 local MINIMAP_ICON = "Interface\\Icons\\INV_Misc_Map_01"
+local LOGO_TEXTURE = "Interface\\AddOns\\unrealMap\\Media\\Textures\\UI\\uM_logo"
 local PLAIN_TEXTURE = "Interface\\Buttons\\WHITE8X8"
 
 -- Standalone window metrics, the same header/footer/padding UnrealQuest uses.
 local HEADER_HEIGHT = 32
 local FOOTER_HEIGHT = 46
 local PADDING = 12
-local CONTENT_WIDTH = 360
+local CONTENT_WIDTH = 440
 local CONTENT_HEIGHT = 152
 local TEXT_WIDTH = CONTENT_WIDTH - 12
+local PACK_HEADER_GAP = 12
+local PACK_ROW_HEIGHT = 46
+local PACK_ICON_SIZE = 18
+local PACK_NOTICE_SIZE = 16
+local PACK_STATUS_WIDTH = 92
+local PACK_STATUS_LEFT = TEXT_WIDTH - PACK_STATUS_WIDTH - PACK_ICON_SIZE - 6
+local PACK_COUNT_WIDTH = 200
 local NOTE_INDENT = 20
 local CHECKBOX_SIZE = 14
 local CHECKBOX_INSET = 3
 local MINIMAP_BUTTON_SIZE = 24
+local TITLE_LOGO_SIZE = 20
+local TITLE_LOGO_GAP = 5
 
 -- Standalone language flags, unrealUI/UnrealQuest's header row: opacity alone
 -- marks the selection (full when active, dim when idle, near-full on hover).
@@ -67,6 +94,9 @@ local HOST_POLL_SECONDS = 15
 
 local ACCENT = { 0.96, 0.68, 0.04, 1.00 }
 local ACCENT_HEX = "f5ae0a"
+local INSTALLED = { 0.36, 0.84, 0.28 }
+local INSTALLED_HEX = "5cd648"
+local RULE = { 0.24, 0.24, 0.24, 1.00 }
 local BACKGROUND = { 0.06, 0.06, 0.06 }
 local BORDER = { 0.16, 0.16, 0.16, 1.00 }
 local NOTE_GREY = 0.70
@@ -101,14 +131,8 @@ local function Store(key, value)
   unrealMapDB[key] = value
 end
 
+-- Every chat line: the white/accent wordmark, then grey text.
 local function Print(text)
-  local frame = _G["DEFAULT_CHAT_FRAME"]
-  if frame and type(frame.AddMessage) == "function" then
-    pcall(frame.AddMessage, frame, "|cff33ffccunreal|cffffffffMap|r: " .. text)
-  end
-end
-
-local function PrintLoaded(text)
   local frame = _G["DEFAULT_CHAT_FRAME"]
   if frame and type(frame.AddMessage) == "function" then
     pcall(frame.AddMessage, frame,
@@ -119,7 +143,8 @@ end
 
 local function PageTitle()
   local version = unrealMap and unrealMap.version or "?"
-  return "|cff33ffccunreal|cffffffffMap|r |cff888888v" .. tostring(version) .. "|r"
+  return "|cffffffffUnreal |cff" .. ACCENT_HEX .. "Map|r |cff888888v"
+    .. tostring(version) .. "|r"
 end
 
 -- unrealUI's namespace, only if it carries the function this needs.
@@ -266,8 +291,12 @@ end
 -- unrealUI's contract (modules/settings.lua, RegisterSettingsTab):
 -- build(parent) returns the regions the page owns and a refresh function run
 -- on every open. The standalone window honours the same contract.
+--
+-- sections selects what the page holds: { general = true, packs = true }.
+-- The third return value is the page's bottom offset, used to size the
+-- standalone window.
 
-local function BuildPage(parent, standalone)
+local function BuildPage(parent, standalone, sections)
   local widgets, syncs = {}, {}
   local y = standalone and -10 or 0
 
@@ -311,42 +340,157 @@ local function BuildPage(parent, standalone)
     table.insert(syncs, function() control.SetValue(Setting(key) and true or false) end)
   end
 
+  -- A wrapped label's height, or fallback before the client can measure it.
+  local function Measured(label, fallback)
+    if label and type(label.GetHeight) == "function" then
+      local ok, measured = pcall(label.GetHeight, label)
+      if ok and type(measured) == "number" and measured > 0 then return measured end
+    end
+    return fallback
+  end
+
   local function Note(text)
     local label = Add(FontString(parent, "GameFontHighlightSmall", NOTE_INDENT, y,
       TEXT_WIDTH - NOTE_INDENT, text, NOTE_GREY))
-    local height = 26
-    if label and type(label.GetHeight) == "function" then
-      local ok, measured = pcall(label.GetHeight, label)
-      if ok and type(measured) == "number" and measured > 0 then height = measured end
-    end
-    y = y - height - 12
+    y = y - Measured(label, 26) - 12
   end
 
-  local heading = Add(FontString(parent, "GameFontNormal", 0, y, nil, L("SETTINGS_HEADING_WORLD_MAP")))
-  if heading then pcall(heading.SetTextColor, heading, ACCENT[1], ACCENT[2], ACCENT[3]) end
-  y = y - 22
+  local function Heading(text)
+    local heading = Add(FontString(parent, "GameFontNormal", 0, y, nil, text))
+    if heading then pcall(heading.SetTextColor, heading, ACCENT[1], ACCENT[2], ACCENT[3]) end
+    y = y - 22
+  end
 
-  Checkbox("revealFog", L("SETTINGS_REVEAL_FOG"), function(checked)
-    if unrealMap and type(unrealMap.SetFogRevealEnabled) == "function" then
-      unrealMap.SetFogRevealEnabled(checked)
-    else
-      Store("revealFog", checked and true or false)
+  -- A 1px separator across the text column at the current offset.
+  local function Rule()
+    local rule = Add(Solid(parent, "ARTWORK", RULE[1], RULE[2], RULE[3], RULE[4]))
+    if rule then
+      pcall(rule.SetPoint, rule, "TOPLEFT", parent, "TOPLEFT", 0, y)
+      pcall(rule.SetWidth, rule, TEXT_WIDTH)
+      pcall(rule.SetHeight, rule, 1)
     end
-  end)
-  Note(L("SETTINGS_REVEAL_FOG_NOTE"))
+    y = y - 1
+  end
 
-  if standalone then
-    Checkbox("minimapButton", L("SETTINGS_MINIMAP_BUTTON"), function(checked)
-      Store("minimapButton", checked and true or false)
-      Show(minimapButton, checked)
+  local function Icon(path, x, top, size)
+    local ok, icon = pcall(parent.CreateTexture, parent, nil, "ARTWORK")
+    if not ok or not icon then return nil end
+    pcall(icon.SetTexture, icon, path)
+    pcall(icon.SetWidth, icon, size)
+    pcall(icon.SetHeight, icon, size)
+    pcall(icon.SetPoint, icon, "TOPLEFT", parent, "TOPLEFT", x, top)
+    return Add(icon)
+  end
+
+  local function PackInstalled(pack)
+    return unrealMap and type(unrealMap.IsPackInstalled) == "function"
+      and unrealMap.IsPackInstalled(pack) and true or false
+  end
+
+  -- One launcher pack: its display name, a description below it, and its
+  -- install state on the right, read again on every open. A separator
+  -- closes the row.
+  local function PackRow(pack)
+    local info = PACK_INFO[pack]
+    local top = y
+    local textWidth = PACK_STATUS_LEFT - 8
+    Add(FontString(parent, "GameFontHighlight", 0, top - 8, textWidth,
+      info and L(info.name) or pack))
+    local height = PACK_ROW_HEIGHT
+    if info then
+      local note = Add(FontString(parent, "GameFontHighlightSmall", NOTE_INDENT, top - 26,
+        textWidth - NOTE_INDENT, L(info.note), NOTE_GREY))
+      local needed = 26 + Measured(note, 12) + 9
+      if needed > height then height = needed end
+    end
+    -- Whole pixels, so the icon is not resampled between screen pixels.
+    local middle = math.floor(top - height / 2)
+    local icon = Icon(PACK_ICON_MISSING, PACK_STATUS_LEFT, middle + PACK_ICON_SIZE / 2,
+      PACK_ICON_SIZE)
+    local status = Add(FontString(parent, "GameFontHighlightSmall", 0, 0, PACK_STATUS_WIDTH, ""))
+    if status then
+      pcall(status.ClearAllPoints, status)
+      pcall(status.SetPoint, status, "LEFT", parent, "TOPLEFT",
+        PACK_STATUS_LEFT + PACK_ICON_SIZE + 6, middle)
+    end
+    y = top - height
+    Rule()
+    table.insert(syncs, function()
+      local installed = PackInstalled(pack)
+      if icon then
+        pcall(icon.SetTexture, icon, installed and PACK_ICON_INSTALLED or PACK_ICON_MISSING)
+      end
+      if not status then return end
+      if installed then
+        pcall(status.SetText, status, L("PACK_INSTALLED"))
+        pcall(status.SetTextColor, status, INSTALLED[1], INSTALLED[2], INSTALLED[3])
+      else
+        pcall(status.SetText, status, L("PACK_NOT_INSTALLED"))
+        pcall(status.SetTextColor, status, NOTE_GREY, NOTE_GREY, NOTE_GREY)
+      end
     end)
+  end
+
+  if sections.general then
+    Heading(L("SETTINGS_HEADING_WORLD_MAP"))
+
+    Checkbox("revealFog", L("SETTINGS_REVEAL_FOG"), function(checked)
+      if unrealMap and type(unrealMap.SetFogRevealEnabled) == "function" then
+        unrealMap.SetFogRevealEnabled(checked)
+      else
+        Store("revealFog", checked and true or false)
+      end
+    end)
+    Note(L("SETTINGS_REVEAL_FOG_NOTE"))
+
+    if standalone then
+      Checkbox("minimapButton", L("SETTINGS_MINIMAP_BUTTON"), function(checked)
+        Store("minimapButton", checked and true or false)
+        Show(minimapButton, checked)
+      end)
+    end
+  end
+
+  if sections.packs then
+    -- Gap above the header: clear of the host's title rule on its own page,
+    -- or of the General options when stacked below them.
+    if sections.general then y = y - 14 else y = y - PACK_HEADER_GAP end
+    local packs = unrealMap and type(unrealMap.GetPacks) == "function"
+      and unrealMap.GetPacks() or {}
+    local total = table.getn(packs)
+
+    -- Header: the heading on the left, "N of M packs installed" on the right.
+    local count = Add(FontString(parent, "GameFontHighlightSmall",
+      TEXT_WIDTH - PACK_COUNT_WIDTH, y - 2, PACK_COUNT_WIDTH, "", NOTE_GREY))
+    if count then pcall(count.SetJustifyH, count, "RIGHT") end
+    Heading(L("SETTINGS_HEADING_PACKS"))
+    Rule()
+    table.insert(syncs, function()
+      if not count then return end
+      local installed, i = 0
+      for i = 1, total do
+        if PackInstalled(packs[i]) then installed = installed + 1 end
+      end
+      pcall(count.SetText, count, L("SETTINGS_PACKS_COUNT",
+        "|cff" .. INSTALLED_HEX .. installed .. "|r", total))
+    end)
+
+    local i
+    for i = 1, total do PackRow(packs[i]) end
+
+    -- Footer: a notice icon and the install hint, left-aligned.
+    y = y - 12
+    Icon(PACK_ICON_NOTICE, 0, y + 3, PACK_NOTICE_SIZE)
+    local hint = Add(FontString(parent, "GameFontHighlightSmall", PACK_NOTICE_SIZE + 6, y,
+      TEXT_WIDTH - PACK_NOTICE_SIZE - 6, L("SETTINGS_PACKS_NOTE"), NOTE_GREY))
+    y = y - Measured(hint, 12) - 12
   end
 
   local function Refresh()
     local i
     for i = 1, table.getn(syncs) do syncs[i]() end
   end
-  return widgets, Refresh
+  return widgets, Refresh, y
 end
 
 -- Standalone window ---------------------------------------------------------
@@ -491,8 +635,23 @@ local function BuildWindow()
       pcall(rule.SetHeight, rule, 1)
     end
   end
-  FontString(frame, "GameFontNormal", 2 + PADDING,
-    -(math.floor((HEADER_HEIGHT - 14) / 2) + 4), nil, PageTitle())
+  local titleLeft = 2 + PADDING
+  local logoOk, logo = pcall(frame.CreateTexture, frame, nil, "OVERLAY")
+  if logoOk and logo and pcall(logo.SetTexture, logo, LOGO_TEXTURE) then
+    pcall(logo.SetWidth, logo, TITLE_LOGO_SIZE)
+    pcall(logo.SetHeight, logo, TITLE_LOGO_SIZE)
+    pcall(logo.SetPoint, logo, "LEFT", frame, "TOPLEFT", titleLeft,
+      -HEADER_HEIGHT / 2)
+    titleLeft = titleLeft + TITLE_LOGO_SIZE + TITLE_LOGO_GAP
+  elseif logoOk and logo then
+    pcall(logo.Hide, logo)
+  end
+  local title = FontString(frame, "GameFontNormal", 0, 0, nil, PageTitle())
+  if title then
+    pcall(title.ClearAllPoints, title)
+    pcall(title.SetPoint, title, "LEFT", frame, "TOPLEFT", titleLeft,
+      -HEADER_HEIGHT / 2)
+  end
 
   -- Drag handle over the header: a Button child raised by frame level, never
   -- by strata, moved with the warm-up StartMoving/StopMovingOrSizing pair
@@ -638,23 +797,30 @@ end
 
 -- Host resolution -----------------------------------------------------------
 
--- A group with one page where unrealUI supports groups; unrealUI lists a
--- group registered as "unrealmap" as its own category. An older unrealUI
--- without groups gets a single row instead.
+-- A group with General and Packs pages where unrealUI supports groups;
+-- unrealUI lists a group registered as "unrealmap" as its own category. An
+-- older unrealUI without groups gets a single row holding both sections.
 local function RegisterWithUnrealUI(hostUI)
-  local function Build(parent) return BuildPage(parent, false) end
+  local function Build(parent) return BuildPage(parent, false, { general = true }) end
+  local function BuildPacks(parent) return BuildPage(parent, false, { packs = true }) end
+  local function BuildAll(parent)
+    return BuildPage(parent, false, { general = true, packs = true })
+  end
   if type(hostUI.RegisterSettingsGroup) == "function" then
     local ok, group = pcall(hostUI.RegisterSettingsGroup, TAB_ID, TAB_LABEL,
-      { after = "profiles", defaultPage = GENERAL_PAGE_ID })
+      { after = "profiles", defaultPage = GENERAL_PAGE_ID, icon = LOGO_TEXTURE })
     if not ok or not group then return false end
     local pageOk, entry = pcall(hostUI.RegisterSettingsTab, GENERAL_PAGE_ID,
       L("SETTINGS_PAGE_GENERAL"), Build, { parent = TAB_ID, after = TAB_ID })
     if not pageOk or not entry then return false end
+    -- Informational page; General stays registered if unrealUI refuses it.
+    pcall(hostUI.RegisterSettingsTab, PACKS_PAGE_ID, L("SETTINGS_PAGE_PACKS"),
+      BuildPacks, { parent = TAB_ID, after = GENERAL_PAGE_ID })
     hostPageId = GENERAL_PAGE_ID
     return true
   end
-  local ok, entry = pcall(hostUI.RegisterSettingsTab, TAB_ID, TAB_LABEL, Build,
-    { after = "profiles" })
+  local ok, entry = pcall(hostUI.RegisterSettingsTab, TAB_ID, TAB_LABEL, BuildAll,
+    { after = "profiles", icon = LOGO_TEXTURE })
   if not ok or not entry then return false end
   hostPageId = TAB_ID
   return true
@@ -698,7 +864,7 @@ poll:SetScript("OnUpdate", function()
   local now = Now()
   if not pollStarted then
     pollStarted = now
-    PrintLoaded(L("CHAT_LOADED", tostring(unrealMap and unrealMap.version or "?")))
+    Print(L("CHAT_LOADED", tostring(unrealMap and unrealMap.version or "?")))
   elseif now - pollLast < HOST_POLL_INTERVAL then
     return
   end
@@ -737,8 +903,12 @@ local function Open()
 
   if not BuildWindow() or not content then return false end
   if not page then
-    local widgets, refresh = BuildPage(content, true)
+    local widgets, refresh, bottom = BuildPage(content, true, { general = true, packs = true })
     page = { widgets = widgets or {}, refresh = refresh }
+    -- Grows the window to fit both stacked sections, never below its base size.
+    local height = CONTENT_HEIGHT
+    if type(bottom) == "number" and PADDING - bottom > height then height = PADDING - bottom end
+    pcall(window.SetHeight, window, height + HEADER_HEIGHT + FOOTER_HEIGHT)
   end
   SetPageShown(true)
   if type(page.refresh) == "function" then page.refresh() end
