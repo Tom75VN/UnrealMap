@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "project": "unrealMap",
+  "purpose": "Paged terrain source for the maximum world-map zoom level",
+  "provenance": {
+    "title": "WoW Classic High-res Terrain Maps of Azeroth",
+    "author": "teebling / Barrens Chat",
+    "sourcePage": "https://barrens.chat/viewtopic.php?t=1260",
+    "sourceImage": "https://barrens.chat/images/maps/fullres/wow_classic_high_resolution_world_terrain_map_azeroth.png",
+    "permission": "Author permits non-commercial use with attribution and a link to Barrens Chat; see source page.",
+    "suppliedBy": "User-provided local download",
+    "localRoot": "D:/Development/unrealMap_data/highresterrainmaps (1)",
+    "sourceSha256": "31E3F30F8287CD85230A39B8CD4242DB8C840B70CF793D02C828EDFA93FA2A7C",
+    "classicVisualCheck": "PASS: the source has pre-harbor Stormwind; the different ZIP-bundled composite with Stormwind Harbor is excluded"
+  },
+  "pipeline": {
+    "generator": "python -B tools/import_terrain_atlas.py",
+    "format": "BLP2 DXT5",
+    "tileSize": 512,
+    "mipLevels": 11,
+    "edgePolicy": "Opaque black padding outside the logical source dimensions",
+    "runtimePolicy": "Bind only pages intersecting the visible max-zoom window; do not preload an atlas"
+  },
+  "atlases": [
+    {
+      "id": "classic-terrain-azeroth",
+      "directory": "Azeroth",
+      "source": {
+        "file": "wow_classic_high_resolution_world_terrain_map_azeroth.png",
+        "dimensions": [13000, 12000]
+      },
+      "grid": {"columns": 26, "rows": 24},
+      "pathPattern": "TerrainClassicR{row:02d}C{column:02d}.blp",
+      "runtimePathPattern": "Interface/AddOns/unrealMap_World/Terrain/Azeroth/TerrainClassicR{row:02d}C{column:02d}",
+      "pageCount": 624,
+      "calibration": {
+        "runtime": "MapTerrain.lua (CONTINENT_OFFSET, ZONES)",
+        "model": "atlasX = 8192 - 0.48 * worldY - ox; atlasY = 8192 - 0.48 * worldX - oy (worldX north, worldY west; 0.48 px per yard = 256 px per ADT tile)",
+        "continents": {
+          "0 Eastern Kingdoms": {"ox": -953, "oy": 3981},
+          "1 Kalimdor": {"ox": 5609, "oy": 2220}
+        },
+        "zoneRects": "Vanilla WorldMapArea.dbc bounds, read from pfQuest toolbox/client-data.sql table WorldMapArea_vanilla (reference data, not runtime evidence)",
+        "method": "Scale confirmed by a constant 8/16 px chunk-seam phase across each continent. Offsets by maximizing the correlation of water masks (terrain: blue hue; native 1002x668 zone maps from the 1.12 MPQ export: low saturation) over the coastal zones, then snapped to the seam grid. Strong zones agree within 4 px: Hilsbrad, Wetlands, Stranglethorn, Arathi, Hinterlands (EK); Dustwallow, Tanaris, Desolace, Winterspring (Kalimdor). Overlays of Elwynn, Tirisfal, Durotar, Barrens and Teldrassil checked visually.",
+        "uncertainty": "About 4 atlas px (8 yards); NOT_TESTED in game"
+      },
+      "runtimeBudget": {
+        "maxBoundPages": 12,
+        "worstWindow": "The Barrens at zoom 3.5: 4x3 pages",
+        "estimatedActiveBytes": "12 x 512x512 DXT5 with mips, about 4 MB",
+        "boundWhile": "Last zoom step of a zone map only; cleared when the fade ends, on map change and on map close"
+      }
+    }
+  ]
+}

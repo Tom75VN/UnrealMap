@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HD Unexplored Map Checklist</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #111827;
+      --panel: #1f2937;
+      --panel-hover: #263449;
+      --border: #374151;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --complete: #34d399;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #243047 0, var(--background) 42%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      color: #fde68a;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .progress-card {
+      min-width: 180px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(31, 41, 55, 0.88);
+    }
+
+    .progress-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 9px;
+      font-weight: 700;
+    }
+
+    .progress-track {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #0f172a;
+    }
+
+    .progress-bar {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--accent), var(--complete));
+      transition: width 180ms ease;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      outline: none;
+      background: #111827;
+      color: var(--text);
+      font: inherit;
+    }
+
+    input[type="search"]:focus { border-color: var(--accent); }
+
+    button {
+      padding: 0 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button:hover { background: var(--panel-hover); }
+
+    .zone-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .zone {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-height: 58px;
+      padding: 11px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: rgba(31, 41, 55, 0.9);
+      cursor: pointer;
+      transition: background 120ms ease, border-color 120ms ease;
+    }
+
+    .zone:hover {
+      border-color: #6b7280;
+      background: var(--panel-hover);
+    }
+
+    .zone:has(input:checked) {
+      border-color: rgba(52, 211, 153, 0.5);
+      background: rgba(6, 78, 59, 0.3);
+    }
+
+    .zone.hidden { display: none; }
+
+    .zone input {
+      width: 21px;
+      height: 21px;
+      margin: 0;
+      accent-color: var(--complete);
+      flex: 0 0 auto;
+    }
+
+    .zone-name {
+      display: block;
+      font-weight: 650;
+    }
+
+    .map-key {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 0.8rem;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 680px) {
+      main { padding-top: 28px; }
+      header { align-items: stretch; flex-direction: column; }
+      .progress-card { width: 100%; }
+      .zone-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>HD Unexplored Maps</h1>
+        <p>Tick a zone when its HD unexplored map is complete and integrated.</p>
+      </div>
+      <section class="progress-card" aria-label="Completion progress">
+        <div class="progress-row">
+          <span>Progress</span>
+          <span id="progress-text">5 / 40</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </section>
+    </header>
+
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Find a zone…" aria-label="Find a zone">
+      <button id="reset" type="button">Reset</button>
+    </div>
+
+    <section class="zone-list" id="zone-list" aria-label="Zone checklist"></section>
+
+    <footer>Progress is saved automatically in this browser.</footer>
+  </main>
+
+  <script>
+    const zones = [
+      ["Alterac Mountains", "Alterac", true],
+      ["Arathi Highlands", "Arathi", true],
+      ["Ashenvale", "Ashenvale", true],
+      ["Azshara", "Aszhara", false],
+      ["Badlands", "Badlands", false],
+      ["The Barrens", "Barrens", false],
+      ["Blasted Lands", "BlastedLands", false],
+      ["Burning Steppes", "BurningSteppes", false],
+      ["Darkshore", "Darkshore", false],
+      ["Deadwind Pass", "DeadwindPass", false],
+      ["Desolace", "Desolace", false],
+      ["Dun Morogh", "DunMorogh", false],
+      ["Durotar", "Durotar", true],
+      ["Duskwood", "Duskwood", false],
+      ["Dustwallow Marsh", "Dustwallow", false],
+      ["Eastern Plaguelands", "EasternPlaguelands", false],
+      ["Elwynn Forest", "Elwynn", true],
+      ["Felwood", "Felwood", false],
+      ["Feralas", "Feralas", false],
+      ["Hillsbrad Foothills", "Hilsbrad", false],
+      ["The Hinterlands", "Hinterlands", false],
+      ["Loch Modan", "LochModan", false],
+      ["Moonglade", "Moonglade", false],
+      ["Mulgore", "Mulgore", false],
+      ["Redridge Mountains", "Redridge", false],
+      ["Searing Gorge", "SearingGorge", false],
+      ["Silithus", "Silithus", false],
+      ["Silverpine Forest", "Silverpine", false],
+      ["Stonetalon Mountains", "StonetalonMountains", false],
+      ["Stranglethorn Vale", "Stranglethorn", false],
+      ["Swamp of Sorrows", "SwampOfSorrows", false],
+      ["Tanaris", "Tanaris", false],
+      ["Teldrassil", "Teldrassil", false],
+      ["Thousand Needles", "ThousandNeedles", false],
+      ["Tirisfal Glades", "Tirisfal", false],
+      ["Un'Goro Crater", "UngoroCrater", false],
+      ["Western Plaguelands", "WesternPlaguelands", false],
+      ["Westfall", "Westfall", false],
+      ["Wetlands", "Wetlands", false],
+      ["Winterspring", "Winterspring", false]
+    ];
+
+    const storageKey = "unrealMap.hdUnexploredChecklist.v1";
+    const initialState = Object.fromEntries(zones.map(([, key, done]) => [key, done]));
+    let state;
+
+    try {
+      state = { ...initialState, ...JSON.parse(localStorage.getItem(storageKey) || "{}") };
+    } catch {
+      state = { ...initialState };
+    }
+
+    const list = document.getElementById("zone-list");
+    const progressText = document.getElementById("progress-text");
+    const progressBar = document.getElementById("progress-bar");
+
+    function save() {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    }
+
+    function updateProgress() {
+      const complete = Object.values(state).filter(Boolean).length;
+      progressText.textContent = `${complete} / ${zones.length}`;
+      progressBar.style.width = `${complete / zones.length * 100}%`;
+    }
+
+    function render() {
+      list.replaceChildren(...zones.map(([name, key]) => {
+        const label = document.createElement("label");
+        label.className = "zone";
+        label.dataset.search = `${name} ${key}`.toLowerCase();
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = Boolean(state[key]);
+        checkbox.addEventListener("change", () => {
+          state[key] = checkbox.checked;
+          save();
+          updateProgress();
+        });
+
+        const text = document.createElement("span");
+        text.innerHTML = `<span class="zone-name">${name}</span><span class="map-key">${key}</span>`;
+        label.append(checkbox, text);
+        return label;
+      }));
+      updateProgress();
+    }
+
+    document.getElementById("search").addEventListener("input", event => {
+      const query = event.target.value.trim().toLowerCase();
+      document.querySelectorAll(".zone").forEach(zone => {
+        zone.classList.toggle("hidden", !zone.dataset.search.includes(query));
+      });
+    });
+
+    document.getElementById("reset").addEventListener("click", () => {
+      if (!confirm("Reset the checklist to the five currently integrated maps?")) return;
+      state = { ...initialState };
+      save();
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>

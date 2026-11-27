@@ -9,6 +9,9 @@ unrealMapLocale.Register("enUS", {
   ["SETTINGS_REVEAL_FOG_NOTE"] = "Shows the unexplored areas of every zone on the world map. "
     .. "Exploration progress itself is unchanged. "
     .. "When fog of war is kept, unexplored areas stay in low definition.",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE"] = "Hide map markers while moving the map",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE_NOTE"] = "Quest and other addon markers vanish while you drag or zoom "
+    .. "the world map and come back when it stops. Smoother dragging when many markers are shown.",
   ["SETTINGS_MINIMAP_BUTTON"] = "Show minimap button",
   ["SETTINGS_LANGUAGE_CHANGED"] = "language set to %s.",
   ["SETTINGS_LANGUAGE_RELOAD"] = "type /reload to redraw the interface in it.",
@@ -17,6 +20,7 @@ unrealMapLocale.Register("enUS", {
   ["SETTINGS_HOST_REFUSED"] = "unrealUI refused the settings page; using unrealMap's own window.",
   ["SETTINGS_IN_UNREALUI"] = "the settings are in unrealUI's settings window.",
   ["MINIMAP_TOOLTIP"] = "Click to open the map settings.",
+  ["MAP_ZOOM_HINT"] = "Zoom",
 
   ["CHAT_LOADED"] = "v%s loaded. /umap for settings.",
   ["CHAT_FOG_REMOVED"] = "fog of war removed.",
@@ -27,6 +31,9 @@ unrealMapLocale.Register("enUS", {
   ["CHAT_RAGEFIRE_FAILED"] = "Ragefire dungeon map could not be updated.",
   ["CHAT_RAGEFIRE_UNAVAILABLE"] = "Ragefire dungeon support is unavailable.",
   ["CHAT_HELP"] = "/umap opens settings. /umap fog [on|off], /umap minimap, /umap dungeon <map|off>, /umap raid <map|off>.",
+  ["BENCH_ARMED"] = "Map drag benchmark armed: open the map, zoom in, then keep dragging for about 40 seconds. The map acts oddly while it runs. Then close the map and /reload.",
+  ["BENCH_STOPPED"] = "Map drag benchmark stopped.",
+  ["BENCH_UNAVAILABLE"] = "Map drag benchmark is unavailable.",
 
   ["RAGEFIRE_NEEDS_DUNGEON"] = "Ragefire confirmation only works inside a party dungeon.",
   ["RAGEFIRE_ENABLED"] = "Ragefire dungeon map enabled.",
@@ -46,6 +53,7 @@ unrealMapLocale.Register("enUS", {
   ["SETTINGS_PACKS_NOTE"] = "Install missing packs from the launcher, then restart the game.",
   ["PACK_INSTALLED"] = "Installed",
   ["PACK_NOT_INSTALLED"] = "Not installed",
+  ["PACK_VERSION"] = "v%s",
   ["PACK_WORLD_NAME"] = "World Maps",
   ["PACK_WORLD_NOTE"] = "Zones, continents, capitals and battlegrounds.",
   ["PACK_UNEXPLORED_NAME"] = "Unexplored Maps",
@@ -53,10 +61,11 @@ unrealMapLocale.Register("enUS", {
   ["PACK_INSTANCES_NAME"] = "Instances Maps",
   ["PACK_INSTANCES_NOTE"] = "Dungeons and raids.",
 
-  ["POPUP_QUESTION"] = "You like it ?",
+  ["POPUP_QUESTION"] = "Do you like it?",
   ["POPUP_MESSAGE"] = "Give a like to this addon from the launcher",
-  ["POPUP_THANKS"] = "THANKS FOR YOUR SUPPORT !",
-  ["POPUP_DONT_SHOW"] = "Don't show again",
+  ["POPUP_THANKS"] = "THANKS FOR YOUR SUPPORT!",
+  ["POPUP_ALREADY_LIKED"] = "I already liked it",
+  ["POPUP_WILL_LIKE"] = "OK, I will add a like",
   ["POPUP_PACK_REQUIRED"] = "Data pack required",
   ["POPUP_PACK_MESSAGE"] = "Unreal Map needs at least the %s data pack. Install it from the launcher, then restart the game.",
   ["POPUP_PACK_OPTIONAL"] = "The %s and %s packs are optional.",

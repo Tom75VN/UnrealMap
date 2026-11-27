@@ -104,6 +104,7 @@ local NOTE_GREY = 0.70
 local DEFAULTS = {
   revealFog = true,
   minimapButton = true,
+  hideMarkersOnMove = false,
 }
 
 local host            -- nil while undecided, then "unrealui" or "standalone"
@@ -394,8 +395,8 @@ local function BuildPage(parent, standalone, sections)
     local info = PACK_INFO[pack]
     local top = y
     local textWidth = PACK_STATUS_LEFT - 8
-    Add(FontString(parent, "GameFontHighlight", 0, top - 8, textWidth,
-      info and L(info.name) or pack))
+    local packName = info and L(info.name) or pack
+    local title = Add(FontString(parent, "GameFontHighlight", 0, top - 8, textWidth, packName))
     local height = PACK_ROW_HEIGHT
     if info then
       local note = Add(FontString(parent, "GameFontHighlightSmall", NOTE_INDENT, top - 26,
@@ -417,6 +418,13 @@ local function BuildPage(parent, standalone, sections)
     Rule()
     table.insert(syncs, function()
       local installed = PackInstalled(pack)
+      if title then
+        -- The installed pack's version after its name, in the note grey.
+        local version = installed and unrealMap and type(unrealMap.GetPackVersion) == "function"
+          and unrealMap.GetPackVersion(pack)
+        pcall(title.SetText, title, version
+          and packName .. "  |cffb3b3b3" .. L("PACK_VERSION", version) .. "|r" or packName)
+      end
       if icon then
         pcall(icon.SetTexture, icon, installed and PACK_ICON_INSTALLED or PACK_ICON_MISSING)
       end
@@ -442,6 +450,10 @@ local function BuildPage(parent, standalone, sections)
       end
     end)
     Note(L("SETTINGS_REVEAL_FOG_NOTE"))
+
+    -- Read by MapZoom.lua's W.ZoomMarkersHidden on every map frame.
+    Checkbox("hideMarkersOnMove", L("SETTINGS_HIDE_MARKERS_ON_MOVE"))
+    Note(L("SETTINGS_HIDE_MARKERS_ON_MOVE_NOTE"))
 
     if standalone then
       Checkbox("minimapButton", L("SETTINGS_MINIMAP_BUTTON"), function(checked)
@@ -989,6 +1001,13 @@ SlashCmdList["UNREALMAP"] = function(message)
       Print(result or L(ok and "RAID_ENABLED" or "RAID_UNKNOWN", value))
     else
       Print(L("RAID_UNAVAILABLE"))
+    end
+  elseif command == "bench" then
+    local W = unrealMap and unrealMap.MapWindow
+    if W and type(W.BenchCommand) == "function" then
+      Print(L(W.BenchCommand(value)))
+    else
+      Print(L("BENCH_UNAVAILABLE"))
     end
   elseif command == "" or command == "config" or command == "settings" then
     Open()

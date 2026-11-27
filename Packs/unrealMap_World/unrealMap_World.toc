@@ -1,8 +1,10 @@
 ## Interface: 11200
 ## Title: |cffffffffUnreal |cfff5ae0aMap|r - World textures
-## Notes: HD textures for unrealMap: zones, continents, capitals and battlegrounds.
+## Notes: HD textures for unrealMap: zones, continents, terrain, capitals and battlegrounds.
 ## Author: Thomas
-## Version: 1.0.0
+## Version: 1.1.0
+## X-Terrain-Attribution: WoW Classic High-res Terrain Maps by teebling / Barrens Chat (non-commercial use with attribution)
+## X-Terrain-Source: https://barrens.chat/viewtopic.php?t=1260
 ## LoadOnDemand: 1
 
 # The client registers an addon only when its .toc lists a file. LoadOnDemand

@@ -1,6 +1,9 @@
 {
   "schemaVersion": 1,
   "project": "unrealMap",
+  "supplementalManifests": [
+    "assets/terrain_atlas_manifest.json"
+  ],
   "provenance": {
     "source": "User-supplied explored full-map PNG masters under D:/Development/unrealMap_data/#Maps and unexplored masters under D:/Development/unrealMap_data/#Maps/zones_unexplored; native sprites used only for geometry, reveal alpha, and declared active-zone fog fallback",
     "authorOrOwner": "Not supplied",
@@ -930,6 +933,59 @@
       }
     },
     {
+      "id": "ui.mapwindow",
+      "name": "World map window controls art (not a map surface)",
+      "bindingKey": "MapWindow.lua / MapZoom.lua",
+      "files": [
+        {
+          "runtime": "Media/Textures/UI/unrealmap-window-button.tga",
+          "copiedFrom": "unrealUI/media/Textures/modern-wow/buttons/red-button.tga",
+          "originalSource": "DragonflightUI-Reforged 1.3.4 redbutton2x.blp",
+          "dimensions": "256x128",
+          "sha256": "73f74b594e268e03672f8d9b88774a9566f910fcfbeebee55970a589c0a95a06",
+          "use": "Minimize / maximize toggle and hover glow; 5x3 grid of 34x38 cells"
+        },
+        {
+          "runtime": "Media/Textures/UI/unrealmap-zoom-button.tga",
+          "copiedFrom": "unrealUI/media/Textures/modern-wow/buttons/plus-minus-button.tga",
+          "originalSource": "Blizzard FileDataID 4496242 plus / minus tree button",
+          "dimensions": "64x64",
+          "sha256": "9eb6ab4694d65826c446aeaa95df13dbf182da0599e49f8d8dac5877a6d44f6a",
+          "use": "Zoom in / out buttons; four 20x22 cells"
+        },
+        {
+          "runtime": "Media/Textures/UI/unrealmap-resize-grip.tga",
+          "copiedFrom": "unrealUI/media/resize.tga",
+          "dimensions": "32x32",
+          "sha256": "3ec3f00f5ed7dff5a93cd6043294edfec9d60263f307761c744dbcd85603f36a",
+          "use": "Minimized map resize grip"
+        },
+        {
+          "runtime": "Media/Textures/UI/unrealmap-mousewheel-zoom.tga",
+          "copiedFrom": "pandaUI/media/Textures/mousewheel-zoom.tga (identical copy in pandaMap/Media/Textures/UI/mousewheel-zoom.tga)",
+          "originalSource": "Supplied by the pandaUI author on 2026-10-20, generated with ChatGPT's image model from a prompt written for pandaUI; see pandaUI media/Textures/ATTRIBUTION.md",
+          "dimensions": "64x64",
+          "sha256": "61b3bc5e8a0f66051155e041949d6868010f54dcf7027080596c12e680a1f714",
+          "use": "World map \"Zoom\" hint icon, drawn when unrealUI is not installed"
+        }
+      ],
+      "provenance": "Copied byte-for-byte from UnrealUI by explicit user request (port of its world map zoom and minimize). Upstream: DragonflightUI-Reforged 1.3.4 and Blizzard Entertainment UI art. See unrealUI/media/Textures/modern-wow/ATTRIBUTION.md. Exception: unrealmap-mousewheel-zoom.tga is copied byte-for-byte from pandaUI (user request 2026-11-27, \"as in PandaMap\"); it is pandaUI author-supplied AI-generated art, no licence file.",
+      "licenseOrPermission": "Not supplied: DragonflightUI-Reforged ships no LICENSE file and part of the art derives from Blizzard UI assets. Not a licence grant; redistribution rights are undocumented.",
+      "runtime": {
+        "activeFormat": "window-button: 32-bit RLE TGA (type 10); zoom-button, resize-grip and mousewheel-zoom: 32-bit uncompressed TGA (type 2); descriptor 0x08, as shipped and drawn by UnrealUI",
+        "conversion": "none; renamed to unique basenames because the client resolves addon textures by basename (textures.addon_paths_resolved_by_basename)",
+        "pathPattern": "Interface/AddOns/unrealMap/Media/Textures/UI/unrealmap-{window-button,zoom-button,resize-grip,mousewheel-zoom}",
+        "startupBindings": 0,
+        "binding": "Bound once, on the first world map show",
+        "addonOwnedTextureRegions": 8,
+        "addonOwnedFrames": 12
+      },
+      "validation": {
+        "offline": "PASS 2026-11-27: byte-identical copies (sha256 above); TGA headers read",
+        "inGame": "NOT_TESTED"
+      }
+    },
+    {
       "id": "ui.languageflags",
       "name": "Settings language flags (not a map surface)",
       "bindingKey": "Locale.lua / Settings.lua",
@@ -1086,7 +1142,6 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "role": "authoritative full-map unexplored themed master",
         "warpOutputToMaster": [
           [
             0.766513,
@@ -1098,7 +1153,8 @@
             0.768194,
             6.108636
           ]
-        ]
+        ],
+        "role": "authoritative full-map unexplored themed master"
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
@@ -1276,7 +1332,6 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "role": "authoritative full-map unexplored themed master",
         "warpOutputToMaster": [
           [
             0.766371,
@@ -1288,7 +1343,8 @@
             0.765934,
             0.312577
           ]
-        ]
+        ],
+        "role": "authoritative full-map unexplored themed master"
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
@@ -1450,7 +1506,6 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "role": "authoritative full-map unexplored themed master",
         "warpOutputToMaster": [
           [
             0.766984,
@@ -1462,7 +1517,8 @@
             0.766132,
             -0.101769
           ]
-        ]
+        ],
+        "role": "authoritative full-map unexplored themed master"
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
@@ -1611,6 +1667,53 @@
       }
     },
     {
+      "id": "world.aszhara.unexplored",
+      "name": "Aszhara unexplored base map",
+      "bindingKey": "Aszhara",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Aszhara.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Aszhara/Aszhara_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Aszhara",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 44
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.aszhara.exploration",
       "name": "Aszhara exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -1743,6 +1846,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 30224384,
         "estimatedPeakCompressedMipBytesIncludingExploration": 10076544,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 38
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.badlands.unexplored",
+      "name": "Badlands unexplored base map",
+      "bindingKey": "Badlands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Badlands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Badlands/Badlands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Badlands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 38
       },
       "validation": {
@@ -1885,6 +2035,53 @@
       }
     },
     {
+      "id": "world.barrens.unexplored",
+      "name": "Barrens unexplored base map",
+      "bindingKey": "Barrens",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Barrens.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Barrens/Barrens_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Barrens",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 38
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.barrens.exploration",
       "name": "Barrens exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -2019,6 +2216,53 @@
       }
     },
     {
+      "id": "world.blastedlands.unexplored",
+      "name": "BlastedLands unexplored base map",
+      "bindingKey": "BlastedLands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "BlastedLands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/BlastedLands/BlastedLands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/BlastedLands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 26
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.blastedlands.exploration",
       "name": "BlastedLands exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -2138,6 +2382,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 27058176,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9021872,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 43
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.burningsteppes.unexplored",
+      "name": "BurningSteppes unexplored base map",
+      "bindingKey": "BurningSteppes",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "BurningSteppes.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/BurningSteppes/BurningSteppes_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/BurningSteppes",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 43
       },
       "validation": {
@@ -2289,6 +2580,53 @@
       }
     },
     {
+      "id": "world.darkshore.unexplored",
+      "name": "Darkshore unexplored base map",
+      "bindingKey": "Darkshore",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Darkshore.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Darkshore/Darkshore_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Darkshore",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 22
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.darkshore.exploration",
       "name": "Darkshore exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -2399,6 +2737,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 15204352,
         "estimatedPeakCompressedMipBytesIncludingExploration": 5068592,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 17
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.deadwindpass.unexplored",
+      "name": "DeadwindPass unexplored base map",
+      "bindingKey": "DeadwindPass",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "DeadwindPass.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 5,
+          "worstHDPixels": 24
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/DeadwindPass/DeadwindPass_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/DeadwindPass",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 17
       },
       "validation": {
@@ -2519,6 +2904,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 28590080,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9531408,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 35
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.desolace.unexplored",
+      "name": "Desolace unexplored base map",
+      "bindingKey": "Desolace",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Desolace.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.532x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Desolace/Desolace_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Desolace",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 35
       },
       "validation": {
@@ -2650,6 +3082,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 25165824,
         "estimatedPeakCompressedMipBytesIncludingExploration": 8389568,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 32
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.dunmorogh.unexplored",
+      "name": "DunMorogh unexplored base map",
+      "bindingKey": "DunMorogh",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "DunMorogh.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 18
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/DunMorogh/DunMorogh_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/DunMorogh",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 32
       },
       "validation": {
@@ -2809,7 +3288,6 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "role": "authoritative full-map unexplored themed master",
         "warpOutputToMaster": [
           [
             0.766128,
@@ -2821,7 +3299,8 @@
             0.766694,
             -0.150479
           ]
-        ]
+        ],
+        "role": "authoritative full-map unexplored themed master"
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
@@ -2953,6 +3432,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 34373632,
         "estimatedPeakCompressedMipBytesIncludingExploration": 11459360,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 42
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.duskwood.unexplored",
+      "name": "Duskwood unexplored base map",
+      "bindingKey": "Duskwood",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Duskwood.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.532x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 18
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Duskwood/Duskwood_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Duskwood",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 42
       },
       "validation": {
@@ -3099,6 +3625,53 @@
       }
     },
     {
+      "id": "world.dustwallow.unexplored",
+      "name": "Dustwallow unexplored base map",
+      "bindingKey": "Dustwallow",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Dustwallow.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Dustwallow/Dustwallow_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Dustwallow",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 26
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.dustwallow.exploration",
       "name": "Dustwallow exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -3213,6 +3786,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 37191680,
         "estimatedPeakCompressedMipBytesIncludingExploration": 12398624,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 40
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.easternplaguelands.unexplored",
+      "name": "EasternPlaguelands unexplored base map",
+      "bindingKey": "EasternPlaguelands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "EasternPlaguelands.png",
+        "width": 1535,
+        "height": 1025,
+        "colorMode": "RGB",
+        "detailScale": "1.532x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/EasternPlaguelands/EasternPlaguelands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/EasternPlaguelands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 40
       },
       "validation": {
@@ -3380,7 +4000,6 @@
         "provenance": "user-supplied",
         "authorOrOwner": "not supplied",
         "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
-        "role": "authoritative full-map unexplored themed master",
         "warpOutputToMaster": [
           [
             0.766324,
@@ -3392,7 +4011,8 @@
             0.764264,
             -0.356286
           ]
-        ]
+        ],
+        "role": "authoritative full-map unexplored themed master"
       },
       "runtime": {
         "activeFormat": "BLP2 DXT5",
@@ -3545,6 +4165,53 @@
       }
     },
     {
+      "id": "world.felwood.unexplored",
+      "name": "Felwood unexplored base map",
+      "bindingKey": "Felwood",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Felwood.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Felwood/Felwood_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Felwood",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 25
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.felwood.exploration",
       "name": "Felwood exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -3658,6 +4325,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 27131904,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9044992,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 32
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.feralas.unexplored",
+      "name": "Feralas unexplored base map",
+      "bindingKey": "Feralas",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Feralas.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            -1,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Feralas/Feralas_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Feralas",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 32
       },
       "validation": {
@@ -3786,6 +4500,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 27361280,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9122000,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 37
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.hilsbrad.unexplored",
+      "name": "Hilsbrad unexplored base map",
+      "bindingKey": "Hilsbrad",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Hilsbrad.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Hilsbrad/Hilsbrad_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Hilsbrad",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 37
       },
       "validation": {
@@ -3927,6 +4688,53 @@
       }
     },
     {
+      "id": "world.hinterlands.unexplored",
+      "name": "Hinterlands unexplored base map",
+      "bindingKey": "Hinterlands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Hinterlands.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.532x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 23
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Hinterlands/Hinterlands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Hinterlands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 33
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.hinterlands.exploration",
       "name": "Hinterlands exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -4049,6 +4857,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 29294592,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9766416,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 39
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.lochmodan.unexplored",
+      "name": "LochModan unexplored base map",
+      "bindingKey": "LochModan",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "LochModan.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 12,
+          "worstHDPixels": 19
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/LochModan/LochModan_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/LochModan",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 39
       },
       "validation": {
@@ -4192,6 +5047,53 @@
       }
     },
     {
+      "id": "world.moonglade.unexplored",
+      "name": "Moonglade unexplored base map",
+      "bindingKey": "Moonglade",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Moonglade.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 4
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Moonglade/Moonglade_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Moonglade",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 19
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.moonglade.exploration",
       "name": "Moonglade exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -4299,6 +5201,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 25296896,
         "estimatedPeakCompressedMipBytesIncludingExploration": 8433200,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 29
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.mulgore.unexplored",
+      "name": "Mulgore unexplored base map",
+      "bindingKey": "Mulgore",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Mulgore.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 9,
+          "worstHDPixels": 24
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Mulgore/Mulgore_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Mulgore",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 29
       },
       "validation": {
@@ -4429,6 +5378,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 31539200,
         "estimatedPeakCompressedMipBytesIncludingExploration": 10514816,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 42
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.redridge.unexplored",
+      "name": "Redridge unexplored base map",
+      "bindingKey": "Redridge",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Redridge.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Redridge/Redridge_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Redridge",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 42
       },
       "validation": {
@@ -4575,6 +5571,53 @@
       }
     },
     {
+      "id": "world.searinggorge.unexplored",
+      "name": "SearingGorge unexplored base map",
+      "bindingKey": "SearingGorge",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "SearingGorge.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/SearingGorge/SearingGorge_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/SearingGorge",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 35
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.searinggorge.exploration",
       "name": "SearingGorge exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -4698,6 +5741,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 28246016,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9416624,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 37
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.silithus.unexplored",
+      "name": "Silithus unexplored base map",
+      "bindingKey": "Silithus",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Silithus.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            2,
+            2
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Silithus/Silithus_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Silithus",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 37
       },
       "validation": {
@@ -4873,6 +5963,53 @@
       }
     },
     {
+      "id": "world.silverpine.unexplored",
+      "name": "Silverpine unexplored base map",
+      "bindingKey": "Silverpine",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Silverpine.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Silverpine/Silverpine_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Silverpine",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 28
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.silverpine.exploration",
       "name": "Silverpine exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -4989,6 +6126,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 22970368,
         "estimatedPeakCompressedMipBytesIncludingExploration": 7658080,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 32
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.stonetalonmountains.unexplored",
+      "name": "StonetalonMountains unexplored base map",
+      "bindingKey": "StonetalonMountains",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "StonetalonMountains.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 3,
+          "medianHDPixels": [
+            -2,
+            -1
+          ],
+          "p90HDPixels": 20,
+          "worstHDPixels": 24
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/StonetalonMountains/StonetalonMountains_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/StonetalonMountains",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 32
       },
       "validation": {
@@ -5117,6 +6301,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 26476544,
         "estimatedPeakCompressedMipBytesIncludingExploration": 8826656,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 40
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.stranglethorn.unexplored",
+      "name": "Stranglethorn unexplored base map",
+      "bindingKey": "Stranglethorn",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Stranglethorn.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Stranglethorn/Stranglethorn_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Stranglethorn",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 40
       },
       "validation": {
@@ -5261,6 +6492,53 @@
       }
     },
     {
+      "id": "world.swampofsorrows.unexplored",
+      "name": "SwampOfSorrows unexplored base map",
+      "bindingKey": "SwampOfSorrows",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "SwampOfSorrows.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/SwampOfSorrows/SwampOfSorrows_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/SwampOfSorrows",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 40
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.swampofsorrows.exploration",
       "name": "SwampOfSorrows exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -5389,6 +6667,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 32243712,
         "estimatedPeakCompressedMipBytesIncludingExploration": 10748816,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 33
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.tanaris.unexplored",
+      "name": "Tanaris unexplored base map",
+      "bindingKey": "Tanaris",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Tanaris.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Tanaris/Tanaris_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Tanaris",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 33
       },
       "validation": {
@@ -5526,6 +6851,53 @@
       }
     },
     {
+      "id": "world.teldrassil.unexplored",
+      "name": "Teldrassil unexplored base map",
+      "bindingKey": "Teldrassil",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Teldrassil.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Teldrassil/Teldrassil_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Teldrassil",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 25
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.teldrassil.exploration",
       "name": "Teldrassil exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -5639,6 +7011,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 23789568,
         "estimatedPeakCompressedMipBytesIncludingExploration": 7930720,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 28
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.thousandneedles.unexplored",
+      "name": "ThousandNeedles unexplored base map",
+      "bindingKey": "ThousandNeedles",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "ThousandNeedles.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 4,
+          "worstHDPixels": 18
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/ThousandNeedles/ThousandNeedles_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/ThousandNeedles",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 28
       },
       "validation": {
@@ -5771,6 +7190,53 @@
       }
     },
     {
+      "id": "world.tirisfal.unexplored",
+      "name": "Tirisfal unexplored base map",
+      "bindingKey": "Tirisfal",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Tirisfal.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Tirisfal/Tirisfal_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Tirisfal",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 31
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.tirisfal.exploration",
       "name": "Tirisfal exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -5890,6 +7356,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 25542656,
         "estimatedPeakCompressedMipBytesIncludingExploration": 8516464,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 43
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.ungorocrater.unexplored",
+      "name": "UngoroCrater unexplored base map",
+      "bindingKey": "UngoroCrater",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "UngoroCrater.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 24
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/UngoroCrater/UngoroCrater_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/UngoroCrater",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 43
       },
       "validation": {
@@ -6038,6 +7551,53 @@
       }
     },
     {
+      "id": "world.westernplaguelands.unexplored",
+      "name": "WesternPlaguelands unexplored base map",
+      "bindingKey": "WesternPlaguelands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "WesternPlaguelands.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.532x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/WesternPlaguelands/WesternPlaguelands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/WesternPlaguelands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 35
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.westernplaguelands.exploration",
       "name": "WesternPlaguelands exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -6174,6 +7734,53 @@
       }
     },
     {
+      "id": "world.westfall.unexplored",
+      "name": "Westfall unexplored base map",
+      "bindingKey": "Westfall",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Westfall.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 4,
+          "worstHDPixels": 9
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Westfall/Westfall_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Westfall",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 30
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
       "id": "world.westfall.exploration",
       "name": "Westfall exploration overlays",
       "bindingKey": "native WorldMapOverlay texture basename",
@@ -6292,6 +7899,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 29622272,
         "estimatedPeakCompressedMipBytesIncludingExploration": 9875008,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 32
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.wetlands.unexplored",
+      "name": "Wetlands unexplored base map",
+      "bindingKey": "Wetlands",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Wetlands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Wetlands/Wetlands_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Wetlands",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 32
       },
       "validation": {
@@ -6420,6 +8074,53 @@
         "addonOwnedTextureRegions": 0,
         "estimatedPeakDecodedBytesIncludingExploration": 24903680,
         "estimatedPeakCompressedMipBytesIncludingExploration": 8301952,
+        "maximumSimultaneouslyBoundTilesIncludingExploration": 26
+      },
+      "validation": {
+        "offline": "PASS",
+        "inGame": "PASS"
+      }
+    },
+    {
+      "id": "world.winterspring.unexplored",
+      "name": "Winterspring unexplored base map",
+      "bindingKey": "Winterspring",
+      "grid": {
+        "columns": 4,
+        "rows": 3,
+        "order": "row-major"
+      },
+      "master": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Winterspring.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScale": "1.533x native supplied; resampled once to 2x runtime",
+        "provenance": "user-supplied",
+        "authorOrOwner": "not supplied",
+        "licenseOrPermission": "not supplied; local validation only until redistribution rights are documented",
+        "registration": "registered against the native map by PandaMap build_unexplored_tiles.py; not re-registered against the explored master",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        },
+        "role": "authoritative full-map unexplored themed master"
+      },
+      "runtime": {
+        "activeFormat": "BLP2 DXT5",
+        "role": "optional shipped runtime output: bound instead of the standard base tiles when the unrealMap_Unexplored pack is installed; the exploration overlays are shared",
+        "pathPattern": "Interface/AddOns/unrealMap_Unexplored/World_Unexplored/Winterspring/Winterspring_Unexplored{1..12}",
+        "dimensionsPerTile": "512x512",
+        "mipPolicy": "complete chain",
+        "generator": "copied byte-for-byte from C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Winterspring",
+        "startupBindings": 0,
+        "addonOwnedTextureRegions": 0,
         "maximumSimultaneouslyBoundTilesIncludingExploration": 26
       },
       "validation": {

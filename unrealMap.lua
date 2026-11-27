@@ -11,6 +11,7 @@ local CATEGORY_PACKS = {
   Battlegrounds = "unrealMap_World",
   Capitals = "unrealMap_World",
   Continents = "unrealMap_World",
+  Terrain = "unrealMap_World",
   World = "unrealMap_World",
   World_Unexplored = "unrealMap_Unexplored",
   Dungeons = "unrealMap_Instances",
@@ -38,12 +39,49 @@ local MAP_CATEGORIES = {
   World = "Continents",
 }
 
+-- true: in every unrealMap_Unexplored release; a version: the first pack
+-- release that ships that zone (older packs keep the standard base).
 local UNEXPLORED_BASE_MAPS = {
   Alterac = true,
   Arathi = true,
   Ashenvale = true,
+  Aszhara = "1.0.0",
+  Badlands = "1.0.0",
+  Barrens = "1.0.0",
+  BlastedLands = "1.0.0",
+  BurningSteppes = "1.0.0",
+  Darkshore = "1.0.0",
+  DeadwindPass = "1.0.0",
+  Desolace = "1.0.0",
+  DunMorogh = "1.0.0",
   Durotar = true,
+  Duskwood = "1.0.0",
+  Dustwallow = "1.0.0",
+  EasternPlaguelands = "1.0.0",
   Elwynn = true,
+  Felwood = "1.0.0",
+  Feralas = "1.0.0",
+  Hilsbrad = "1.0.0",
+  Hinterlands = "1.0.0",
+  LochModan = "1.0.0",
+  Moonglade = "1.0.0",
+  Mulgore = "1.0.0",
+  Redridge = "1.0.0",
+  SearingGorge = "1.0.0",
+  Silithus = "1.0.0",
+  Silverpine = "1.0.0",
+  StonetalonMountains = "1.0.0",
+  Stranglethorn = "1.0.0",
+  SwampOfSorrows = "1.0.0",
+  Tanaris = "1.0.0",
+  Teldrassil = "1.0.0",
+  ThousandNeedles = "1.0.0",
+  Tirisfal = "1.0.0",
+  UngoroCrater = "1.0.0",
+  WesternPlaguelands = "1.0.0",
+  Westfall = "1.0.0",
+  Wetlands = "1.0.0",
+  Winterspring = "1.0.0",
 }
 
 local MAP_OVERLAYS = {
@@ -194,6 +232,38 @@ local function IsPackInstalled(pack)
   return packInstalled[pack]
 end
 
+-- Files added to a pack after its first release are bound only when the
+-- installed pack is at least that version (.claude/rules/release.md).
+-- GetAddOnMetadata is DOCUMENTED_NOT_RUNTIME_VERIFIED: no answer reads as too
+-- old, so those files stay unbound rather than blank. One entry per pack.
+local packVersion = {}
+
+local function VersionNumber(text)
+  if type(text) ~= "string" then return nil end
+  local _, _, major, minor, patch = string.find(text, "^(%d+)%.(%d+)%.?(%d*)")
+  if not major then return nil end
+  return tonumber(major) * 1000000 + tonumber(minor) * 1000 + (tonumber(patch) or 0)
+end
+
+-- The installed pack's .toc Version text, or nil when missing or unreadable.
+local function GetPackVersion(pack)
+  if not IsPackInstalled(pack) then return nil end
+  if packVersion[pack] == nil then
+    local ok, text = false, nil
+    if type(GetAddOnMetadata) == "function" then
+      ok, text = pcall(GetAddOnMetadata, pack, "Version")
+    end
+    packVersion[pack] = ok and VersionNumber(text) and text or false
+  end
+  return packVersion[pack] or nil
+end
+
+local function IsPackAtLeast(pack, minimum)
+  local have = VersionNumber(GetPackVersion(pack))
+  local need = VersionNumber(minimum)
+  return have ~= nil and need ~= nil and have >= need
+end
+
 local function RequirePack(pack)
   if IsPackInstalled(pack) then return true end
   if not packReported[pack] then
@@ -217,8 +287,10 @@ end
 -- unrealMap_World. The optional unrealMap_Unexplored pack adds a second base,
 -- <Map>_Unexplored1..12, used instead when installed; overlays are shared.
 local function UsesUnexploredBase(assetMapName)
-  return UNEXPLORED_BASE_MAPS[assetMapName] == true
-    and IsPackInstalled(CATEGORY_PACKS[UNEXPLORED_CATEGORY])
+  local since = UNEXPLORED_BASE_MAPS[assetMapName]
+  local pack = CATEGORY_PACKS[UNEXPLORED_CATEGORY]
+  if since == true then return IsPackInstalled(pack) end
+  return type(since) == "string" and IsPackAtLeast(pack, since)
 end
 
 local function AssetTileRoot(mapName)
@@ -1158,7 +1230,7 @@ RefreshDungeonContext()
 RefreshRaidContext()
 
 unrealMap = {
-  version = "0.6.0",
+  version = "1.0.0",
   ApplyReplacement = ApplyReplacement,
   ClearBindings = ClearBindings,
   GetFogRevealEnabled = IsFogRevealEnabled,
@@ -1166,6 +1238,13 @@ unrealMap = {
     return PACKS
   end,
   IsPackInstalled = IsPackInstalled,
+  IsPackAtLeast = IsPackAtLeast,
+  GetPackVersion = GetPackVersion,
+  -- The map whose HD textures are bound now, as its asset name; nil while
+  -- the map is native or closed.
+  GetActiveMap = function()
+    return activeMap and AssetMapName(activeMap) or nil
+  end,
   GetOverlayReplacementEnabled = function()
     return overlayReplacementEnabled
   end,

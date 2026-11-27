@@ -9,6 +9,9 @@ unrealMapLocale.Register("zhCN", {
   ["SETTINGS_REVEAL_FOG_NOTE"] = "在世界地图上显示每个区域的未探索区域。"
     .. "探索进度本身不会改变。"
     .. "保留战争迷雾时，未探索区域保持低清晰度。",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE"] = "移动地图时隐藏标记",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE_NOTE"] = "拖动或缩放世界地图时，任务和其他插件的标记会暂时消失，"
+    .. "地图停止后重新出现。标记较多时拖动更流畅。",
   ["SETTINGS_MINIMAP_BUTTON"] = "显示小地图按钮",
   ["SETTINGS_LANGUAGE_CHANGED"] = "语言已设为 %s。",
   ["SETTINGS_LANGUAGE_RELOAD"] = "输入 /reload 以用该语言重绘界面。",
@@ -17,6 +20,7 @@ unrealMapLocale.Register("zhCN", {
   ["SETTINGS_HOST_REFUSED"] = "unrealUI 拒绝了设置页面；改用 unrealMap 自己的窗口。",
   ["SETTINGS_IN_UNREALUI"] = "设置位于 unrealUI 的设置窗口中。",
   ["MINIMAP_TOOLTIP"] = "点击打开地图设置。",
+  ["MAP_ZOOM_HINT"] = "缩放",
 
   ["CHAT_LOADED"] = "v%s 已加载。输入 /umap 打开设置。",
   ["CHAT_FOG_REMOVED"] = "已移除战争迷雾。",
@@ -27,6 +31,9 @@ unrealMapLocale.Register("zhCN", {
   ["CHAT_RAGEFIRE_FAILED"] = "无法更新怒焰裂谷地下城地图。",
   ["CHAT_RAGEFIRE_UNAVAILABLE"] = "怒焰裂谷地下城支持不可用。",
   ["CHAT_HELP"] = "/umap 打开设置。/umap fog [on|off]，/umap minimap，/umap dungeon <地图|off>，/umap raid <地图|off>。",
+  ["BENCH_ARMED"] = "地图拖动测试已就绪：打开地图并放大，然后持续拖动约 40 秒。测试期间地图表现异常属正常。之后关闭地图并输入 /reload。",
+  ["BENCH_STOPPED"] = "地图拖动测试已停止。",
+  ["BENCH_UNAVAILABLE"] = "地图拖动测试不可用。",
 
   ["RAGEFIRE_NEEDS_DUNGEON"] = "怒焰裂谷确认只能在小队地下城内使用。",
   ["RAGEFIRE_ENABLED"] = "已启用怒焰裂谷地下城地图。",
@@ -46,6 +53,7 @@ unrealMapLocale.Register("zhCN", {
   ["SETTINGS_PACKS_NOTE"] = "请在启动器中安装缺少的数据包，然后重启游戏。",
   ["PACK_INSTALLED"] = "已安装",
   ["PACK_NOT_INSTALLED"] = "未安装",
+  ["PACK_VERSION"] = "v%s",
   ["PACK_WORLD_NAME"] = "世界地图",
   ["PACK_WORLD_NOTE"] = "区域、大陆、主城和战场。",
   ["PACK_UNEXPLORED_NAME"] = "未探索地图",
@@ -56,7 +64,8 @@ unrealMapLocale.Register("zhCN", {
   ["POPUP_QUESTION"] = "喜欢吗？",
   ["POPUP_MESSAGE"] = "请在启动器中为此插件点赞",
   ["POPUP_THANKS"] = "感谢您的支持！",
-  ["POPUP_DONT_SHOW"] = "不再显示",
+  ["POPUP_ALREADY_LIKED"] = "我已经点赞了",
+  ["POPUP_WILL_LIKE"] = "好的，我会去点赞",
   ["POPUP_PACK_REQUIRED"] = "需要数据包",
   ["POPUP_PACK_MESSAGE"] = "Unreal Map 至少需要 %s 数据包。请从启动器安装，然后重新启动游戏。",
   ["POPUP_PACK_OPTIONAL"] = "%s 和 %s 数据包为可选。",

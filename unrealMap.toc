@@ -2,7 +2,7 @@
 ## Title: |cffffffffUnreal |cfff5ae0aMap
 ## Notes: High-definition map texture replacement, with an optional fog-of-war reveal.
 ## Author: Thomas
-## Version: 0.6.0
+## Version: 1.0.0
 ## SavedVariables: unrealMapDB
 
 Locale.lua
@@ -13,5 +13,9 @@ MapOverlayData.lua
 DungeonMapData.lua
 RaidMapData.lua
 unrealMap.lua
+MapWindow.lua
+MapZoom.lua
+MapZoomBench.lua
+MapTerrain.lua
 Settings.lua
 SupportPopup.lua

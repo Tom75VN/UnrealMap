@@ -9,6 +9,9 @@ unrealMapLocale.Register("ruRU", {
   ["SETTINGS_REVEAL_FOG_NOTE"] = "Показывает неисследованные области всех зон на карте мира. "
     .. "Сам прогресс исследования не меняется. "
     .. "Если туман войны сохранён, неисследованные области остаются в низком разрешении.",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE"] = "Скрывать метки при перемещении карты",
+  ["SETTINGS_HIDE_MARKERS_ON_MOVE_NOTE"] = "Метки заданий и других аддонов исчезают, пока вы перетаскиваете "
+    .. "или масштабируете карту мира, и возвращаются, когда она останавливается. Перетаскивание плавнее при множестве меток.",
   ["SETTINGS_MINIMAP_BUTTON"] = "Показывать кнопку у миникарты",
   ["SETTINGS_LANGUAGE_CHANGED"] = "язык установлен на %s.",
   ["SETTINGS_LANGUAGE_RELOAD"] = "введите /reload, чтобы перерисовать интерфейс на этом языке.",
@@ -17,6 +20,7 @@ unrealMapLocale.Register("ruRU", {
   ["SETTINGS_HOST_REFUSED"] = "unrealUI отклонил страницу настроек; используется собственное окно unrealMap.",
   ["SETTINGS_IN_UNREALUI"] = "настройки находятся в окне настроек unrealUI.",
   ["MINIMAP_TOOLTIP"] = "Нажмите, чтобы открыть настройки карты.",
+  ["MAP_ZOOM_HINT"] = "Масштаб",
 
   ["CHAT_LOADED"] = "v%s загружен. Настройки: /umap.",
   ["CHAT_FOG_REMOVED"] = "туман войны убран.",
@@ -27,6 +31,9 @@ unrealMapLocale.Register("ruRU", {
   ["CHAT_RAGEFIRE_FAILED"] = "не удалось обновить карту подземелья Огненная Пропасть.",
   ["CHAT_RAGEFIRE_UNAVAILABLE"] = "поддержка подземелья Огненная Пропасть недоступна.",
   ["CHAT_HELP"] = "/umap открывает настройки. /umap fog [on|off], /umap minimap, /umap dungeon <карта|off>, /umap raid <карта|off>.",
+  ["BENCH_ARMED"] = "Тест перетаскивания карты запущен: откройте карту, приблизьте её и перетаскивайте около 40 секунд. Во время теста карта ведёт себя странно. Затем закройте карту и введите /reload.",
+  ["BENCH_STOPPED"] = "Тест перетаскивания карты остановлен.",
+  ["BENCH_UNAVAILABLE"] = "Тест перетаскивания карты недоступен.",
 
   ["RAGEFIRE_NEEDS_DUNGEON"] = "Подтверждение Огненной Пропасти работает только внутри группового подземелья.",
   ["RAGEFIRE_ENABLED"] = "Карта подземелья Огненная Пропасть включена.",
@@ -46,6 +53,7 @@ unrealMapLocale.Register("ruRU", {
   ["SETTINGS_PACKS_NOTE"] = "Установите недостающие пакеты в лаунчере, затем перезапустите игру.",
   ["PACK_INSTALLED"] = "Установлен",
   ["PACK_NOT_INSTALLED"] = "Не установлен",
+  ["PACK_VERSION"] = "v%s",
   ["PACK_WORLD_NAME"] = "Карты мира",
   ["PACK_WORLD_NOTE"] = "Зоны, континенты, столицы и поля боя.",
   ["PACK_UNEXPLORED_NAME"] = "Неисследованные карты",
@@ -56,7 +64,8 @@ unrealMapLocale.Register("ruRU", {
   ["POPUP_QUESTION"] = "Вам нравится?",
   ["POPUP_MESSAGE"] = "Поставьте лайк этому аддону в лаунчере",
   ["POPUP_THANKS"] = "СПАСИБО ЗА ПОДДЕРЖКУ!",
-  ["POPUP_DONT_SHOW"] = "Больше не показывать",
+  ["POPUP_ALREADY_LIKED"] = "Я уже поставил лайк",
+  ["POPUP_WILL_LIKE"] = "ОК, поставлю лайк",
   ["POPUP_PACK_REQUIRED"] = "Требуется пакет данных",
   ["POPUP_PACK_MESSAGE"] = "Для Unreal Map нужен как минимум пакет данных %s. Установите его из лаунчера и перезапустите игру.",
   ["POPUP_PACK_OPTIONAL"] = "Пакеты %s и %s необязательны.",

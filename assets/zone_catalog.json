@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-10",
+  "updated": "2026-11-27",
   "zones": [
     {
       "order": 1,
@@ -395,6 +395,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Aszhara.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Aszhara",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -472,6 +491,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Badlands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Badlands",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -549,6 +587,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Barrens.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Barrens",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -614,6 +671,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "BlastedLands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/BlastedLands",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -696,6 +772,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "BurningSteppes.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/BurningSteppes",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -757,6 +852,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Darkshore.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Darkshore",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -820,6 +934,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "DeadwindPass.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/DeadwindPass",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 5,
+          "worstHDPixels": 24
+        }
       }
     },
     {
@@ -894,6 +1027,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Desolace.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.532,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Desolace",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        }
       }
     },
     {
@@ -965,6 +1117,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "DunMorogh.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/DunMorogh",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 18
+        }
       }
     },
     {
@@ -1139,6 +1310,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Duskwood.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.532,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Duskwood",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 18
+        }
       }
     },
     {
@@ -1204,6 +1394,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Dustwallow.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Dustwallow",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -1283,6 +1492,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "EasternPlaguelands.png",
+        "width": 1535,
+        "height": 1025,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.532,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/EasternPlaguelands",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -1437,6 +1665,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Felwood.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Felwood",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -1508,6 +1755,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Feralas.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Feralas",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            -1,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -1584,6 +1850,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Hilsbrad.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Hilsbrad",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -1656,6 +1941,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Hinterlands.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.532,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Hinterlands",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 23
+        }
       }
     },
     {
@@ -1734,6 +2038,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "LochModan.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/LochModan",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 12,
+          "worstHDPixels": 19
+        }
       }
     },
     {
@@ -1792,6 +2115,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Moonglade.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Moonglade",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 4
+        }
       }
     },
     {
@@ -1860,6 +2202,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Mulgore.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Mulgore",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 9,
+          "worstHDPixels": 24
+        }
       }
     },
     {
@@ -1941,6 +2302,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Redridge.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Redridge",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        }
       }
     },
     {
@@ -2015,6 +2395,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "SearingGorge.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/SearingGorge",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        }
       }
     },
     {
@@ -2125,6 +2524,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Silithus.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Silithus",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            2,
+            2
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        }
       }
     },
     {
@@ -2192,6 +2610,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Silverpine.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Silverpine",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -2263,6 +2700,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "StonetalonMountains.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/StonetalonMountains",
+        "registrationVsExploredTiles": {
+          "samples": 3,
+          "medianHDPixels": [
+            -2,
+            -1
+          ],
+          "p90HDPixels": 20,
+          "worstHDPixels": 24
+        }
       }
     },
     {
@@ -2342,6 +2798,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Stranglethorn.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Stranglethorn",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 1,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -2421,6 +2896,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "SwampOfSorrows.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/SwampOfSorrows",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 5
+        }
       }
     },
     {
@@ -2493,6 +2987,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Tanaris.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Tanaris",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -2557,6 +3070,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Teldrassil.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Teldrassil",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -2624,6 +3156,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "ThousandNeedles.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/ThousandNeedles",
+        "registrationVsExploredTiles": {
+          "samples": 22,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 4,
+          "worstHDPixels": 18
+        }
       }
     },
     {
@@ -2694,6 +3245,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Tirisfal.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Tirisfal",
+        "registrationVsExploredTiles": {
+          "samples": 23,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -2776,6 +3346,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "UngoroCrater.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/UngoroCrater",
+        "registrationVsExploredTiles": {
+          "samples": 19,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 3,
+          "worstHDPixels": 24
+        }
       }
     },
     {
@@ -2850,6 +3439,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "WesternPlaguelands.png",
+        "width": 1535,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.532,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/WesternPlaguelands",
+        "registrationVsExploredTiles": {
+          "samples": 24,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 2
+        }
       }
     },
     {
@@ -2919,6 +3527,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Westfall.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Westfall",
+        "registrationVsExploredTiles": {
+          "samples": 20,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 4,
+          "worstHDPixels": 9
+        }
       }
     },
     {
@@ -2990,6 +3617,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Wetlands.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Wetlands",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     },
     {
@@ -3055,6 +3701,25 @@
         "validatedBy": "user",
         "date": "2026-10-10",
         "notes": "User confirmed the explored HD map OK in game"
+      },
+      "unexploredSource": {
+        "root": "D:/Development/unrealMap_data/#Maps/zones_unexplored",
+        "file": "Winterspring.png",
+        "width": 1536,
+        "height": 1024,
+        "colorMode": "RGB",
+        "detailScaleVsNative": 1.533,
+        "warpOutputToMaster": null,
+        "importedFrom": "C:/Games/Wow-Octo/Interface/AddOns/pandaMap/Packs/PandaMap_Unexplored/World_Unexplored/Winterspring",
+        "registrationVsExploredTiles": {
+          "samples": 21,
+          "medianHDPixels": [
+            0,
+            0
+          ],
+          "p90HDPixels": 2,
+          "worstHDPixels": 3
+        }
       }
     }
   ]

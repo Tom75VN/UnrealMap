@@ -1,14 +1,15 @@
 --[[
 unrealMap / SupportPopup.lua
 
-A one-time support reminder shown a few seconds after the UI loads, until the
-player ticks "Don't show again". Its art is UnrealUI's Modern WoW popup set,
+A support reminder shown a few seconds after the UI loads. Two answers:
+"I already liked it" stops it for good (account-wide); "OK, I will add a like"
+only closes it until the next login. Its art is UnrealUI's Modern WoW popup set,
 imported under Media/Textures/UI (provenance in assets/manifest.json). Every
 region is created on first show only, so a dismissed popup costs one timer
 frame for a few seconds and no texture.
 
 While the required unrealMap_World pack is missing, the same popup explains
-how to install the data packs instead. That notice has no "Don't show again"
+how to install the data packs instead. That notice has one Close button
 and ignores the support dismissal: it returns every login until the pack is
 installed, because no map is shown in HD without it.
 ]]
@@ -22,16 +23,16 @@ local MEDIA = "Interface\\AddOns\\unrealMap\\Media\\Textures\\UI\\"
 local PLAIN_TEXTURE = "Interface\\Buttons\\WHITE8X8"
 
 local WIDTH = 368
-local HEIGHT = 168
+local HEIGHT = 148
 local PACK_HEIGHT = 196
 local TEXT_WIDTH = 312
 local BUTTON_WIDTH = 132
 local BUTTON_HEIGHT = 30
 local BUTTON_BOTTOM = 16
-local CHECK_BOTTOM = 60
 local THANKS_GAP = 6
-local CHECK_WIDTH = 16
-local CHECK_HEIGHT = 15
+-- UnrealUI M.modernWow.corpsePopupButton: the two-button row geometry.
+local SIDE_INSET = 18
+local PAIR_GAP = 19
 
 local TITLE = "|cffffffffUnreal |cfff5ae0aMap|r"
 local ACCENT = "|cfff5ae0a"
@@ -77,24 +78,75 @@ local BUTTON = {
   glowIntensity = 0.8,
 }
 
--- UnrealUI M.foreverWow.control.checkbox: box and tick on one 64x64 sheet.
-local CHECK = {
-  path = MEDIA .. "unrealmap-popup-checkmark",
-  sheet = 64,
-  box = { 1, 31, 1, 30 },
-  tick = { 1, 31, 32, 61 },
-}
-
 local popup
+
+-- Side by side with the other Unreal addons' like popups (unrealUI,
+-- unrealQuest all show theirs a few seconds after login, centred). Shared
+-- protocol, identical in each addon: every popup adds its frame once to the
+-- global UnrealSupportPopups list, and showing or hiding one re-lays every
+-- shown popup in centred rows, wrapping when a row would leave the screen.
+local stack = { gap = 12 }
+
+function stack.Layout()
+  local list = UnrealSupportPopups
+  if type(list) ~= "table" then return end
+  local shown = {}
+  local width, height = 0, 0
+  local i
+  for i = 1, table.getn(list) do
+    local f = list[i]
+    local ok, visible = pcall(f.IsShown, f)
+    if ok and visible then
+      table.insert(shown, f)
+      local okW, w = pcall(f.GetWidth, f)
+      local okH, h = pcall(f.GetHeight, f)
+      w = okW and tonumber(w) or 0
+      h = okH and tonumber(h) or 0
+      if w > width then width = w end
+      if h > height then height = h end
+    end
+  end
+  local n = table.getn(shown)
+  if n == 0 then return end
+
+  local gap = stack.gap
+  local okP, screen = pcall(UIParent.GetWidth, UIParent)
+  screen = okP and tonumber(screen) or 0
+  local perRow = n
+  if screen > 0 and width > 0 then
+    perRow = math.floor((screen - gap) / (width + gap))
+    if perRow < 1 then perRow = 1 end
+    if perRow > n then perRow = n end
+  end
+  local rows = math.ceil(n / perRow)
+  for i = 1, n do
+    local row = math.floor((i - 1) / perRow)
+    local col = (i - 1) - row * perRow
+    local inRow = math.min(perRow, n - row * perRow)
+    local x = (col - (inRow - 1) / 2) * (width + gap)
+    local y = ((rows - 1) / 2 - row) * (height + gap)
+    pcall(shown[i].ClearAllPoints, shown[i])
+    pcall(shown[i].SetPoint, shown[i], "CENTER", UIParent, "CENTER", x, y)
+  end
+end
+
+function stack.Register(frame)
+  if type(UnrealSupportPopups) ~= "table" then UnrealSupportPopups = {} end
+  local i
+  for i = 1, table.getn(UnrealSupportPopups) do
+    if UnrealSupportPopups[i] == frame then return end
+  end
+  table.insert(UnrealSupportPopups, frame)
+end
 
 local function Dismissed()
   local db = _G["unrealMapDB"]
   return type(db) == "table" and db[DISMISSED_KEY] == true
 end
 
-local function SetDismissed(value)
+local function SetDismissed()
   if type(unrealMapDB) ~= "table" then unrealMapDB = {} end
-  unrealMapDB[DISMISSED_KEY] = value and true or nil
+  unrealMapDB[DISMISSED_KEY] = true
 end
 
 -- Without unrealMap.lua's pack check the support popup is shown as before.
@@ -181,11 +233,11 @@ local function MetalFrame(frame, width, height)
   end)
 end
 
-local function RedButton(parent, text, onClick)
+local function RedButton(parent, text, width, onClick)
   local ok, button = pcall(CreateFrame, "Button", nil, parent)
   if not ok or not button then return nil end
   local t = BUTTON
-  pcall(button.SetWidth, button, BUTTON_WIDTH)
+  pcall(button.SetWidth, button, width)
   pcall(button.SetHeight, button, BUTTON_HEIGHT)
   pcall(button.EnableMouse, button, true)
   pcall(button.RegisterForClicks, button, "LeftButtonUp")
@@ -248,52 +300,9 @@ local function RedButton(parent, text, onClick)
   return button
 end
 
--- The whole row (box and label) is one Button so the text toggles too.
-local function Checkbox(parent, text, onChange)
-  local ok, row = pcall(CreateFrame, "Button", nil, parent)
-  if not ok or not row then return nil end
-  pcall(row.EnableMouse, row, true)
-  pcall(row.RegisterForClicks, row, "LeftButtonUp")
-  pcall(row.SetHeight, row, CHECK_HEIGHT)
-
-  local s = CHECK.sheet
-  local b, k = CHECK.box, CHECK.tick
-  local box = Texture(row, "ARTWORK", CHECK.path, b[1] / s, b[2] / s, b[3] / s, b[4] / s)
-  local tick = Texture(row, "OVERLAY", CHECK.path, k[1] / s, k[2] / s, k[3] / s, k[4] / s)
-  if not box or not tick then return nil end
-  local parts = { box, tick }
-  local i
-  for i = 1, 2 do
-    pcall(parts[i].SetWidth, parts[i], CHECK_WIDTH)
-    pcall(parts[i].SetHeight, parts[i], CHECK_HEIGHT)
-    pcall(parts[i].SetPoint, parts[i], "LEFT", row, "LEFT", 0, 0)
-  end
-
-  local label = Label(row, "GameFontHighlightSmall", text)
-  local width = CHECK_WIDTH + 6
-  if label then
-    pcall(label.SetPoint, label, "LEFT", row, "LEFT", CHECK_WIDTH + 6, 0)
-    local measured, value = pcall(label.GetStringWidth, label)
-    value = measured and tonumber(value) or 0
-    width = width + (value > 0 and value or 100)
-  end
-  pcall(row.SetWidth, row, width)
-
-  local checked = false
-  local function Sync()
-    if checked then pcall(tick.Show, tick) else pcall(tick.Hide, tick) end
-  end
-  Sync()
-  pcall(row.SetScript, row, "OnClick", function()
-    checked = not checked
-    Sync()
-    onChange(checked)
-  end)
-  return row
-end
-
 -- lines: centred paragraphs stacked under the title, each { text, gap }.
-local function Build(height, lines, withCheck)
+-- buttons: { { text, onClick or nil }, ... }, one or two.
+local function Build(height, lines, buttons)
   local ok, frame = pcall(CreateFrame, "Frame", "unrealMapSupportPopup", UIParent)
   if not ok or not frame then return nil end
   pcall(frame.SetFrameStrata, frame, "DIALOG")
@@ -322,29 +331,36 @@ local function Build(height, lines, withCheck)
     end
   end
 
-  local parts = {}
-  local check
-  if withCheck then
-    check = Checkbox(frame, L("POPUP_DONT_SHOW"), SetDismissed)
-    if not check then return nil end
-    local width = 0
-    local measured, value = pcall(check.GetWidth, check)
-    if measured and tonumber(value) then width = tonumber(value) end
-    pcall(check.SetPoint, check, "BOTTOMLEFT", frame, "BOTTOM", -width / 2, CHECK_BOTTOM)
-    table.insert(parts, check)
-  end
-
   -- Child frames are shown and hidden explicitly; this client does not
   -- reliably carry parent visibility to them (rendering.parent_alpha_not_propagated).
-  local close
-  close = RedButton(frame, L("COMMON_CLOSE"), function()
-    if check then pcall(check.Hide, check) end
-    pcall(close.Hide, close)
+  local parts = {}
+  local function Close()
+    local k
+    for k = 1, table.getn(parts) do pcall(parts[k].Hide, parts[k]) end
     pcall(frame.Hide, frame)
-  end)
-  if not close then return nil end
-  pcall(close.SetPoint, close, "BOTTOM", frame, "BOTTOM", 0, BUTTON_BOTTOM)
-  table.insert(parts, close)
+    stack.Layout()
+  end
+
+  -- buttons: one centred, or two side by side; each closes before its onClick.
+  local count = table.getn(buttons)
+  local width = BUTTON_WIDTH
+  if count > 1 then width = (WIDTH - 2 * SIDE_INSET - PAIR_GAP) / 2 end
+  for i = 1, count do
+    local spec = buttons[i]
+    local button = RedButton(frame, spec[1], width, function()
+      Close()
+      if spec[2] then spec[2]() end
+    end)
+    if not button then return nil end
+    if count == 1 then
+      pcall(button.SetPoint, button, "BOTTOM", frame, "BOTTOM", 0, BUTTON_BOTTOM)
+    elseif i == 1 then
+      pcall(button.SetPoint, button, "BOTTOMRIGHT", frame, "BOTTOM", -PAIR_GAP / 2, BUTTON_BOTTOM)
+    else
+      pcall(button.SetPoint, button, "BOTTOMLEFT", frame, "BOTTOM", PAIR_GAP / 2, BUTTON_BOTTOM)
+    end
+    table.insert(parts, button)
+  end
   frame.parts = parts
   return frame
 end
@@ -354,7 +370,10 @@ local function BuildSupport()
     { L("POPUP_QUESTION"), 0 },
     { L("POPUP_MESSAGE"), 0 },
     { L("POPUP_THANKS"), THANKS_GAP },
-  }, true)
+  }, {
+    { L("POPUP_ALREADY_LIKED"), SetDismissed },
+    { L("POPUP_WILL_LIKE") },
+  })
 end
 
 local function BuildPackNotice()
@@ -362,7 +381,7 @@ local function BuildPackNotice()
     { L("POPUP_PACK_REQUIRED"), 0 },
     { L("POPUP_PACK_MESSAGE", Accent(REQUIRED_PACK)), THANKS_GAP },
     { L("POPUP_PACK_OPTIONAL", Accent(OPTIONAL_PACKS[1]), Accent(OPTIONAL_PACKS[2])), THANKS_GAP },
-  }, false)
+  }, { { L("COMMON_CLOSE") } })
 end
 
 local timer = CreateFrame("Frame", "unrealMapSupportPopupTimer", UIParent)
@@ -382,7 +401,9 @@ timer:SetScript("OnUpdate", function()
     popup = popup or BuildSupport()
   end
   if not popup then return end
+  stack.Register(popup)
   pcall(popup.Show, popup)
   local i
   for i = 1, table.getn(popup.parts) do pcall(popup.parts[i].Show, popup.parts[i]) end
+  stack.Layout()
 end)
