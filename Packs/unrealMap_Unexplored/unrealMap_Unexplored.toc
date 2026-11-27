@@ -2,7 +2,7 @@
 ## Title: |cffffffffUnreal |cfff5ae0aMap|r - Unexplored textures
 ## Notes: HD unexplored zone textures for unrealMap, shown while fog of war is kept.
 ## Author: Thomas
-## Version: 0.2.0
+## Version: 1.0.0
 ## LoadOnDemand: 1
 
 # The client registers an addon only when its .toc lists a file. LoadOnDemand
